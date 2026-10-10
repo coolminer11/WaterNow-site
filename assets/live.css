@@ -1,0 +1,28 @@
+/* The live location page (live/). Its own look: the page is opened from a link, full height map and panel. */
+:root {
+  --bg: #fafafa; --card: #ffffff; --fg: #09090b; --muted: #71717a; --border: #e4e4e7;
+  --accent: #0066cc; --ok: #16a34a; --warn: #d97706;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #09090b; --card: #18181b; --fg: #fafafa; --muted: #a1a1aa; --border: #27272a; --accent: #3395ff; --ok: #22c55e; --warn: #f59e0b; }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg);
+  font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+body { display: flex; flex-direction: column; }
+header { padding: 14px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
+header h1 { font-size: 17px; margin: 0; flex: 1; }
+.badge { font-size: 12px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
+.badge.ok { color: var(--ok); border-color: currentColor; }
+.badge.warn { color: var(--warn); border-color: currentColor; }
+#map { flex: 1; min-height: 260px; }
+#panel { padding: 16px; display: grid; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.who { font-size: 17px; font-weight: 600; margin: 0 0 2px; }
+.sub { color: var(--muted); margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }
+.label { font-size: 12px; color: var(--muted); }
+.value { font-size: 20px; font-weight: 600; overflow-wrap: anywhere; }
+.msg { padding: 32px 16px; text-align: center; }
+.msg h2 { font-size: 18px; margin: 0 0 6px; }
+.hidden { display: none !important; }

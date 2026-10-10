@@ -1,0 +1,17 @@
+{
+  "versionCode": 66,
+  "versionName": "1.66",
+  "minVersionCode": 53,
+  "apkUrl": "https://coolminer11.github.io/WaterNow-site/download/WaterNow-66.apk",
+  "sha256": "ea43be5186b2bd565ff41265f9ce97037afa6092d217242195409bdb77601def",
+  "sizeBytes": 39602072,
+  "publishedAt": "2026-10-10T22:17:59Z",
+  "notes": {
+    "en": "Adding a point is faster: tick everything that's there (toilets with a fountain = one point), answer only the questions that fit (drinkable? closed in winter? toilet type), the address fills itself in from the photo and the place's names are offered. A point already within 25 m? Add your photo to it. A preview shows your point, and it waits for you if the app closes.",
+    "fr": "Ajouter un point est plus rapide : coche tout ce qu'il y a ici (toilettes avec fontaine = un seul point), réponds seulement aux questions utiles (potable ? fermé l'hiver ? type de toilettes), l'adresse se remplit toute seule à partir de la photo et les noms du lieu te sont proposés. Un point existe déjà à moins de 25 m ? Ajoute-lui ta photo. Un aperçu montre ton point, et il t'attend si l'app se ferme.",
+    "es": "Añadir un punto es más rápido: marca todo lo que hay aquí (baños con fuente = un solo punto), responde solo las preguntas que aplican (¿potable? ¿cerrado en invierno? tipo de baño), la dirección se completa sola a partir de la foto y se te proponen los nombres del lugar. ¿Ya hay un punto a menos de 25 m? Añádele tu foto. Una vista previa muestra tu punto, y te espera si la app se cierra.",
+    "de": "Einen Ort hinzufügen geht schneller: Wähle alles, was es hier gibt (Toiletten mit Trinkbrunnen = ein Ort), beantworte nur die passenden Fragen (Trinkwasser? im Winter geschlossen? Toilettenart), die Adresse füllt sich anhand des Fotos aus und Namen des Ortes werden vorgeschlagen. Schon ein Ort in weniger als 25 m? Füge dort dein Foto hinzu. Eine Vorschau zeigt deinen Ort, und er wartet auf dich, wenn sich die App schließt.",
+    "pt": "Adicionar um ponto ficou mais rápido: marque tudo o que tem aqui (banheiros com bebedouro = um só ponto), responda só às perguntas que fazem sentido (potável? fechado no inverno? tipo de banheiro), o endereço se preenche sozinho a partir da foto e os nomes do lugar são sugeridos. Já existe um ponto a menos de 25 m? Adicione sua foto a ele. Uma prévia mostra seu ponto, e ele espera por você se o app fechar.",
+    "ja": "地点の追加がもっと簡単に：ここにあるものをすべて選択（トイレと水飲み場＝1つの地点）、関係する質問だけに回答（飲用可否、冬季閉鎖、トイレの種類）。住所は写真の場所から自動入力され、場所の名前が候補に表示されます。25 m以内に既存の地点があれば写真を追加できます。プレビューで確認でき、アプリが閉じても続きから再開できます。"
+  }
+}

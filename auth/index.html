@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src https://pkqsvlbiznrqxfckaxll.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>WaterNow account</title>
+<style>
+  :root { --bg:#fafafa; --card:#fff; --fg:#18181b; --muted:#52525b; --border:#e4e4e7; --accent:#0066cc; --ok:#15803d; --err:#b91c1c; --on-accent:#ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#09090b; --card:#18181b; --fg:#fafafa; --muted:#a1a1aa; --border:#27272a; --accent:#3395ff; --ok:#4ade80; --err:#f87171; --on-accent:#09090b; } }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; padding:16px; background:var(--bg); color:var(--fg);
+         font:16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { width:100%; max-width:420px; background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px 24px; }
+  h1 { font-size:22px; margin:0 0 8px; }
+  p { color:var(--muted); margin:0 0 16px; }
+  label { display:block; font-size:14px; font-weight:600; margin:14px 0 6px; }
+  input { width:100%; font:inherit; padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:transparent; color:var(--fg); }
+  input:focus { outline:2px solid var(--accent); outline-offset:1px; }
+  button { width:100%; margin-top:20px; padding:13px; border:0; border-radius:12px; background:var(--accent); color:var(--on-accent); font:600 16px system-ui, sans-serif; cursor:pointer; min-height:48px; }
+  button:disabled { opacity:.6; cursor:default; }
+  .msg { margin-top:14px; font-size:14px; }
+  .ok { color:var(--ok); } .err { color:var(--err); }
+  .badge { width:48px; height:48px; border-radius:14px; display:grid; place-items:center; background:var(--accent); color:var(--on-accent); font-weight:700; margin-bottom:16px; }
+</style>
+</head>
+<body>
+<main id="app" aria-live="polite">
+  <div class="badge" aria-hidden="true">W</div>
+  <h1 id="title">WaterNow</h1>
+  <p id="text"></p>
+</main>
+<script>
+(() => {
+  const SUPABASE_URL = "https://pkqsvlbiznrqxfckaxll.supabase.co";
+  const PUBLISHABLE_KEY = "sb_publishable_Jw6cnMgupaVxupvltvUlPQ_mvwpiNVE";
+  // One table per app language; the browser's language when it is one of them ("pt-PT" → pt), English otherwise.
+  const STRINGS = {
+    en: {
+      doc: "WaterNow account",
+      confirmedTitle: "Email confirmed", confirmedText: "Your account is ready. Go back to WaterNow and sign in.",
+      resetTitle: "New password", resetText: "Choose a new password for your WaterNow account.",
+      pw: "New password", pw2: "Confirm password", save: "Save",
+      rule: "At least 8 characters, with a letter and a digit.", mismatch: "The two passwords don't match.",
+      saved: "Password changed. Go back to WaterNow and sign in with your new password.",
+      expired: "This link has expired or was already used. Request a new email from the app.",
+      failed: "Couldn't save right now. Try again in a moment.",
+      nothingTitle: "WaterNow", nothingText: "Open this link from the email WaterNow sent you."
+    },
+    fr: {
+      doc: "Compte WaterNow",
+      confirmedTitle: "Courriel confirmé", confirmedText: "Ton compte est prêt. Retourne dans WaterNow et connecte-toi.",
+      resetTitle: "Nouveau mot de passe", resetText: "Choisis un nouveau mot de passe pour ton compte WaterNow.",
+      pw: "Nouveau mot de passe", pw2: "Confirme le mot de passe", save: "Enregistrer",
+      rule: "Au moins 8 caractères, avec une lettre et un chiffre.", mismatch: "Les deux mots de passe ne correspondent pas.",
+      saved: "Mot de passe changé. Retourne dans WaterNow et connecte-toi avec ton nouveau mot de passe.",
+      expired: "Ce lien a expiré ou a déjà servi. Redemande un courriel depuis l'app.",
+      failed: "Impossible d'enregistrer pour l'instant. Réessaie dans un moment.",
+      nothingTitle: "WaterNow", nothingText: "Ouvre ce lien depuis le courriel que WaterNow t'a envoyé."
+    },
+    es: {
+      doc: "Cuenta de WaterNow",
+      confirmedTitle: "Correo confirmado", confirmedText: "Tu cuenta está lista. Vuelve a WaterNow e inicia sesión.",
+      resetTitle: "Nueva contraseña", resetText: "Elige una nueva contraseña para tu cuenta de WaterNow.",
+      pw: "Nueva contraseña", pw2: "Confirma la contraseña", save: "Guardar",
+      rule: "Al menos 8 caracteres, con una letra y un número.", mismatch: "Las dos contraseñas no coinciden.",
+      saved: "Contraseña cambiada. Vuelve a WaterNow e inicia sesión con tu nueva contraseña.",
+      expired: "Este enlace ha caducado o ya se ha usado. Pide un correo nuevo desde la app.",
+      failed: "No se ha podido guardar ahora. Inténtalo de nuevo en un momento.",
+      nothingTitle: "WaterNow", nothingText: "Abre este enlace desde el correo que te envió WaterNow."
+    },
+    de: {
+      doc: "WaterNow-Konto",
+      confirmedTitle: "E-Mail bestätigt", confirmedText: "Dein Konto ist bereit. Geh zurück zu WaterNow und melde dich an.",
+      resetTitle: "Neues Passwort", resetText: "Wähle ein neues Passwort für dein WaterNow-Konto.",
+      pw: "Neues Passwort", pw2: "Passwort bestätigen", save: "Speichern",
+      rule: "Mindestens 8 Zeichen, mit einem Buchstaben und einer Ziffer.", mismatch: "Die beiden Passwörter stimmen nicht überein.",
+      saved: "Passwort geändert. Geh zurück zu WaterNow und melde dich mit deinem neuen Passwort an.",
+      expired: "Dieser Link ist abgelaufen oder wurde schon benutzt. Fordere in der App eine neue E-Mail an.",
+      failed: "Speichern ist gerade nicht möglich. Versuch es gleich noch einmal.",
+      nothingTitle: "WaterNow", nothingText: "Öffne diesen Link aus der E-Mail, die WaterNow dir geschickt hat."
+    },
+    pt: {
+      doc: "Conta WaterNow",
+      confirmedTitle: "E-mail confirmado", confirmedText: "Sua conta está pronta. Volte ao WaterNow e entre.",
+      resetTitle: "Nova senha", resetText: "Escolha uma nova senha para sua conta do WaterNow.",
+      pw: "Nova senha", pw2: "Confirme a senha", save: "Salvar",
+      rule: "Pelo menos 8 caracteres, com uma letra e um número.", mismatch: "As duas senhas não coincidem.",
+      saved: "Senha alterada. Volte ao WaterNow e entre com sua nova senha.",
+      expired: "Este link expirou ou já foi usado. Peça um novo e-mail pelo app.",
+      failed: "Não foi possível salvar agora. Tente de novo daqui a pouco.",
+      nothingTitle: "WaterNow", nothingText: "Abra este link pelo e-mail que o WaterNow te enviou."
+    },
+    ja: {
+      doc: "WaterNowアカウント",
+      confirmedTitle: "メールアドレスを確認しました", confirmedText: "アカウントの準備ができました。WaterNowに戻ってログインしてください。",
+      resetTitle: "新しいパスワード", resetText: "WaterNowアカウントの新しいパスワードを決めてください。",
+      pw: "新しいパスワード", pw2: "パスワードの確認", save: "保存",
+      rule: "8文字以上で、英字と数字をそれぞれ1つ以上含めてください。", mismatch: "2つのパスワードが一致しません。",
+      saved: "パスワードを変更しました。WaterNowに戻って、新しいパスワードでログインしてください。",
+      expired: "このリンクは期限切れか、すでに使われています。アプリからもう一度メールをリクエストしてください。",
+      failed: "今は保存できません。しばらくしてからもう一度お試しください。",
+      nothingTitle: "WaterNow", nothingText: "WaterNowから届いたメールのリンクから開いてください。"
+    }
+  };
+  const tag = /^([a-z]{2,3})(?:[-_]|$)/i.exec(typeof navigator.language === "string" ? navigator.language : "");
+  const lang = tag && Object.prototype.hasOwnProperty.call(STRINGS, tag[1].toLowerCase()) ? tag[1].toLowerCase() : "en";
+  const T = STRINGS[lang];
+  document.documentElement.lang = lang;
+  document.title = T.doc;
+
+  // Tokens arrive in the URL fragment (never sent to this site's server). Read once, then wipe the URL.
+  const params = new URLSearchParams(location.hash.slice(1) || location.search.slice(1));
+  history.replaceState(null, "", location.pathname);
+  const type = params.get("type");
+  const token = params.get("access_token");
+  const title = document.getElementById("title");
+  const text = document.getElementById("text");
+  const app = document.getElementById("app");
+  const show = (t, x) => { title.textContent = t; text.textContent = x; };
+
+  if (params.get("error") || params.get("error_code")) { show(T.nothingTitle, T.expired); return; }
+  if (!token) { show(T.nothingTitle, T.nothingText); return; }
+  if (type !== "recovery") { show(T.confirmedTitle, T.confirmedText); return; }
+
+  show(T.resetTitle, T.resetText);
+  const field = (id, label) => {
+    const l = document.createElement("label"); l.htmlFor = id; l.textContent = label;
+    const i = document.createElement("input"); i.id = id; i.type = "password"; i.autocomplete = "new-password"; i.required = true;
+    app.append(l, i); return i;
+  };
+  const p1 = field("pw", T.pw), p2 = field("pw2", T.pw2);
+  const hint = document.createElement("p"); hint.className = "msg"; hint.textContent = T.rule; app.append(hint);
+  const btn = document.createElement("button"); btn.type = "button"; btn.textContent = T.save; app.append(btn);
+  const msg = document.createElement("p"); msg.className = "msg"; msg.setAttribute("role", "status"); app.append(msg);
+  const say = (x, cls) => { msg.textContent = x; msg.className = "msg " + cls; };
+
+  btn.addEventListener("click", async () => {
+    const a = p1.value, b = p2.value;
+    if (a.length < 8 || !/[A-Za-z]/.test(a) || !/[0-9]/.test(a)) { say(T.rule, "err"); return; }
+    if (a !== b) { say(T.mismatch, "err"); return; }
+    btn.disabled = true;
+    try {
+      const r = await fetch(SUPABASE_URL + "/auth/v1/user", {
+        method: "PUT",
+        headers: { "apikey": PUBLISHABLE_KEY, "Authorization": "Bearer " + token, "Content-Type": "application/json" },
+        body: JSON.stringify({ password: a })
+      });
+      if (r.ok) { p1.value = ""; p2.value = ""; p1.disabled = p2.disabled = true; btn.hidden = true; hint.hidden = true; say(T.saved, "ok"); return; }
+      say(r.status === 401 || r.status === 403 ? T.expired : T.failed, "err");
+    } catch (_) { say(T.failed, "err"); }
+    btn.disabled = false;
+  });
+})();
+</script>
+</body>
+</html>

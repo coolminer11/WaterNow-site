@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co https://tiles.openfreemap.org; worker-src blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>A water point on WaterNow</title>
+<meta name="description" content="A free water point shared from WaterNow: see it on the map and get directions.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="A water point on WaterNow">
+<meta property="og:description" content="Free drinking water, shared by the WaterNow community. See it on the map and get directions.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.css"
+      integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/map.css">
+</head>
+<body>
+<header class="bar"><a class="brand" href="../"><span class="logo" aria-hidden="true">W</span>WaterNow</a></header>
+<main class="page">
+  <div id="map" class="map" role="img" aria-label="Map"></div>
+
+  <section class="card" id="spot" aria-live="polite">
+    <p class="eyebrow" id="type">Water point</p>
+    <h1 id="name">Water point</h1>
+    <p class="verified hidden" id="verified">Verified by WaterNow</p>
+    <p class="muted" id="coords"></p>
+    <ul class="facts hidden" id="facts"></ul>
+    <p class="note hidden" id="note" role="status"></p>
+    <div class="actions">
+      <a class="btn primary" id="open" href="#">Open in WaterNow</a>
+      <a class="btn" id="dir" href="#" rel="noopener noreferrer">Directions</a>
+    </div>
+  </section>
+
+  <section class="card hidden" id="bad" role="status">
+    <h1 id="badTitle">Link incomplete</h1>
+    <p class="muted" id="badText">This link to a water point is damaged. Ask for it again.</p>
+  </section>
+
+  <section class="card">
+    <h2 id="getTitle">No WaterNow yet?</h2>
+    <p class="muted" id="getText">Free drinking water near you, on a map the community keeps up to date.</p>
+    <a class="btn wide" id="get" href="../">Get WaterNow</a>
+  </section>
+
+  <p class="foot muted" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.js"
+        integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin=""></script>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/map.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
