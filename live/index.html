@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co https://tiles.openfreemap.org; worker-src blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>WaterNow Live</title>
+<link rel="stylesheet" href="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.css"
+      integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="">
+<link rel="stylesheet" href="../assets/live.css">
+<link rel="stylesheet" href="../assets/map.css">
+</head>
+<body>
+<header>
+  <h1 id="title">Live location</h1>
+  <span id="status" class="badge">Loading…</span>
+</header>
+<div id="map" role="img" aria-label="Map with the shared position"></div>
+<main id="panel" aria-live="polite">
+  <div class="card">
+    <p class="who" id="who">…</p>
+    <p class="sub" id="dest"></p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="label" id="stopLabel">Next water stop</div><div class="value" id="stop">–</div></div>
+    <div class="card"><div class="label" id="etaLabel">ETA</div><div class="value" id="eta">–</div></div>
+    <div class="card"><div class="label" id="speedLabel">Speed</div><div class="value" id="speed">–</div></div>
+  </div>
+</main>
+<div id="message" class="msg hidden" role="status"><h2 id="msgTitle"></h2><p class="sub" id="msgBody"></p></div>
+
+<script src="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.js"
+        integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin=""></script>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/map.js"></script>
+<script src="../assets/live.js"></script>
+</body>
+</html>

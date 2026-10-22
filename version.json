@@ -1,0 +1,18 @@
+{
+  "versionCode": 353,
+  "versionName": "1.353",
+  "minVersionCode": 312,
+  "apkUrl": "https://coolminer11.github.io/WaterNow-site/download/WaterNow-353.apk",
+  "sha256": "1a419c16186f34bcf1afa5466fe7eac9f36dc840ff6f031ac23a322ee30a4f8c",
+  "sizeBytes": 40047872,
+  "publishedAt": "2026-10-22T00:50:14Z",
+  "notes": {
+    "en": "WaterNow in Romanian: the whole app, voice guidance included, now speaks Romanian: choose \"Română\" as the app's language. More natural translations: over 500 sentences reworded in French, Spanish, German, Portuguese and Japanese so they read naturally and use one word for one thing. Voice guidance always speaks: if your phone has no voice for the app's language, guidance now reads with your phone's default voice.",
+    "fr": "WaterNow en roumain : toute l'app, guidage vocal compris, parle maintenant roumain : choisis « Română » comme langue de l'app. Des traductions plus naturelles : plus de 500 phrases revues en français, espagnol, allemand, portugais et japonais pour qu'elles se lisent naturellement, avec un seul mot par idée. Le guidage vocal parle toujours : si ton téléphone n'a pas de voix pour la langue de l'app, le guidage lit maintenant avec la voix par défaut du téléphone.",
+    "es": "WaterNow en rumano: toda la app, guía por voz incluida, ya habla rumano: elige «Română» como idioma de la app. Traducciones más naturales: más de 500 frases revisadas en francés, español, alemán, portugués y japonés para que se lean con naturalidad y usen una sola palabra para cada cosa. La guía por voz siempre habla: si tu teléfono no tiene voz para el idioma de la app, la guía ahora lee con la voz predeterminada del teléfono.",
+    "de": "WaterNow auf Rumänisch: Die ganze App, Sprachansagen inklusive, spricht jetzt Rumänisch: wähle „Română“ als App-Sprache. Natürlichere Übersetzungen: Über 500 Sätze auf Französisch, Spanisch, Deutsch, Portugiesisch und Japanisch überarbeitet, damit sie natürlich klingen und für jede Sache ein Wort verwenden. Sprachansagen sprechen immer: Hat dein Handy keine Stimme für die App-Sprache, liest die Navigation jetzt mit der Standardstimme des Handys vor.",
+    "pt": "WaterNow em romeno: o app inteiro, inclusive a navegação por voz, agora fala romeno: escolha \"Română\" como idioma do app. Traduções mais naturais: mais de 500 frases revisadas em francês, espanhol, alemão, português e japonês para soarem naturais e usarem uma só palavra para cada coisa. A navegação por voz sempre fala: se o seu celular não tiver voz para o idioma do app, a navegação agora lê com a voz padrão do celular.",
+    "ja": "ルーマニア語に対応：音声案内を含むアプリ全体がルーマニア語に対応しました。アプリの言語で「Română」を選んでください。 より自然な翻訳：フランス語、スペイン語、ドイツ語、ポルトガル語、日本語の500以上の文を見直し、自然に読めて用語がそろうようにしました。 音声案内がいつでも話します：アプリの言語の音声がスマホにない場合は、スマホの標準の音声で案内を読み上げます。",
+    "ro": "WaterNow în limba română: toată aplicația, inclusiv indicațiile vocale, vorbește acum românește: alege „Română” ca limbă a aplicației. Traduceri mai naturale: peste 500 de fraze revizuite în franceză, spaniolă, germană, portugheză și japoneză, ca să sune natural și să folosească un singur cuvânt pentru fiecare lucru. Indicațiile vocale vorbesc mereu: dacă telefonul nu are o voce pentru limba aplicației, navigarea citește acum cu vocea implicită a telefonului."
+  }
+}

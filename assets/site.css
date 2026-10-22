@@ -1,0 +1,67 @@
+/* WaterNow companion site: one small stylesheet, light and dark, mobile first. */
+:root {
+  --bg: #fafafa; --card: #ffffff; --fg: #18181b; --muted: #52525b; --border: #e4e4e7;
+  --accent: #0066cc; --on-accent: #ffffff; --ok: #15803d; --warn: #b45309; --soft: #f4f4f5;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #09090b; --card: #18181b; --fg: #fafafa; --muted: #a1a1aa; --border: #27272a;
+    --accent: #3395ff; --on-accent: #09090b; --ok: #4ade80; --warn: #fbbf24; --soft: #27272a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; min-height: 100vh; background: var(--bg); color: var(--fg);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+.hidden { display: none !important; }
+
+.bar { display: flex; align-items: center; padding: 12px 16px; border-bottom: 1px solid var(--border); background: var(--card); }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; font-weight: 700; font-size: 17px; }
+.logo {
+  width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--accent); color: var(--on-accent); font-weight: 800; font-size: 15px;
+}
+
+.page { width: 100%; max-width: 560px; margin: 0 auto; padding: 16px; display: grid; gap: 12px; }
+.map { height: 42vh; min-height: 220px; max-height: 420px; border-radius: 16px; border: 1px solid var(--border); overflow: hidden; background: var(--soft); }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px 16px; }
+h1 { font-size: 22px; line-height: 1.25; margin: 2px 0 4px; overflow-wrap: anywhere; }
+h2 { font-size: 17px; margin: 0 0 4px; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.eyebrow { font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+.facts { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; font-size: 15px; }
+.facts .ok { color: var(--ok); } .facts .warn { color: var(--warn); }
+/* "Verified by WaterNow": a quiet pill under the name. */
+.verified {
+  display: inline-flex; align-items: center; gap: 6px; margin: 2px 0 6px; padding: 3px 10px 3px 8px; border-radius: 999px;
+  font-size: 13px; font-weight: 600; color: var(--accent); background: var(--soft);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.verified::before {
+  content: "\2713"; display: grid; place-items: center; flex: none; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent); color: var(--on-accent); font-size: 11px; line-height: 1;
+}
+/* Maintenance: one short line in the card; what the link itself carries stays on screen. */
+.note { margin-top: 12px; padding: 10px 12px; border-radius: 12px; font-size: 14px; color: var(--muted); background: var(--soft); }
+
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 16px;
+  border-radius: 12px; border: 1px solid var(--border); background: var(--card); color: var(--fg);
+  font: 600 15px/1.2 system-ui, sans-serif; text-decoration: none; text-align: center;
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.btn.wide { width: 100%; margin-top: 14px; }
+@media (max-width: 340px) { .actions { grid-template-columns: 1fr; } }
+
+.foot { font-size: 13px; text-align: center; padding: 4px 0 16px; }
+.list { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.hero { padding: 28px 18px; }
+.hero h1 { font-size: 28px; }
+.hero p { margin-top: 8px; }

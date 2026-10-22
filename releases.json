@@ -1,0 +1,628 @@
+[
+  {
+    "versionCode": 353,
+    "versionName": "1.353",
+    "publishedAt": "2026-10-22T00:50:14Z",
+    "notes": {
+      "en": "WaterNow in Romanian: the whole app, voice guidance included, now speaks Romanian: choose \"Română\" as the app's language. More natural translations: over 500 sentences reworded in French, Spanish, German, Portuguese and Japanese so they read naturally and use one word for one thing. Voice guidance always speaks: if your phone has no voice for the app's language, guidance now reads with your phone's default voice.",
+      "fr": "WaterNow en roumain : toute l'app, guidage vocal compris, parle maintenant roumain : choisis « Română » comme langue de l'app. Des traductions plus naturelles : plus de 500 phrases revues en français, espagnol, allemand, portugais et japonais pour qu'elles se lisent naturellement, avec un seul mot par idée. Le guidage vocal parle toujours : si ton téléphone n'a pas de voix pour la langue de l'app, le guidage lit maintenant avec la voix par défaut du téléphone.",
+      "es": "WaterNow en rumano: toda la app, guía por voz incluida, ya habla rumano: elige «Română» como idioma de la app. Traducciones más naturales: más de 500 frases revisadas en francés, español, alemán, portugués y japonés para que se lean con naturalidad y usen una sola palabra para cada cosa. La guía por voz siempre habla: si tu teléfono no tiene voz para el idioma de la app, la guía ahora lee con la voz predeterminada del teléfono.",
+      "de": "WaterNow auf Rumänisch: Die ganze App, Sprachansagen inklusive, spricht jetzt Rumänisch: wähle „Română“ als App-Sprache. Natürlichere Übersetzungen: Über 500 Sätze auf Französisch, Spanisch, Deutsch, Portugiesisch und Japanisch überarbeitet, damit sie natürlich klingen und für jede Sache ein Wort verwenden. Sprachansagen sprechen immer: Hat dein Handy keine Stimme für die App-Sprache, liest die Navigation jetzt mit der Standardstimme des Handys vor.",
+      "pt": "WaterNow em romeno: o app inteiro, inclusive a navegação por voz, agora fala romeno: escolha \"Română\" como idioma do app. Traduções mais naturais: mais de 500 frases revisadas em francês, espanhol, alemão, português e japonês para soarem naturais e usarem uma só palavra para cada coisa. A navegação por voz sempre fala: se o seu celular não tiver voz para o idioma do app, a navegação agora lê com a voz padrão do celular.",
+      "ja": "ルーマニア語に対応：音声案内を含むアプリ全体がルーマニア語に対応しました。アプリの言語で「Română」を選んでください。 より自然な翻訳：フランス語、スペイン語、ドイツ語、ポルトガル語、日本語の500以上の文を見直し、自然に読めて用語がそろうようにしました。 音声案内がいつでも話します：アプリの言語の音声がスマホにない場合は、スマホの標準の音声で案内を読み上げます。",
+      "ro": "WaterNow în limba română: toată aplicația, inclusiv indicațiile vocale, vorbește acum românește: alege „Română” ca limbă a aplicației. Traduceri mai naturale: peste 500 de fraze revizuite în franceză, spaniolă, germană, portugheză și japoneză, ca să sune natural și să folosească un singur cuvânt pentru fiecare lucru. Indicațiile vocale vorbesc mereu: dacă telefonul nu are o voce pentru limba aplicației, navigarea citește acum cu vocea implicită a telefonului."
+    }
+  },
+  {
+    "versionCode": 312,
+    "versionName": "1.312",
+    "publishedAt": "2026-10-21T20:04:02Z",
+    "notes": {
+      "en": "A big round of fixes: dozens of bugs fixed across the map, adding points, routes, your account and the community, and every screen checked in all 6 languages and at the largest text size. Your name only where you want it: reviews, photos and notifications show your current public name, or \"Member\" while your profile is private. New profiles start private. Your units and your language: in miles mode the planner shows feet, miles, mph and °F. Numbers, dates and times follow the app's language, whatever your phone's. Steadier guidance: loops no longer arrive at their start, Back asks before ending guidance, arrival waits for a good GPS fix, and the widget's Stop works even after the app was closed.",
+      "fr": "Une grosse vague de corrections : des dizaines de bugs corrigés sur la carte, l'ajout de points, les itinéraires, le compte et la communauté, et chaque écran vérifié dans les 6 langues et avec le plus grand texte. Un nom public qui respecte la vie privée : avis, photos et notifications affichent ton nom public actuel, ou « Membre » tant que ton profil est privé. Les nouveaux profils commencent en privé. Les bonnes unités et la bonne langue : en mode miles, le planificateur affiche pieds, miles, mi/h et °F. Les nombres, dates et heures suivent la langue de l'app, quelle que soit celle du téléphone. Un guidage plus fiable : les boucles ne se terminent plus dès le départ, Retour demande confirmation avant d'arrêter le guidage, l'arrivée attend un bon signal GPS, et le bouton Arrêter du widget fonctionne même après la fermeture de l'app.",
+      "es": "Una gran ronda de correcciones: decenas de errores corregidos en el mapa, al añadir puntos, en las rutas, la cuenta y la comunidad, y cada pantalla revisada en los 6 idiomas y con el texto más grande. Tu nombre, solo donde quieras: las reseñas, fotos y notificaciones muestran tu nombre público actual, o «Miembro» mientras tu perfil sea privado. Los perfiles nuevos empiezan como privados. Tus unidades y tu idioma: en modo millas, el planificador muestra pies, millas, mph y °F. Los números, fechas y horas siguen el idioma de la app, sea cual sea el del teléfono. Una navegación más fiable: los circuitos ya no marcan la llegada nada más salir, Atrás pregunta antes de terminar la navegación, la llegada espera una buena señal GPS y el botón Detener del widget funciona incluso con la app cerrada.",
+      "de": "Eine große Runde Korrekturen: Dutzende Fehler behoben: Karte, Orte hinzufügen, Routen, Konto und Community, dazu jeder Bildschirm in allen 6 Sprachen und mit größter Schrift geprüft. Dein Name nur, wo du willst: Bewertungen, Fotos und Benachrichtigungen zeigen deinen aktuellen öffentlichen Namen oder „Mitglied“, solange dein Profil privat ist. Neue Profile starten privat. Deine Einheiten und deine Sprache: Im Meilenmodus zeigt der Planer Fuß, Meilen, mph und °F. Zahlen, Daten und Uhrzeiten folgen der Sprache der App, egal welche das Handy hat. Verlässlichere Navigation: Runden kommen nicht mehr gleich am Start an, Zurück fragt vor dem Beenden, die Ankunft wartet auf ein gutes GPS-Signal, und „Beenden“ im Widget klappt auch, wenn die App geschlossen wurde.",
+      "pt": "Uma grande rodada de correções: dezenas de erros corrigidos no mapa, ao adicionar pontos, nas rotas, na conta e na comunidade, e cada tela revisada nos 6 idiomas e com o maior tamanho de texto. Seu nome só onde você quiser: avaliações, fotos e notificações mostram seu nome público atual, ou “Membro” enquanto seu perfil for privado. Perfis novos começam privados. Suas unidades e seu idioma: no modo milhas, o planejador mostra pés, milhas, mph e °F. Números, datas e horários seguem o idioma do app, qualquer que seja o do celular. Navegação mais confiável: os circuitos não terminam mais logo na partida, Voltar pergunta antes de encerrar a navegação, a chegada espera um bom sinal de GPS e o botão Parar do widget funciona mesmo com o app fechado.",
+      "ja": "まとめて不具合を修正：マップ、スポットの追加、ルート、アカウント、コミュニティで数十件の不具合を修正し、すべての画面を6言語と最大の文字サイズで確認しました。 名前は見せたい所だけ：レビュー、写真、通知には現在の公開名が表示され、プロフィールが非公開の間は「メンバー」と表示されます。新しいプロフィールは非公開から始まります。 単位と言語をそろえました：マイル設定ではプランナーにフィート、マイル、mph、°Fを表示します。数字・日付・時刻は端末の言語に関係なく、アプリの言語に合わせます。 より確実なナビ：周回ルートが出発直後に到着扱いになることはなくなりました。戻るボタンはナビを終了する前に確認し、到着判定は十分なGPS精度を待ちます。ウィジェットの「終了」はアプリを閉じた後でも使えます。"
+    }
+  },
+  {
+    "versionCode": 189,
+    "versionName": "1.189",
+    "publishedAt": "2026-10-21T00:19:32Z",
+    "notes": {
+      "en": "Your public name works again: changing your public name works again, and a refused name now says why. New members start as a number, like Member 48213. Half bottles and your own bottles: 500 ml is one bottle, so 250 ml counts as half a bottle, leaderboards included. Create your own bottles with their size and log refills with them; they follow your account. Indoors, outdoors and toilets: when adding a point, say if it is indoors or outdoors. Toilets can be added from the same sheet, alone or with water. Clearer filtered map: with a filter on, a place with water and toilets shows the symbol you are looking for. When moving a point, the confirm button now sits at the top where you can see it.",
+      "fr": "Le nom public est réparé : changer son nom public fonctionne de nouveau, et un nom refusé dit maintenant pourquoi. Les nouveaux membres commencent avec un numéro, comme Membre 48213. Demi-bouteilles et gourdes perso : 500 ml font une bouteille, donc 250 ml comptent pour une demi-bouteille, classements compris. On peut créer ses propres gourdes avec leur volume et s'en servir pour noter ses remplissages ; elles suivent le compte. Intérieur, extérieur et toilettes : en ajoutant un point, on peut dire s'il est à l'intérieur ou à l'extérieur. Les toilettes s'ajoutent depuis la même fiche, seules ou avec de l'eau. Une carte filtrée plus claire : avec un filtre, un lieu qui a de l'eau et des toilettes montre le symbole cherché. En déplaçant un point, le bouton pour confirmer est maintenant en haut, bien visible.",
+      "es": "El nombre público vuelve a funcionar: cambiar el nombre público vuelve a funcionar, y un nombre rechazado ahora dice por qué. Los nuevos miembros empiezan con un número, como Miembro 48213. Medias botellas y botellas propias: 500 ml son una botella, así que 250 ml cuentan como media botella, clasificaciones incluidas. Crea tus propias botellas con su volumen y registra recargas con ellas; siguen a tu cuenta. Interior, exterior y baños: al añadir un punto, indica si está en el interior o en el exterior. Los baños se añaden desde la misma ficha, solos o con agua. Un mapa filtrado más claro: con un filtro, un lugar con agua y baños muestra el símbolo que buscas. Al mover un punto, el botón para confirmar está ahora arriba, bien visible.",
+      "de": "Der öffentliche Name geht wieder: Den öffentlichen Namen zu ändern klappt wieder, und ein abgelehnter Name sagt jetzt warum. Neue Mitglieder starten mit einer Nummer, etwa Mitglied 48213. Halbe Flaschen und eigene Flaschen: 500 ml sind eine Flasche, also zählen 250 ml als halbe Flasche, auch in den Ranglisten. Lege eigene Flaschen mit ihrem Volumen an und trage Nachfüllungen damit ein; sie folgen deinem Konto. Drinnen, draußen und Toiletten: Beim Hinzufügen eines Punkts lässt sich angeben, ob er drinnen oder draußen ist. Toiletten kommen über dasselbe Blatt dazu, allein oder mit Wasser. Klarere gefilterte Karte: Mit Filter zeigt ein Ort mit Wasser und Toiletten das gesuchte Symbol. Beim Verschieben eines Punkts sitzt der Bestätigen-Knopf jetzt gut sichtbar oben.",
+      "pt": "O nome público voltou a funcionar: mudar o nome público voltou a funcionar, e um nome recusado agora diz por quê. Novos membros começam com um número, como Membro 48213. Meias garrafas e garrafas próprias: 500 ml são uma garrafa, então 250 ml contam como meia garrafa, inclusive nos rankings. Crie suas próprias garrafas com o volume e registre recargas com elas; elas acompanham sua conta. Local fechado, ao ar livre e banheiros: ao adicionar um ponto, diga se ele fica em local fechado ou ao ar livre. Banheiros são adicionados pela mesma ficha, sozinhos ou com água. Mapa filtrado mais claro: com um filtro, um lugar com água e banheiros mostra o símbolo procurado. Ao mover um ponto, o botão de confirmar agora fica no alto, bem visível.",
+      "ja": "公開名をまた変更できます：公開名の変更が再びできるようになり、使えない名前はその理由が表示されます。新しいメンバーは「メンバー48213」のような番号から始まります。 半分のボトルとマイボトル：500 mlで1本なので、250 mlは0.5本として数えます（ランキングも同じ）。容量つきのマイボトルを作って給水の記録に使えます。アカウントに保存されます。 屋内・屋外とトイレ：地点を追加するときに屋内か屋外かを選べます。トイレも同じ画面から、単独でも水と一緒にでも追加できます。 わかりやすいフィルター表示：フィルター使用中は、水とトイレがある場所も探している記号で表示されます。地点を移動するときの確定ボタンは、見やすい上部に移りました。"
+    }
+  },
+  {
+    "versionCode": 174,
+    "versionName": "1.174",
+    "publishedAt": "2026-10-20T20:52:07Z",
+    "notes": {
+      "en": "Along the Skåne Trail: 177 drinking-water posts and 179 toilets along Sweden's Skåneleden hiking trails, most of them new to the map. Sundsvall and Corangamite: 75 toilets in Sundsvall's outdoor areas, Sweden, and 19 in Corangamite Shire, Australia. Water taps in Utrecht: 59 drinking-water taps from Utrecht's heat plan, in parks, squares and along cycle paths.",
+      "fr": "Le long du sentier de Scanie : 177 points d'eau potable et 179 toilettes le long des sentiers de randonnée Skåneleden, en Suède, la plupart nouveaux sur la carte. Sundsvall et Corangamite : 75 toilettes dans les espaces de plein air de Sundsvall, en Suède, et 19 dans le comté de Corangamite, en Australie. Robinets d'eau à Utrecht : 59 robinets d'eau potable du plan canicule d'Utrecht, dans les parcs, sur les places et le long des pistes cyclables.",
+      "es": "A lo largo del sendero de Escania: 177 puntos de agua potable y 179 baños a lo largo de los senderos Skåneleden, en Suecia, la mayoría nuevos en el mapa. Sundsvall y Corangamite: 75 baños en los espacios al aire libre de Sundsvall, Suecia, y 19 en el condado de Corangamite, Australia. Grifos de agua en Utrecht: 59 grifos de agua potable del plan de calor de Utrecht, en parques, plazas y junto a carriles bici.",
+      "de": "Entlang des Skåneleden: 177 Trinkwasserstellen und 179 Toiletten an den Skåneleden-Wanderwegen in Schweden, die meisten neu auf der Karte. Sundsvall und Corangamite: 75 Toiletten in Sundsvalls Freizeitanlagen, Schweden, und 19 im Corangamite Shire, Australien. Wasserhähne in Utrecht: 59 Trinkwasserhähne aus Utrechts Hitzeplan, in Parks, auf Plätzen und an Radwegen.",
+      "pt": "Ao longo da trilha de Escânia: 177 pontos de água potável e 179 banheiros ao longo das trilhas Skåneleden, na Suécia, a maioria nova no mapa. Sundsvall e Corangamite: 75 banheiros nas áreas ao ar livre de Sundsvall, Suécia, e 19 no condado de Corangamite, Austrália. Torneiras de água em Utrecht: 59 torneiras de água potável do plano de calor de Utrecht, em parques, praças e ao longo de ciclovias.",
+      "ja": "スコーネ・トレイル沿い：スウェーデンのスコーネレーデン沿いの給水ポスト177か所とトイレ179か所。ほとんどが初めて地図に載ります。 スンツヴァルとコランガマイト：スウェーデン・スンツヴァルの屋外施設のトイレ75か所と、オーストラリア・コランガマイトのトイレ19か所。 ユトレヒトの給水栓：ユトレヒト市の暑さ対策計画による飲み水の蛇口59か所（公園・広場・自転車道沿い）。"
+    }
+  },
+  {
+    "versionCode": 168,
+    "versionName": "1.168",
+    "publishedAt": "2026-10-20T20:04:01Z",
+    "notes": {
+      "en": "Fountains in Daegu: 203 drinking fountains in the parks of Daegu, Korea. Park toilets in Daegu: 222 toilets in the same parks. Cleaner park lists: lists of park equipment now only show fountains and toilets, never benches or lamps, even when a city adds new kinds.",
+      "fr": "Des fontaines à Daegu : 203 fontaines à boire dans les parcs de Daegu, en Corée. Toilettes des parcs de Daegu : 222 toilettes dans ces mêmes parcs. Des listes de parcs plus propres : les listes d'équipements de parcs n'affichent que les fontaines et les toilettes, jamais les bancs ou les lampadaires, même quand une ville ajoute de nouveaux types.",
+      "es": "Fuentes en Daegu: 203 fuentes de agua potable en los parques de Daegu, Corea. Baños de los parques de Daegu: 222 baños en esos mismos parques. Listas de parques más limpias: las listas de equipamiento de parques solo muestran fuentes y baños, nunca bancos ni farolas, aunque una ciudad añada tipos nuevos.",
+      "de": "Trinkbrunnen in Daegu: 203 Trinkbrunnen in den Parks von Daegu, Korea. Parktoiletten in Daegu: 222 Toiletten in denselben Parks. Sauberere Parklisten: Listen mit Parkausstattung zeigen nur Brunnen und Toiletten, nie Bänke oder Laternen, auch wenn eine Stadt neue Arten hinzufügt.",
+      "pt": "Bebedouros em Daegu: 203 bebedouros nos parques de Daegu, Coreia. Banheiros dos parques de Daegu: 222 banheiros nesses mesmos parques. Listas de parques mais limpas: as listas de equipamentos de parques só mostram bebedouros e banheiros, nunca bancos ou postes, mesmo quando uma cidade adiciona novos tipos.",
+      "ja": "大邱の水飲み場：韓国・大邱市の公園にある水飲み場203か所。 大邱の公園トイレ：同じ公園のトイレ222か所。 公園リストを整理：公園設備のリストは、自治体が新しい種類を加えても、水飲み場とトイレだけを表示し、ベンチや街灯は表示しません。"
+    }
+  },
+  {
+    "versionCode": 163,
+    "versionName": "1.163",
+    "publishedAt": "2026-10-20T18:18:27Z",
+    "notes": {
+      "en": "Hachioji, western Tokyo: 257 public toilets in Hachioji and 31 in Inagi. Ten more Japanese towns: about 300 toilets in Iwata, Mishima, Tateyama, Nishitokyo, Daito, Omihachiman, Nanbu, Niikappu, Kembuchi and Shizuoka's nature sites. Excel lists: WaterNow now reads cities' Excel spreadsheets, so lists published only that way can appear on the map.",
+      "fr": "Hachiōji, dans l'ouest de Tokyo : 257 toilettes publiques à Hachiōji et 31 à Inagi. Dix villes japonaises de plus : environ 300 toilettes à Iwata, Mishima, Tateyama, Nishitokyo, Daito, Omihachiman, Nanbu, Niikappu, Kembuchi et dans les sites naturels de Shizuoka. Listes Excel : WaterNow lit maintenant les tableurs Excel des villes : les listes publiées seulement sous cette forme peuvent apparaître sur la carte.",
+      "es": "Hachiōji, al oeste de Tokio: 257 baños públicos en Hachiōji y 31 en Inagi. Diez localidades japonesas más: unos 300 baños en Iwata, Mishima, Tateyama, Nishitokyo, Daito, Omihachiman, Nanbu, Niikappu, Kembuchi y los espacios naturales de Shizuoka. Listas en Excel: WaterNow ahora lee las hojas de cálculo Excel de las ciudades, así que las listas publicadas solo así pueden aparecer en el mapa.",
+      "de": "Hachiōji im Westen Tokios: 257 öffentliche Toiletten in Hachiōji und 31 in Inagi. Zehn weitere japanische Orte: Rund 300 Toiletten in Iwata, Mishima, Tateyama, Nishitokyo, Daito, Omihachiman, Nanbu, Niikappu, Kembuchi und in Shizuokas Naturgebieten. Excel-Listen: WaterNow liest jetzt Excel-Tabellen der Städte, damit auch Listen, die nur so veröffentlicht werden, auf der Karte erscheinen.",
+      "pt": "Hachiōji, no oeste de Tóquio: 257 banheiros públicos em Hachiōji e 31 em Inagi. Mais dez cidades japonesas: cerca de 300 banheiros em Iwata, Mishima, Tateyama, Nishitokyo, Daito, Omihachiman, Nanbu, Niikappu, Kembuchi e nas áreas naturais de Shizuoka. Listas em Excel: O WaterNow agora lê as planilhas Excel das cidades, então listas publicadas só assim podem aparecer no mapa.",
+      "ja": "八王子市と稲城市：八王子市の公衆トイレ257か所と稲城市の31か所。 国内10市町を追加：磐田、三島、館山、西東京、大東、近江八幡、南部、新冠、剣淵と静岡県の自然公園施設のトイレ約300か所。 Excelのリストに対応：自治体がExcelだけで公開しているリストも読み込めるようになり、地図に表示できます。"
+    }
+  },
+  {
+    "versionCode": 158,
+    "versionName": "1.158",
+    "publishedAt": "2026-10-20T17:38:00Z",
+    "notes": {
+      "en": "Osaka and 15 more towns: about 1,340 public toilets in Osaka, Matsumoto, Kariya, Ome, Yonezawa and 11 more Japanese towns. Seven more Korean lists: about 390 toilets in parks, markets and rest areas of Pyeongtaek, Hwaseong, Siheung, Incheon, Ulsan, Sangju and Seogwipo, almost all new to the map. Konstanz fountains and New Westminster: 21 drinking fountains in Konstanz and 21 park washrooms in New Westminster, Canada. Tidier lists: lists that were withdrawn or stopped being updated years ago now leave the phone on their own, like Herne and Shinagawa.",
+      "fr": "Osaka et 15 autres villes : environ 1 340 toilettes publiques à Osaka, Matsumoto, Kariya, Ome, Yonezawa et 11 autres villes japonaises. Sept listes coréennes de plus : environ 390 toilettes dans les parcs, marchés et aires de repos de Pyeongtaek, Hwaseong, Siheung, Incheon, Ulsan, Sangju et Seogwipo, presque toutes nouvelles sur la carte. Fontaines de Constance et New Westminster : 21 fontaines d'eau potable à Constance et 21 toilettes de parcs à New Westminster, au Canada. Des listes plus propres : les listes retirées par leur éditeur ou plus mises à jour depuis des années disparaissent maintenant d'elles-mêmes du téléphone, comme Herne et Shinagawa.",
+      "es": "Osaka y 15 localidades más: unos 1.340 baños públicos en Osaka, Matsumoto, Kariya, Ome, Yonezawa y otras 11 localidades japonesas. Siete listas coreanas más: unos 390 baños en parques, mercados y áreas de descanso de Pyeongtaek, Hwaseong, Siheung, Incheon, Ulsan, Sangju y Seogwipo, casi todos nuevos en el mapa. Fuentes de Constanza y New Westminster: 21 fuentes de agua potable en Constanza y 21 baños de parques en New Westminster, Canadá. Listas más limpias: las listas retiradas por su editor o sin actualizar desde hace años ahora desaparecen solas del teléfono, como Herne y Shinagawa.",
+      "de": "Osaka und 15 weitere Orte: Rund 1.340 öffentliche Toiletten in Osaka, Matsumoto, Kariya, Ome, Yonezawa und 11 weiteren japanischen Orten. Sieben weitere koreanische Listen: Rund 390 Toiletten in Parks, Märkten und Rastplätzen von Pyeongtaek, Hwaseong, Siheung, Incheon, Ulsan, Sangju und Seogwipo, fast alle neu auf der Karte. Trinkbrunnen in Konstanz und New Westminster: 21 Trinkbrunnen in Konstanz und 21 Parktoiletten in New Westminster, Kanada. Aufgeräumte Listen: Listen, die zurückgezogen oder seit Jahren nicht mehr aktualisiert wurden, verschwinden jetzt von selbst vom Handy, etwa Herne und Shinagawa.",
+      "pt": "Osaka e mais 15 cidades: cerca de 1.340 banheiros públicos em Osaka, Matsumoto, Kariya, Ome, Yonezawa e outras 11 cidades japonesas. Mais sete listas coreanas: cerca de 390 banheiros em parques, mercados e áreas de descanso de Pyeongtaek, Hwaseong, Siheung, Incheon, Ulsan, Sangju e Seogwipo, quase todos novos no mapa. Bebedouros de Constança e New Westminster: 21 bebedouros em Constança e 21 banheiros de parques em New Westminster, no Canadá. Listas mais limpas: listas retiradas pelo editor ou sem atualização há anos agora somem sozinhas do celular, como Herne e Shinagawa.",
+      "ja": "大阪市など16市町：大阪市、松本市、刈谷市、青梅市、米沢市など16市町の公衆トイレ約1,340か所。 韓国のリストを7件追加：平沢、華城、始興、仁川、蔚山、尚州、西帰浦の公園・市場・休憩所のトイレ約390か所。ほとんどが初めて地図に載ります。 コンスタンツの水飲み場とニューウェストミンスター：コンスタンツの水飲み場21か所と、カナダ・ニューウェストミンスターの公園トイレ21か所。 リストを整理：公開が取り下げられたり、何年も更新されていないリスト（ヘルネ、品川など）は自動的に端末から消えます。"
+    }
+  },
+  {
+    "versionCode": 152,
+    "versionName": "1.152",
+    "publishedAt": "2026-10-20T15:11:33Z",
+    "notes": {
+      "en": "Konstanz, Dresden and Cologne: 85 public toilets, including shops of the Nette Toilette scheme that let anyone use their toilet for free. Along Brittany's canals: 71 drinking-water points and 55 toilets along the Ille-et-Rance, Vilaine, Nantes-Brest and Blavet canals, plus toilets in Nice and in Île-de-France's leisure parks. More of New Zealand: 143 public toilets in Gisborne, South Taranaki and New Plymouth.",
+      "fr": "Constance, Dresde et Cologne : 85 toilettes publiques, dont des commerces du programme Nette Toilette qui laissent tout le monde utiliser leurs toilettes gratuitement. Le long des canaux bretons : 71 points d'eau potable et 55 toilettes le long des canaux d'Ille-et-Rance, de la Vilaine, de Nantes à Brest et du Blavet, plus des toilettes à Nice et dans les îles de loisirs d'Île-de-France. Encore plus de Nouvelle-Zélande : 143 toilettes publiques à Gisborne, dans le South Taranaki et à New Plymouth.",
+      "es": "Constanza, Dresde y Colonia: 85 baños públicos, incluidos comercios del programa Nette Toilette que dejan usar su baño gratis a cualquiera. A lo largo de los canales de Bretaña: 71 puntos de agua potable y 55 baños a lo largo de los canales Ille-et-Rance, Vilaine, Nantes-Brest y Blavet, además de baños en Niza y en los parques de ocio de Île-de-France. Más de Nueva Zelanda: 143 baños públicos en Gisborne, South Taranaki y New Plymouth.",
+      "de": "Konstanz, Dresden und Köln: 85 öffentliche Toiletten, darunter Geschäfte der Aktion „Nette Toilette“, die ihre Toilette allen kostenlos öffnen. Entlang der bretonischen Kanäle: 71 Trinkwasserstellen und 55 Toiletten an den Kanälen Ille-et-Rance, Vilaine, Nantes–Brest und Blavet, dazu Toiletten in Nizza und in den Freizeitparks der Île-de-France. Mehr aus Neuseeland: 143 öffentliche Toiletten in Gisborne, South Taranaki und New Plymouth.",
+      "pt": "Constança, Dresden e Colônia: 85 banheiros públicos, incluindo lojas do programa Nette Toilette que deixam qualquer pessoa usar o banheiro de graça. Ao longo dos canais da Bretanha: 71 pontos de água potável e 55 banheiros ao longo dos canais Ille-et-Rance, Vilaine, Nantes-Brest e Blavet, além de banheiros em Nice e nos parques de lazer da Île-de-France. Mais da Nova Zelândia: 143 banheiros públicos em Gisborne, South Taranaki e New Plymouth.",
+      "ja": "コンスタンツ、ドレスデン、ケルン：公衆トイレ85か所（誰でも無料でトイレを使える「ネッテ・トワレッテ」参加店舗を含む）。ブルターニュの運河沿い：イル＝エ＝ランス、ヴィレーヌ、ナント＝ブレスト、ブラヴェの各運河沿いの給水地点71か所とトイレ55か所、ニースとイル＝ド＝フランスのレジャー公園のトイレも。ニュージーランドをさらに追加：ギズボーン、サウス・タラナキ、ニュープリマスの公衆トイレ143か所。"
+    }
+  },
+  {
+    "versionCode": 148,
+    "versionName": "1.148",
+    "publishedAt": "2026-10-20T13:55:03Z",
+    "notes": {
+      "en": "52 more Japanese towns: about 2,600 public toilets in Shizuoka, Miyagi, Hokkaido, Iwate, Chiba, Kanazawa, Shibuya and more, with the accessible ones marked. Fountains in Basel: 25 fountains with drinking water, from the canton's own map. Cleaner park water: water points in US national parks no longer include closed or removed taps.",
+      "fr": "52 villes japonaises de plus : environ 2 600 toilettes publiques à Shizuoka, Miyagi, Hokkaido, Iwate, Chiba, Kanazawa, Shibuya et ailleurs, avec les accessibles indiquées. Des fontaines à Bâle : 25 fontaines d'eau potable, tirées de la carte du canton. Des parcs plus fiables : les points d'eau des parcs nationaux américains n'incluent plus les robinets fermés ou retirés.",
+      "es": "52 localidades japonesas más: unos 2.600 baños públicos en Shizuoka, Miyagi, Hokkaido, Iwate, Chiba, Kanazawa, Shibuya y más, con los accesibles indicados. Fuentes en Basilea: 25 fuentes de agua potable, del mapa del propio cantón. Parques más fiables: los puntos de agua de los parques nacionales de EE. UU. ya no incluyen grifos cerrados o retirados.",
+      "de": "52 weitere japanische Orte: rund 2.600 öffentliche Toiletten in Shizuoka, Miyagi, Hokkaido, Iwate, Chiba, Kanazawa, Shibuya und mehr, barrierefreie gekennzeichnet. Trinkbrunnen in Basel: 25 Brunnen mit Trinkwasser, aus der Karte des Kantons. Verlässlichere Parks: Die Wasserstellen der US-Nationalparks zeigen keine geschlossenen oder entfernten Hähne mehr.",
+      "pt": "Mais 52 cidades japonesas: cerca de 2.600 banheiros públicos em Shizuoka, Miyagi, Hokkaido, Iwate, Chiba, Kanazawa, Shibuya e mais, com os acessíveis indicados. Bebedouros em Basileia: 25 fontes de água potável, do mapa do próprio cantão. Parques mais confiáveis: os pontos de água dos parques nacionais dos EUA não incluem mais torneiras fechadas ou removidas.",
+      "ja": "国内52市町村を追加：静岡、宮城、北海道、岩手、千葉、金沢、渋谷などの公衆トイレ約2,600か所（バリアフリーのトイレを表示）。バーゼルの水飲み場：州の公式地図から、飲用水の噴水25か所。国立公園の給水を整理：米国の国立公園の給水地点から、閉鎖・撤去された蛇口を除きました。"
+    }
+  },
+  {
+    "versionCode": 145,
+    "versionName": "1.145",
+    "publishedAt": "2026-10-20T11:33:20Z",
+    "notes": {
+      "en": "Toilets all over Taiwan: about 6,400 public toilets in parks, stations, offices and scenic areas in 18 counties and cities, with the accessible, unisex and baby-changing ones marked. Water in Taiwan's shops: about 3,800 FamilyMart, Hi-Life and other shops that offer drinking water to anyone, plus about 500 public water dispensers. Back on the map: public water dispensers in New Taipei, Tainan, Taichung, Taoyuan, Hsinchu and Chiayi County show up again after a change in the official data. New: 19 park fountains in Uijeongbu, Korea.",
+      "fr": "Des toilettes partout à Taïwan : environ 6 400 toilettes publiques dans les parcs, gares, bureaux publics et sites touristiques de 18 comtés et villes, avec les accessibles, les mixtes et celles avec table à langer indiquées. De l'eau dans les commerces de Taïwan : environ 3 800 FamilyMart, Hi-Life et autres commerces qui offrent de l'eau potable à tout le monde, et environ 500 distributeurs d'eau publics. De retour sur la carte : les distributeurs d'eau publics de Nouveau Taipei, Tainan, Taichung, Taoyuan, Hsinchu et du comté de Chiayi réapparaissent après un changement dans les données officielles. Nouveau : 19 fontaines de parcs à Uijeongbu, en Corée.",
+      "es": "Baños en todo Taiwán: unos 6.400 baños públicos en parques, estaciones, oficinas públicas y lugares turísticos de 18 condados y ciudades, con los accesibles, los unisex y los que tienen cambiador indicados. Agua en las tiendas de Taiwán: unas 3.800 tiendas FamilyMart, Hi-Life y otras que ofrecen agua potable a cualquiera, y unos 500 dispensadores de agua públicos. De vuelta en el mapa: los dispensadores de agua públicos de Nuevo Taipéi, Tainan, Taichung, Taoyuan, Hsinchu y el condado de Chiayi vuelven a aparecer tras un cambio en los datos oficiales. Nuevo: 19 fuentes en parques de Uijeongbu, Corea.",
+      "de": "Toiletten in ganz Taiwan: rund 6.400 öffentliche Toiletten in Parks, Bahnhöfen, Ämtern und Ausflugszielen in 18 Landkreisen und Städten, barrierefreie, Unisex- und Wickeltoiletten gekennzeichnet. Wasser in Taiwans Geschäften: rund 3.800 FamilyMart-, Hi-Life- und andere Geschäfte, die allen Trinkwasser anbieten, dazu rund 500 öffentliche Wasserspender. Wieder auf der Karte: Die öffentlichen Wasserspender in Neu-Taipeh, Tainan, Taichung, Taoyuan, Hsinchu und im Landkreis Chiayi sind nach einer Änderung der amtlichen Daten wieder da. Neu: 19 Parkbrunnen in Uijeongbu, Korea.",
+      "pt": "Banheiros por todo Taiwan: cerca de 6.400 banheiros públicos em parques, estações, repartições públicas e pontos turísticos de 18 condados e cidades, com os acessíveis, os unissex e os com trocador indicados. Água nas lojas de Taiwan: cerca de 3.800 lojas FamilyMart, Hi-Life e outras que oferecem água potável a qualquer pessoa, e cerca de 500 bebedouros públicos. De volta ao mapa: os bebedouros públicos de Nova Taipé, Tainan, Taichung, Taoyuan, Hsinchu e do condado de Chiayi voltam a aparecer após uma mudança nos dados oficiais. Novo: 19 bebedouros em parques de Uijeongbu, Coreia.",
+      "ja": "台湾全土のトイレ：18の県・市の公園、駅、公共施設、観光地の公衆トイレ約6,400か所（バリアフリー、男女共用、おむつ交換台を表示）。台湾の店舗で給水：誰でも飲み水をもらえるファミリーマート、ハイライフなどの店舗約3,800か所と、公共の給水機約500か所。地図に復帰：公式データの変更で消えていた新北、台南、台中、桃園、新竹、嘉義県の公共給水機が再び表示されます。新たに韓国・議政府市の公園の水飲み場19か所。"
+    }
+  },
+  {
+    "versionCode": 142,
+    "versionName": "1.142",
+    "publishedAt": "2026-10-20T01:43:58Z",
+    "notes": {
+      "en": "Fountains north of Brisbane: about 900 drinking fountains in Moreton Bay, 270 of them with a dog bowl. Wodonga and Far North: 58 more drinking fountains in Wodonga (Victoria) and New Zealand's Far North, 13 of them with a bottle refill tap. Curitiba and Boston: 37 public toilets in Curitiba, with the paid and accessible ones marked, and 10 park restrooms in Boston.",
+      "fr": "Des fontaines au nord de Brisbane : environ 900 fontaines à boire à Moreton Bay, dont 270 avec un bol pour chiens. Wodonga et le Grand Nord néo-zélandais : 58 fontaines à boire de plus à Wodonga (Victoria) et dans le Far North néo-zélandais, dont 13 avec un robinet pour remplir les gourdes. Curitiba et Boston : 37 toilettes publiques à Curitiba, avec les payantes et les accessibles indiquées, et 10 toilettes de parcs à Boston.",
+      "es": "Fuentes al norte de Brisbane: unos 900 bebederos en Moreton Bay, 270 de ellos con bebedero para perros. Wodonga y el Extremo Norte de Nueva Zelanda: 58 bebederos más en Wodonga (Victoria) y el Far North de Nueva Zelanda, 13 de ellos con grifo para rellenar botellas. Curitiba y Boston: 37 baños públicos en Curitiba, con los de pago y los accesibles indicados, y 10 baños de parques en Boston.",
+      "de": "Trinkbrunnen nördlich von Brisbane: rund 900 Trinkbrunnen in Moreton Bay, 270 davon mit Hundenapf. Wodonga und Neuseelands hoher Norden: 58 weitere Trinkbrunnen in Wodonga (Victoria) und im Far North Neuseelands, 13 davon mit Hahn zum Flaschenauffüllen. Curitiba und Boston: 37 öffentliche Toiletten in Curitiba, kostenpflichtige und barrierefreie gekennzeichnet, und 10 Parktoiletten in Boston.",
+      "pt": "Bebedouros ao norte de Brisbane: cerca de 900 bebedouros em Moreton Bay, 270 deles com tigela para cães. Wodonga e o Extremo Norte da Nova Zelândia: mais 58 bebedouros em Wodonga (Victoria) e no Far North da Nova Zelândia, 13 deles com torneira para encher garrafas. Curitiba e Boston: 37 banheiros públicos em Curitiba, com os pagos e os acessíveis indicados, e 10 banheiros de parques em Boston.",
+      "ja": "ブリスベン北部の水飲み場：モートン・ベイの水飲み場約900か所（うち270か所に犬用の水飲み）。ウォドンガとファー・ノース：ウォドンガ（ビクトリア州）とニュージーランドのファー・ノースの水飲み場58か所（うち13か所はボトルに給水可）。クリチバとボストン：クリチバの公衆トイレ37か所（有料とバリアフリーを表示）とボストンの公園トイレ10か所。"
+    }
+  },
+  {
+    "versionCode": 139,
+    "versionName": "1.139",
+    "publishedAt": "2026-10-19T23:36:23Z",
+    "notes": {
+      "en": "Outdoors in Sweden: about 1,140 outhouses and toilets in 616 nature reserves and national parks, with the accessible ones marked. More of Canada: about 120 park washrooms in Guelph, Burlington, Lethbridge and Prince George. Newfoundland and Labrador: 34 community water stations that hand out free treated drinking water for bottles and jugs.",
+      "fr": "Plein air en Suède : environ 1 140 toilettes sèches et toilettes dans 616 réserves naturelles et parcs nationaux, avec les accessibles indiquées. Encore plus du Canada : environ 120 toilettes de parcs à Guelph, Burlington, Lethbridge et Prince George. Terre-Neuve-et-Labrador : 34 postes d'eau communautaires qui offrent de l'eau potable traitée gratuite pour remplir bouteilles et bidons.",
+      "es": "Al aire libre en Suecia: unas 1.140 letrinas y baños en 616 reservas naturales y parques nacionales, con los accesibles indicados. Más de Canadá: unos 120 baños de parques en Guelph, Burlington, Lethbridge y Prince George. Terranova y Labrador: 34 puestos de agua comunitarios con agua potable tratada gratis para llenar botellas y garrafas.",
+      "de": "Draußen in Schweden: rund 1.140 Plumpsklos und Toiletten in 616 Naturschutzgebieten und Nationalparks, barrierefreie gekennzeichnet. Mehr aus Kanada: rund 120 Parktoiletten in Guelph, Burlington, Lethbridge und Prince George. Neufundland und Labrador: 34 Wasserstellen in Gemeinden mit kostenlosem aufbereitetem Trinkwasser für Flaschen und Kanister.",
+      "pt": "Ao ar livre na Suécia: cerca de 1.140 latrinas e banheiros em 616 reservas naturais e parques nacionais, com os acessíveis indicados. Mais do Canadá: cerca de 120 banheiros de parques em Guelph, Burlington, Lethbridge e Prince George. Terra Nova e Labrador: 34 postos de água comunitários com água potável tratada grátis para encher garrafas e galões.",
+      "ja": "スウェーデンの自然の中で：616の自然保護区と国立公園にある屋外トイレとトイレ約1,140か所（バリアフリーのトイレを表示）。カナダをさらに追加：ゲルフ、バーリントン、レスブリッジ、プリンスジョージの公園トイレ約120か所。ニューファンドランド・ラブラドール：ボトルやタンクに無料の浄水を汲める地域の給水所34か所。"
+    }
+  },
+  {
+    "versionCode": 136,
+    "versionName": "1.136",
+    "publishedAt": "2026-10-19T20:30:50Z",
+    "notes": {
+      "en": "Toilets in Türkiye: about 380 city toilets in Istanbul, marked paid (they take an İstanbulkart fee), and 25 in Konya. Réunion Island: 18 public toilets in Saint-Denis, the island's capital. Refill around Herford: 101 shops, town halls and libraries around Herford, Bielefeld and Minden that refill bottles with tap water for free.",
+      "fr": "Des toilettes en Turquie : environ 380 toilettes de la Ville d'Istanbul, marquées payantes (elles se paient avec l'İstanbulkart), et 25 à Konya. L'île de La Réunion : 18 toilettes publiques à Saint-Denis, le chef-lieu de l'île. Remplir sa gourde autour de Herford : 101 commerces, mairies et bibliothèques autour de Herford, Bielefeld et Minden qui remplissent les gourdes d'eau du robinet gratuitement.",
+      "es": "Baños en Turquía: unos 380 baños municipales en Estambul, marcados de pago (se pagan con la İstanbulkart), y 25 en Konya. La isla de la Reunión: 18 baños públicos en Saint-Denis, la capital de la isla. Rellenar la botella cerca de Herford: 101 comercios, ayuntamientos y bibliotecas cerca de Herford, Bielefeld y Minden que rellenan botellas con agua del grifo gratis.",
+      "de": "Toiletten in der Türkei: rund 380 städtische Toiletten in Istanbul, als kostenpflichtig markiert (Bezahlung mit der İstanbulkart), und 25 in Konya. Insel La Réunion: 18 öffentliche Toiletten in Saint-Denis, der Hauptstadt der Insel. Refill rund um Herford: 101 Geschäfte, Rathäuser und Bibliotheken rund um Herford, Bielefeld und Minden, die Flaschen kostenlos mit Leitungswasser auffüllen.",
+      "pt": "Banheiros na Turquia: cerca de 380 banheiros municipais em Istambul, marcados como pagos (são pagos com o İstanbulkart), e 25 em Konya. Ilha da Reunião: 18 banheiros públicos em Saint-Denis, a capital da ilha. Encher a garrafa perto de Herford: 101 lojas, prefeituras e bibliotecas perto de Herford, Bielefeld e Minden que enchem garrafas com água da torneira de graça.",
+      "ja": "トルコのトイレ：イスタンブール市のトイレ約380か所（イスタンブールカードで支払う有料トイレとして表示）とコンヤの25か所。レユニオン島：島の中心地サン＝ドニの公衆トイレ18か所。ヘルフォルト周辺の給水：ヘルフォルト、ビーレフェルト、ミンデン周辺で水道水を無料で補給できる店舗・市役所・図書館101か所。"
+    }
+  },
+  {
+    "versionCode": 133,
+    "versionName": "1.133",
+    "publishedAt": "2026-10-19T17:53:46Z",
+    "notes": {
+      "en": "More toilets across Japan: about 2,700 public toilets from Sendai, Osaka Prefecture, Wakayama, Okinawa and about 50 other towns. Dublin and its coast: about 74 public toilets from Dublin City, Dún Laoghaire-Rathdown and Fingal, with the paid and accessible ones marked. More of the United States: about 205 park toilets and 97 drinking fountains in Oklahoma City, Sacramento County and Alaska's state parks.",
+      "fr": "Encore plus de toilettes au Japon : environ 2 700 toilettes publiques de Sendai, de la préfecture d'Osaka, de Wakayama, d'Okinawa et d'une cinquantaine d'autres villes. Dublin et sa côte : environ 74 toilettes publiques de la ville de Dublin, de Dún Laoghaire-Rathdown et de Fingal, avec les payantes et les accessibles indiquées. Encore plus aux États-Unis : environ 205 toilettes de parcs et 97 fontaines à boire à Oklahoma City, dans le comté de Sacramento et dans les parcs d'État de l'Alaska.",
+      "es": "Más baños en Japón: unos 2.700 baños públicos de Sendai, la prefectura de Osaka, Wakayama, Okinawa y unas 50 localidades más. Dublín y su costa: unos 74 baños públicos de la ciudad de Dublín, Dún Laoghaire-Rathdown y Fingal, con los de pago y los accesibles indicados. Más de Estados Unidos: unos 205 baños de parques y 97 bebederos en Oklahoma City, el condado de Sacramento y los parques estatales de Alaska.",
+      "de": "Mehr Toiletten in Japan: rund 2.700 öffentliche Toiletten aus Sendai, der Präfektur Osaka, Wakayama, Okinawa und rund 50 weiteren Orten. Dublin und seine Küste: rund 74 öffentliche Toiletten aus Dublin City, Dún Laoghaire-Rathdown und Fingal, kostenpflichtige und barrierefreie gekennzeichnet. Mehr aus den USA: rund 205 Parktoiletten und 97 Trinkbrunnen in Oklahoma City, im Sacramento County und in Alaskas State Parks.",
+      "pt": "Mais banheiros no Japão: cerca de 2.700 banheiros públicos de Sendai, da província de Osaka, Wakayama, Okinawa e cerca de 50 outras cidades. Dublin e seu litoral: cerca de 74 banheiros públicos da cidade de Dublin, de Dún Laoghaire-Rathdown e de Fingal, com os pagos e os acessíveis indicados. Mais dos Estados Unidos: cerca de 205 banheiros de parques e 97 bebedouros em Oklahoma City, no condado de Sacramento e nos parques estaduais do Alasca.",
+      "ja": "日本のトイレをさらに追加：仙台、大阪府、和歌山、沖縄など約50の市町村の公衆トイレ約2,700か所。ダブリンとその海岸：ダブリン市、ダン・レアリー＝ラスダウン、フィンガルの公衆トイレ約74か所（有料とバリアフリーを表示）。アメリカをさらに追加：オクラホマシティ、サクラメント郡、アラスカ州立公園の公園トイレ約205か所と水飲み場97か所。"
+    }
+  },
+  {
+    "versionCode": 130,
+    "versionName": "1.130",
+    "publishedAt": "2026-10-19T15:36:21Z",
+    "notes": {
+      "en": "Toilets across South Korea: about 4,200 public toilets from Jeju, Jeonbuk, Incheon, Busan, Yangju, Namyangju and more; most were not on the map before. Central and Eastern Europe: about 100 public toilets in Zagreb, Vilnius, Kyiv and Tartu. Uruguay's capital: about 54 public toilets and 28 drinking fountains in Montevideo.",
+      "fr": "Des toilettes partout en Corée du Sud : environ 4 200 toilettes publiques de Jeju, du Jeonbuk, d'Incheon, de Busan, de Yangju, de Namyangju et plus ; la plupart n'étaient pas sur la carte. L'Europe centrale et de l'Est : environ 100 toilettes publiques à Zagreb, Vilnius, Kyiv et Tartu. La capitale de l'Uruguay : environ 54 toilettes publiques et 28 fontaines à boire à Montevideo.",
+      "es": "Baños en toda Corea del Sur: unos 4.200 baños públicos de Jeju, Jeonbuk, Incheon, Busan, Yangju, Namyangju y más; la mayoría no estaban en el mapa. Europa central y del Este: unos 100 baños públicos en Zagreb, Vilna, Kiev y Tartu. La capital de Uruguay: unos 54 baños públicos y 28 bebederos en Montevideo.",
+      "de": "Toiletten in ganz Südkorea: rund 4.200 öffentliche Toiletten aus Jeju, Jeonbuk, Incheon, Busan, Yangju, Namyangju und mehr; die meisten waren noch nicht auf der Karte. Mittel- und Osteuropa: rund 100 öffentliche Toiletten in Zagreb, Vilnius, Kiew und Tartu. Uruguays Hauptstadt: rund 54 öffentliche Toiletten und 28 Trinkbrunnen in Montevideo.",
+      "pt": "Banheiros por toda a Coreia do Sul: cerca de 4.200 banheiros públicos de Jeju, Jeonbuk, Incheon, Busan, Yangju, Namyangju e mais; a maioria não estava no mapa. Europa Central e do Leste: cerca de 100 banheiros públicos em Zagreb, Vilnius, Kiev e Tartu. A capital do Uruguai: cerca de 54 banheiros públicos e 28 bebedouros em Montevidéu.",
+      "ja": "韓国全土のトイレ：済州、全北、仁川、釜山、楊州、南楊州などの公衆トイレ約4,200か所（ほとんどが初めて地図に載ります）。中東欧：ザグレブ、ビリニュス、キーウ、タルトゥの公衆トイレ約100か所。ウルグアイの首都：モンテビデオの公衆トイレ約54か所と水飲み場28か所。"
+    }
+  },
+  {
+    "versionCode": 127,
+    "versionName": "1.127",
+    "publishedAt": "2026-10-19T12:39:36Z",
+    "notes": {
+      "en": "Toilets in Prague: 442 public toilets from the city's own list, with the wheelchair-accessible ones marked. Lisbon and Oeiras: 125 public toilets, including Lisbon's automatic toilets. Data sources now counts about 48,000 water points and 66,000 toilets from 454 official lists.",
+      "fr": "Les toilettes de Prague : 442 toilettes publiques tirées de la liste de la ville, avec celles accessibles en fauteuil roulant indiquées. Lisbonne et Oeiras : 125 toilettes publiques, dont les toilettes automatiques de Lisbonne. Sources des données compte maintenant environ 48 000 points d'eau et 66 000 toilettes tirés de 454 listes officielles.",
+      "es": "Baños en Praga: 442 baños públicos de la lista de la ciudad, con los accesibles en silla de ruedas indicados. Lisboa y Oeiras: 125 baños públicos, incluidos los baños automáticos de Lisboa. Fuentes de datos cuenta ahora unos 48.000 puntos de agua y 66.000 baños de 454 listas oficiales.",
+      "de": "Toiletten in Prag: 442 öffentliche Toiletten aus der Liste der Stadt, die rollstuhlgerechten gekennzeichnet. Lissabon und Oeiras: 125 öffentliche Toiletten, darunter Lissabons automatische Toiletten. Datenquellen zählt jetzt rund 48.000 Wasserstellen und 66.000 Toiletten aus 454 offiziellen Listen.",
+      "pt": "Banheiros em Praga: 442 banheiros públicos da lista da cidade, com os acessíveis a cadeira de rodas indicados. Lisboa e Oeiras: 125 banheiros públicos, incluindo os banheiros automáticos de Lisboa. Fontes de dados agora conta cerca de 48.000 pontos de água e 66.000 banheiros de 454 listas oficiais.",
+      "ja": "プラハのトイレ：市のリストから公衆トイレ442か所（車いす対応を表示）。リスボンとオエイラス：リスボンの自動トイレを含む公衆トイレ125か所。「データソース」は454の公式リストから給水スポット約48,000か所、トイレ約66,000か所になりました。"
+    }
+  },
+  {
+    "versionCode": 123,
+    "versionName": "1.123",
+    "publishedAt": "2026-10-19T01:40:56Z",
+    "notes": {
+      "en": "Toilets in Belgium: about 380 public toilets in Ghent, Brussels, Liège and Verviers, with the paid and accessible ones marked; in Brussels, the shops and cafés of the City's free \"welcoming toilets\" network let passers-by in. A toilet the team removed no longer comes back when a city lists its building room by room.",
+      "fr": "Les toilettes de Belgique : environ 380 toilettes publiques à Gand, Bruxelles, Liège et Verviers, avec les payantes et les accessibles indiquées ; à Bruxelles, les commerces et cafés du réseau gratuit « Toilettes accueillantes » de la Ville laissent entrer les passants. Des toilettes retirées par l'équipe ne reviennent plus quand une ville liste son bâtiment salle par salle.",
+      "es": "Baños en Bélgica: unos 380 baños públicos en Gante, Bruselas, Lieja y Verviers, con los de pago y los accesibles indicados; en Bruselas, las tiendas y cafés de la red gratuita de \"baños acogedores\" de la ciudad dejan pasar a los transeúntes. Un baño que el equipo quitó ya no vuelve cuando una ciudad lista su edificio sala por sala.",
+      "de": "Toiletten in Belgien: rund 380 öffentliche Toiletten in Gent, Brüssel, Lüttich und Verviers, kostenpflichtige und barrierefreie gekennzeichnet; in Brüssel lassen die Läden und Cafés des kostenlosen Netzes „gastfreundliche Toiletten“ Passanten herein. Eine vom Team entfernte Toilette kommt nicht mehr zurück, wenn eine Stadt ihr Gebäude Raum für Raum auflistet.",
+      "pt": "Banheiros na Bélgica: cerca de 380 banheiros públicos em Gante, Bruxelas, Liège e Verviers, com os pagos e os acessíveis indicados; em Bruxelas, as lojas e cafés da rede gratuita de \"banheiros acolhedores\" da cidade deixam os passantes entrarem. Um banheiro que a equipe removeu não volta mais quando uma cidade lista o prédio sala por sala.",
+      "ja": "ベルギーのトイレ：ヘント、ブリュッセル、リエージュ、ヴェルヴィエの公衆トイレ約380か所（有料とバリアフリーを表示）。ブリュッセルでは市の無料「歓迎トイレ」ネットワークの店やカフェで通行人もトイレを使えます。チームが削除したトイレは、建物が部屋ごとに登録されていても再表示されません。"
+    }
+  },
+  {
+    "versionCode": 119,
+    "versionName": "1.119",
+    "publishedAt": "2026-10-19T00:29:31Z",
+    "notes": {
+      "en": "Toilets all over Denmark: about 2,430 public toilets from the national facilities register, Copenhagen and Frederiksberg, the paid ones marked. Sweden, Norway and Finland: public toilets in Malmö, Umeå, Jönköping, Lomma, Stavanger, Helsinki and the Turku archipelago. The Netherlands: about 200 public toilets in The Hague, Amsterdam, Rotterdam and other Dutch cities.",
+      "fr": "Des toilettes partout au Danemark : environ 2 430 toilettes publiques du registre national des équipements, de Copenhague et de Frederiksberg, les payantes indiquées. Suède, Norvège et Finlande : des toilettes publiques à Malmö, Umeå, Jönköping, Lomma, Stavanger, Helsinki et dans l'archipel de Turku. Les Pays-Bas : environ 200 toilettes publiques à La Haye, Amsterdam, Rotterdam et d'autres villes néerlandaises.",
+      "es": "Baños en toda Dinamarca: unos 2.430 baños públicos del registro nacional de equipamientos, de Copenhague y de Frederiksberg, con los de pago indicados. Suecia, Noruega y Finlandia: baños públicos en Malmö, Umeå, Jönköping, Lomma, Stavanger, Helsinki y el archipiélago de Turku. Países Bajos: unos 200 baños públicos en La Haya, Ámsterdam, Róterdam y otras ciudades neerlandesas.",
+      "de": "Toiletten in ganz Dänemark: rund 2.430 öffentliche Toiletten aus dem nationalen Einrichtungsregister, aus Kopenhagen und Frederiksberg, kostenpflichtige gekennzeichnet. Schweden, Norwegen und Finnland: öffentliche Toiletten in Malmö, Umeå, Jönköping, Lomma, Stavanger, Helsinki und den Schären von Turku. Die Niederlande: rund 200 öffentliche Toiletten in Den Haag, Amsterdam, Rotterdam und anderen niederländischen Städten.",
+      "pt": "Banheiros por toda a Dinamarca: cerca de 2.430 banheiros públicos do registro nacional de equipamentos, de Copenhague e de Frederiksberg, com os pagos indicados. Suécia, Noruega e Finlândia: banheiros públicos em Malmö, Umeå, Jönköping, Lomma, Stavanger, Helsinque e no arquipélago de Turku. Países Baixos: cerca de 200 banheiros públicos em Haia, Amsterdã, Roterdã e outras cidades holandesas.",
+      "ja": "デンマーク全土のトイレ：全国施設登録簿、コペンハーゲン、フレデリクスベアから公衆トイレ約2,430か所（有料を表示）。スウェーデン、ノルウェー、フィンランド：マルメ、ウメオ、ヨンショーピング、ロンマ、スタヴァンゲル、ヘルシンキ、トゥルク群島の公衆トイレ。オランダ：ハーグ、アムステルダム、ロッテルダムなどの公衆トイレ約200か所。"
+    }
+  },
+  {
+    "versionCode": 116,
+    "versionName": "1.116",
+    "publishedAt": "2026-10-18T22:52:25Z",
+    "notes": {
+      "en": "Toilets in Taiwan: about 2,700 public toilets in Taipei, Taichung, Yilan and Miaoli, from the cities' own lists. Hong Kong and Macau: about 1,130 public toilets, Hong Kong's street and country-park toilets and Macau's, the closed ones marked. A building listed room by room now shows as one toilet with every room's facts, under the building's name.",
+      "fr": "Les toilettes de Taïwan : environ 2 700 toilettes publiques à Taipei, Taichung, Yilan et Miaoli, tirées des listes des villes. Hong Kong et Macao : environ 1 130 toilettes publiques, celles des rues et des parcs naturels de Hong Kong et celles de Macao, les fermées indiquées. Un bâtiment listé salle par salle s'affiche maintenant comme un seul point, avec ce qu'offre chaque salle et le nom du bâtiment.",
+      "es": "Baños en Taiwán: unos 2.700 baños públicos en Taipéi, Taichung, Yilan y Miaoli, de las listas de las propias ciudades. Hong Kong y Macao: unos 1.130 baños públicos, los de las calles y parques naturales de Hong Kong y los de Macao, con los cerrados indicados. Un edificio listado sala por sala aparece ahora como un solo baño, con lo que ofrece cada sala y el nombre del edificio.",
+      "de": "Toiletten in Taiwan: rund 2.700 öffentliche Toiletten in Taipeh, Taichung, Yilan und Miaoli, aus den Listen der Städte. Hongkong und Macau: rund 1.130 öffentliche Toiletten, Hongkongs Toiletten an Straßen und in Landschaftsparks und die von Macau, geschlossene gekennzeichnet. Ein Gebäude, das Raum für Raum gelistet ist, erscheint jetzt als eine Toilette mit allem, was jeder Raum bietet, unter dem Namen des Gebäudes.",
+      "pt": "Banheiros em Taiwan: cerca de 2.700 banheiros públicos em Taipé, Taichung, Yilan e Miaoli, das listas das próprias cidades. Hong Kong e Macau: cerca de 1.130 banheiros públicos, os das ruas e parques naturais de Hong Kong e os de Macau, com os fechados indicados. Um prédio listado sala por sala agora aparece como um só banheiro, com o que cada sala oferece e o nome do prédio.",
+      "ja": "台湾のトイレ：台北、台中、宜蘭、苗栗の自治体リストから公衆トイレ約2,700か所。香港とマカオ：香港の街中と郊野公園のトイレ、マカオのトイレ、合わせて約1,130か所（閉鎖中を表示）。部屋ごとに登録された建物は、各部屋の設備をまとめ、建物の名前で1つのトイレとして表示されます。"
+    }
+  },
+  {
+    "versionCode": 112,
+    "versionName": "1.112",
+    "publishedAt": "2026-10-18T20:38:22Z",
+    "notes": {
+      "en": "Toilets all over Australia: about 24,400 public toilets from the government's National Public Toilet Map, with accessible, baby change, 24-hour and paid ones marked. New Zealand: about 1,400 public toilets from Auckland, Christchurch, Wellington and seven more councils. Data sources now counts everything together, OpenStreetMap and the official lists: about 560,000 water points and 583,000 toilets, more with each update.",
+      "fr": "Des toilettes partout en Australie : environ 24 400 toilettes publiques de la carte nationale du gouvernement, avec celles accessibles, avec table à langer, ouvertes 24 h et payantes indiquées. La Nouvelle-Zélande : environ 1 400 toilettes publiques d'Auckland, Christchurch, Wellington et sept autres municipalités. Sources des données compte maintenant tout ensemble, OpenStreetMap et les listes officielles : environ 560 000 points d'eau et 583 000 toilettes, et plus à chaque mise à jour.",
+      "es": "Baños en toda Australia: unos 24.400 baños públicos del mapa nacional del gobierno, con los accesibles, con cambiador, abiertos 24 h y de pago indicados. Nueva Zelanda: unos 1.400 baños públicos de Auckland, Christchurch, Wellington y otros siete municipios. Fuentes de datos ahora cuenta todo junto, OpenStreetMap y las listas oficiales: unos 560.000 puntos de agua y 583.000 baños, más con cada actualización.",
+      "de": "Toiletten in ganz Australien: rund 24.400 öffentliche Toiletten aus der nationalen Toilettenkarte der Regierung, barrierefreie, mit Wickeltisch, rund um die Uhr offene und kostenpflichtige gekennzeichnet. Neuseeland: rund 1.400 öffentliche Toiletten aus Auckland, Christchurch, Wellington und sieben weiteren Gemeinden. Datenquellen zählt jetzt alles zusammen, OpenStreetMap und die offiziellen Listen: rund 560.000 Wasserstellen und 583.000 Toiletten, mit jedem Update mehr.",
+      "pt": "Banheiros por toda a Austrália: cerca de 24.400 banheiros públicos do mapa nacional do governo, com os acessíveis, com trocador, abertos 24 h e pagos indicados. Nova Zelândia: cerca de 1.400 banheiros públicos de Auckland, Christchurch, Wellington e mais sete municípios. Fontes de dados agora conta tudo junto, OpenStreetMap e as listas oficiais: cerca de 560.000 pontos de água e 583.000 banheiros, mais a cada atualização.",
+      "ja": "オーストラリア全土のトイレ：政府の全国公衆トイレマップから約24,400か所（バリアフリー、おむつ替え台、24時間、有料を表示）。ニュージーランド：オークランド、クライストチャーチ、ウェリントンなど10の自治体の公衆トイレ約1,400か所。「データソース」はOpenStreetMapと公式リストをまとめて数えるようになりました：給水スポット約56万か所、トイレ約58万3千か所。更新のたびに増えます。"
+    }
+  },
+  {
+    "versionCode": 108,
+    "versionName": "1.108",
+    "publishedAt": "2026-10-18T19:29:52Z",
+    "notes": {
+      "en": "About 750 more toilets in the US from 16 official lists: Seattle, Tempe, Boulder's trailheads, Louisville, Pittsburgh, Sioux Falls, Michigan's state parks and Iowa's trails, plus service plazas on the Pennsylvania and Massachusetts turnpikes and rest areas in Kentucky and Iowa. A building that a city lists room by room now shows as one toilet, not a stack of pins. Data sources now counts about 48,000 water points and 32,300 toilets in the official lists.",
+      "fr": "Environ 750 toilettes de plus aux États-Unis, tirées de 16 listes officielles : Seattle, Tempe, les départs de sentiers de Boulder, Louisville, Pittsburgh, Sioux Falls, les parcs d'État du Michigan et les sentiers de l'Iowa, plus les aires de service des autoroutes à péage de Pennsylvanie et du Massachusetts et les haltes routières du Kentucky et de l'Iowa. Un bâtiment listé salle par salle s'affiche maintenant comme un seul point, pas une pile de repères. Sources des données compte maintenant environ 48 000 points d'eau et 32 300 toilettes dans les listes officielles.",
+      "es": "Unos 750 baños más en EE. UU. de 16 listas oficiales: Seattle, Tempe, los inicios de sendero de Boulder, Louisville, Pittsburgh, Sioux Falls, los parques estatales de Míchigan y los senderos de Iowa, además de las áreas de servicio de las autopistas de peaje de Pensilvania y Massachusetts y las áreas de descanso de Kentucky e Iowa. Un edificio listado sala por sala aparece ahora como un solo baño, no como una pila de puntos. Fuentes de datos cuenta ahora unos 48.000 puntos de agua y 32.300 baños en las listas oficiales.",
+      "de": "Rund 750 Toiletten mehr in den USA aus 16 offiziellen Listen: Seattle, Tempe, Boulders Wanderparkplätze, Louisville, Pittsburgh, Sioux Falls, Michigans State Parks und Iowas Radwege, dazu Raststätten an den Turnpikes in Pennsylvania und Massachusetts und Rastplätze in Kentucky und Iowa. Ein Gebäude, das Raum für Raum gelistet ist, erscheint jetzt als eine Toilette statt als Stapel von Punkten. Datenquellen zählt jetzt rund 48.000 Wasserstellen und 32.300 Toiletten in den offiziellen Listen.",
+      "pt": "Cerca de 750 banheiros a mais nos EUA de 16 listas oficiais: Seattle, Tempe, os inícios de trilha de Boulder, Louisville, Pittsburgh, Sioux Falls, os parques estaduais de Michigan e as trilhas de Iowa, além das áreas de serviço das rodovias com pedágio da Pensilvânia e de Massachusetts e das áreas de descanso de Kentucky e Iowa. Um prédio listado sala por sala agora aparece como um só banheiro, e não como uma pilha de pontos. Fontes de dados agora conta cerca de 48.000 pontos de água e 32.300 banheiros nas listas oficiais.",
+      "ja": "アメリカのトイレを16の公式リストから約750か所追加：シアトル、テンピ、ボルダーの登山口、ルイビル、ピッツバーグ、スーフォールズ、ミシガン州立公園、アイオワのトレイル、さらにペンシルベニア州とマサチューセッツ州の有料道路のサービスエリア、ケンタッキー州とアイオワ州の休憩所。部屋ごとに登録された建物はピンが重ならず1つのトイレとして表示されます。「データソース」の公式リストは給水スポット約48,000か所、トイレ約32,300か所になりました。"
+    }
+  },
+  {
+    "versionCode": 104,
+    "versionName": "1.104",
+    "publishedAt": "2026-10-18T16:24:34Z",
+    "notes": {
+      "en": "Toilets in US national parks: about 2,600 from the National Park Service, from Acadia to Yosemite and Alaska, the ones open only part of the year marked seasonal. Plus 538 public toilets in national wildlife refuges, with the accessible ones marked. Data sources now counts about 48,000 water points and 31,500 toilets in the official lists.",
+      "fr": "Les toilettes des parcs nationaux américains : environ 2 600 du National Park Service, d'Acadia à Yosemite et en Alaska, celles ouvertes une partie de l'année seulement indiquées saisonnières. Plus 538 toilettes publiques dans les refuges fauniques nationaux, avec celles accessibles indiquées. Sources des données compte maintenant environ 48 000 points d'eau et 31 500 toilettes dans les listes officielles.",
+      "es": "Baños de los parques nacionales de EE. UU.: unos 2.600 del National Park Service, de Acadia a Yosemite y Alaska, los que abren solo parte del año indicados como de temporada. Además, 538 baños públicos en refugios nacionales de vida silvestre, con los accesibles indicados. Fuentes de datos cuenta ahora unos 48.000 puntos de agua y 31.500 baños en las listas oficiales.",
+      "de": "Toiletten in US-Nationalparks: rund 2.600 vom National Park Service, von Acadia bis Yosemite und Alaska, die nur einen Teil des Jahres offenen als saisonal gekennzeichnet. Dazu 538 öffentliche Toiletten in National Wildlife Refuges, die barrierefreien gekennzeichnet. Datenquellen zählt jetzt rund 48.000 Wasserstellen und 31.500 Toiletten in den offiziellen Listen.",
+      "pt": "Banheiros dos parques nacionais dos EUA: cerca de 2.600 do National Park Service, de Acadia a Yosemite e ao Alasca, os que abrem só parte do ano indicados como sazonais. Mais 538 banheiros públicos em refúgios nacionais de vida selvagem, com os acessíveis indicados. Fontes de dados agora conta cerca de 48.000 pontos de água e 31.500 banheiros nas listas oficiais.",
+      "ja": "アメリカの国立公園のトイレ：国立公園局の約2,600か所、アカディアからヨセミテ、アラスカまで。一年の一部だけ開くものは季節限定と表示。さらに国立野生生物保護区の公衆トイレ538か所（バリアフリーを表示）。「データソース」の公式リストは給水スポット約48,000か所、トイレ約31,500か所になりました。"
+    }
+  },
+  {
+    "versionCode": 101,
+    "versionName": "1.101",
+    "publishedAt": "2026-10-17T20:34:33Z",
+    "notes": {
+      "en": "Toilets in the United States, the first ones there: about 1,700 public toilets from 14 official lists, New York City and its subway, San Francisco, San José, Mono County and Los Angeles County parks and trails, California and New York highway rest areas and the New York Thruway's travel plazas, plus drinking water at California's rest areas. Data sources now adds up the official lists too: about 48,000 water points and 28,000 toilets, more with each update.",
+      "fr": "Des toilettes aux États-Unis, les premières là-bas : environ 1 700 toilettes publiques tirées de 14 listes officielles, New York et son métro, San Francisco, San José, les parcs et sentiers des comtés de Mono et de Los Angeles, les haltes routières de Californie et de l'État de New York et les aires de service de la Thruway, plus l'eau potable des haltes californiennes. Sources des données additionne aussi les listes officielles : environ 48 000 points d'eau et 28 000 toilettes, et plus à chaque mise à jour.",
+      "es": "Baños en Estados Unidos, los primeros allí: unos 1.700 baños públicos de 14 listas oficiales, Nueva York y su metro, San Francisco, San José, los parques y senderos de los condados de Mono y Los Ángeles, las áreas de descanso de California y Nueva York y las áreas de servicio de la Thruway, además del agua potable de las áreas californianas. Fuentes de datos ahora suma también las listas oficiales: unos 48.000 puntos de agua y 28.000 baños, más con cada actualización.",
+      "de": "Toiletten in den USA, die ersten dort: rund 1.700 öffentliche Toiletten aus 14 offiziellen Listen, New York City mit der U-Bahn, San Francisco, San José, Parks und Wanderwege in Mono County und Los Angeles County, Rastplätze in Kalifornien und New York und die Raststätten des New York Thruway, dazu Trinkwasser an Kaliforniens Rastplätzen. Datenquellen zählt jetzt auch die offiziellen Listen zusammen: rund 48.000 Wasserstellen und 28.000 Toiletten, mit jedem Update mehr.",
+      "pt": "Banheiros nos Estados Unidos, os primeiros lá: cerca de 1.700 banheiros públicos de 14 listas oficiais, Nova York e seu metrô, San Francisco, San José, os parques e trilhas dos condados de Mono e Los Angeles, as áreas de descanso da Califórnia e de Nova York e as áreas de serviço da Thruway, além da água potável das áreas da Califórnia. Fontes de dados agora soma também as listas oficiais: cerca de 48.000 pontos de água e 28.000 banheiros, mais a cada atualização.",
+      "ja": "アメリカのトイレが初登場：14の公式リストから約1,700か所の公衆トイレ。ニューヨーク市と地下鉄、サンフランシスコ、サンノゼ、モノ郡とロサンゼルス郡の公園とトレイル、カリフォルニア州とニューヨーク州の休憩所、ニューヨーク・スルーウェイのサービスエリア、カリフォルニアの休憩所の飲料水。「データソース」は公式リストの数も合計します：給水スポット約48,000か所とトイレ約28,000か所。更新のたびに増えます。"
+    }
+  },
+  {
+    "versionCode": 95,
+    "versionName": "1.95",
+    "publishedAt": "2026-10-17T18:22:37Z",
+    "notes": {
+      "en": "Toilets across Canada: about 2,700 public toilets from 39 official lists, the first ones in the country. Montréal's public places with toilets, Toronto, Ottawa, Vancouver, Calgary, Edmonton, Halifax, Mississauga, Kitchener, Hamilton, Kingston, London, Windsor and more; Québec and British Columbia highway rest areas with their toilets and drinking water; Parks Canada toilets from Jasper to Kejimkujik. The ones closed in winter say so.",
+      "fr": "Des toilettes partout au Canada : environ 2 700 toilettes publiques tirées de 39 listes officielles, les premières au pays. Les lieux publics de Montréal avec toilettes, Toronto, Ottawa, Vancouver, Calgary, Edmonton, Halifax, Mississauga, Kitchener, Hamilton, Kingston, London, Windsor et plus ; les haltes routières du Québec et de la Colombie-Britannique avec leurs toilettes et leur eau potable ; les toilettes de Parcs Canada, de Jasper à Kejimkujik. Celles fermées l'hiver sont indiquées.",
+      "es": "Baños en todo Canadá: unos 2.700 baños públicos de 39 listas oficiales, los primeros del país. Los lugares públicos de Montreal con baños, Toronto, Ottawa, Vancouver, Calgary, Edmonton, Halifax, Mississauga, Kitchener, Hamilton, Kingston, London, Windsor y más; las áreas de descanso de las carreteras de Quebec y Columbia Británica con sus baños y agua potable; los baños de Parques Canadá, de Jasper a Kejimkujik. Se indican los que cierran en invierno.",
+      "de": "Toiletten in ganz Kanada: rund 2.700 öffentliche Toiletten aus 39 offiziellen Listen, die ersten im Land. Montréals öffentliche Orte mit Toiletten, Toronto, Ottawa, Vancouver, Calgary, Edmonton, Halifax, Mississauga, Kitchener, Hamilton, Kingston, London, Windsor und mehr; die Rastplätze an den Fernstraßen in Québec und British Columbia mit Toiletten und Trinkwasser; die Toiletten von Parks Canada, von Jasper bis Kejimkujik. Im Winter geschlossene sind gekennzeichnet.",
+      "pt": "Banheiros por todo o Canadá: cerca de 2.700 banheiros públicos de 39 listas oficiais, os primeiros do país. Os lugares públicos de Montreal com banheiros, Toronto, Ottawa, Vancouver, Calgary, Edmonton, Halifax, Mississauga, Kitchener, Hamilton, Kingston, London, Windsor e mais; as áreas de descanso das estradas de Quebec e da Colúmbia Britânica com banheiros e água potável; os banheiros da Parks Canada, de Jasper a Kejimkujik. Os que fecham no inverno estão indicados.",
+      "ja": "カナダ全土のトイレ：39の公式リストから約2,700か所の公衆トイレ。カナダで初めてです。モントリオールのトイレのある公共施設、トロント、オタワ、バンクーバー、カルガリー、エドモントン、ハリファックス、ミシサガ、キッチナー、ハミルトン、キングストン、ロンドン、ウィンザーなど。ケベック州とブリティッシュコロンビア州の幹線道路の休憩所のトイレと飲料水、ジャスパーからケジムクジクまでのパークス・カナダのトイレ。冬季閉鎖のものはその旨を表示します。"
+    }
+  },
+  {
+    "versionCode": 92,
+    "versionName": "1.92",
+    "publishedAt": "2026-10-17T16:07:34Z",
+    "notes": {
+      "en": "Paid toilets now say so: a spot with a stated fee shows a Paid badge, a free one shows Free. About 650 more points from official lists: toilets in Brest, Le Mans, Dijon, Saint-Malo, Poitiers and Vendôme, water and toilets in the Hauts-de-Seine parks and along the Côtes-d'Armor greenways, Dijon's drinking-water posts, and 43 accessible toilets in Tenerife. The moderation team gets an Ideas tab to write down and copy what to add or fix.",
+      "fr": "Les toilettes payantes le disent : un point avec un tarif indiqué affiche un badge Payant, un point gratuit affiche Gratuit. Environ 650 points de plus tirés de listes officielles : des toilettes à Brest, au Mans, à Dijon, à Saint-Malo, à Poitiers et à Vendôme, de l'eau et des toilettes dans les parcs des Hauts-de-Seine et le long des voies vertes des Côtes-d'Armor, les bornes d'eau potable de Dijon et 43 toilettes accessibles à Ténérife. L'équipe de modération a un onglet Idées pour noter et copier ce qu'il faut ajouter ou corriger.",
+      "es": "Los baños de pago lo dicen: un punto con tarifa indicada muestra una etiqueta De pago, uno gratuito muestra Gratis. Unos 650 puntos más de listas oficiales: baños en Brest, Le Mans, Dijon, Saint-Malo, Poitiers y Vendôme, agua y baños en los parques de Hauts-de-Seine y en las vías verdes de Côtes-d'Armor, las fuentes de agua potable de Dijon y 43 baños accesibles en Tenerife. El equipo de moderación tiene una pestaña Ideas para anotar y copiar lo que hay que añadir o arreglar.",
+      "de": "Kostenpflichtige Toiletten sagen es: Ein Ort mit angegebener Gebühr zeigt ein Kostenpflichtig-Abzeichen, ein kostenloser zeigt Kostenlos. Rund 650 Punkte mehr aus offiziellen Listen: Toiletten in Brest, Le Mans, Dijon, Saint-Malo, Poitiers und Vendôme, Wasser und Toiletten in den Parks der Hauts-de-Seine und entlang der Radwege der Côtes-d'Armor, Dijons Trinkwassersäulen und 43 barrierefreie Toiletten auf Teneriffa. Das Moderationsteam hat einen Ideen-Tab, um festzuhalten und zu kopieren, was hinzukommen oder repariert werden soll.",
+      "pt": "Banheiros pagos avisam: um ponto com tarifa informada mostra um selo Pago, um gratuito mostra Grátis. Cerca de 650 pontos a mais de listas oficiais: banheiros em Brest, Le Mans, Dijon, Saint-Malo, Poitiers e Vendôme, água e banheiros nos parques de Hauts-de-Seine e nas vias verdes de Côtes-d'Armor, os pontos de água potável de Dijon e 43 banheiros acessíveis em Tenerife. A equipe de moderação ganhou uma aba Ideias para anotar e copiar o que adicionar ou corrigir.",
+      "ja": "有料トイレの表示：料金が分かっているスポットには「有料」、無料のスポットには「無料」のバッジ。公式リストから約650か所を追加：ブレスト、ル・マン、ディジョン、サン・マロ、ポワティエ、ヴァンドームのトイレ、オー・ド・セーヌ県の公園とコート・ダルモール県のグリーンウェイ沿いの水とトイレ、ディジョンの飲料水スタンド、テネリフェ島のバリアフリートイレ43か所。モデレーションチームには、追加や修正の案を書いてコピーできる「アイデア」タブができました。"
+    }
+  },
+  {
+    "versionCode": 87,
+    "versionName": "1.87",
+    "publishedAt": "2026-10-17T01:20:47Z",
+    "notes": {
+      "en": "Public toilets in France, Switzerland and Austria: about 2,400 from 33 official city lists. Paris (read again every day, so out-of-order toilets drop off), the Paris metro and RER, Lyon, Toulouse, Bordeaux, Nantes, Marseille and more than 20 other French towns, plus Zurich, Basel, Geneva, St. Gallen, Vienna and Graz.",
+      "fr": "Toilettes publiques en France, en Suisse et en Autriche : environ 2 400, tirées de 33 listes officielles des villes. Paris (relue chaque jour : les toilettes hors service disparaissent), le métro et le RER, Lyon, Toulouse, Bordeaux, Nantes, Marseille et plus de 20 autres villes françaises, plus Zurich, Bâle, Genève, Saint-Gall, Vienne et Graz.",
+      "es": "Baños públicos en Francia, Suiza y Austria: unos 2.400 de 33 listas oficiales de las ciudades. París (se vuelve a leer cada día: los baños fuera de servicio desaparecen), el metro y el RER, Lyon, Toulouse, Burdeos, Nantes, Marsella y más de 20 ciudades francesas más, además de Zúrich, Basilea, Ginebra, San Galo, Viena y Graz.",
+      "de": "Öffentliche Toiletten in Frankreich, der Schweiz und Österreich: rund 2.400 aus 33 offiziellen Listen der Städte. Paris (täglich neu gelesen: defekte Toiletten verschwinden), Metro und RER, Lyon, Toulouse, Bordeaux, Nantes, Marseille und über 20 weitere französische Orte, dazu Zürich, Basel, Genf, St. Gallen, Wien und Graz.",
+      "pt": "Banheiros públicos na França, Suíça e Áustria: cerca de 2.400 de 33 listas oficiais das cidades. Paris (lida de novo todo dia: os fora de serviço somem), o metrô e o RER, Lyon, Toulouse, Bordéus, Nantes, Marselha e mais de 20 outras cidades francesas, além de Zurique, Basileia, Genebra, St. Gallen, Viena e Graz.",
+      "ja": "フランス、スイス、オーストリアの公衆トイレ：33の自治体公式リストから約2,400か所。パリ（毎日読み直すので故障中のトイレは表示されません）、メトロとRER、リヨン、トゥールーズ、ボルドー、ナント、マルセイユほかフランスの20以上の町、さらにチューリッヒ、バーゼル、ジュネーブ、ザンクト・ガレン、ウィーン、グラーツ。"
+    }
+  },
+  {
+    "versionCode": 84,
+    "versionName": "1.84",
+    "publishedAt": "2026-10-16T23:13:34Z",
+    "notes": {
+      "en": "Version history: Profile › About now lists every version since 1.31, with its date and what changed. Data sources shows the exact number of water points and toilets in OpenStreetMap with the day they were counted, and the server counts them again every week.",
+      "fr": "Historique des versions : Profil › À propos liste maintenant chaque version depuis la 1.31, avec sa date et ce qui a changé. Sources des données affiche le nombre exact de points d'eau et de toilettes dans OpenStreetMap avec le jour du comptage, et le serveur les recompte chaque semaine.",
+      "es": "Historial de versiones: Perfil › Acerca de ahora muestra cada versión desde la 1.31, con su fecha y lo que cambió. Fuentes de datos muestra el número exacto de puntos de agua y baños en OpenStreetMap con el día en que se contaron, y el servidor los vuelve a contar cada semana.",
+      "de": "Versionsverlauf: Profil › Über listet jetzt jede Version seit 1.31 mit Datum und Änderungen. Datenquellen zeigt die genaue Zahl der Wasserstellen und Toiletten in OpenStreetMap mit dem Tag der Zählung, und der Server zählt sie jede Woche neu.",
+      "pt": "Histórico de versões: Perfil › Sobre agora lista cada versão desde a 1.31, com a data e o que mudou. Fontes de dados mostra o número exato de pontos de água e banheiros no OpenStreetMap com o dia da contagem, e o servidor os conta de novo toda semana.",
+      "ja": "バージョン履歴：「プロフィール › このアプリについて」に、1.31以降の全バージョンの日付と変更点が表示されます。「データソース」にはOpenStreetMapの給水スポットとトイレの正確な数と集計日が表示され、サーバーが毎週集計し直します。"
+    }
+  },
+  {
+    "versionCode": 81,
+    "versionName": "1.81",
+    "publishedAt": "2026-10-16T21:13:43Z",
+    "notes": {
+      "en": "About 850 more public toilets from official city lists: some 520 in Spain (Valencia, Barcelona, Madrid, where all are free, with a changing table and designed for everyone) and some 330 in Italy (Milan, Genoa, Bologna, Florence, Bari). WaterNow now reads the cities' own toilet lists in 6 countries on top of OpenStreetMap.",
+      "fr": "Environ 850 toilettes publiques de plus, tirées des listes officielles des villes : quelque 520 en Espagne (Valence, Barcelone, Madrid, où elles sont toutes gratuites, avec table à langer et conçues pour tout le monde) et environ 330 en Italie (Milan, Gênes, Bologne, Florence, Bari). WaterNow lit maintenant les listes de toilettes des villes dans 6 pays, en plus d'OpenStreetMap.",
+      "es": "Unos 850 baños públicos más de las listas oficiales de las ciudades: unos 520 en España (Valencia, Barcelona y Madrid, donde todos son gratuitos, con cambiador y pensados para todas las personas) y unos 330 en Italia (Milán, Génova, Bolonia, Florencia, Bari). WaterNow ahora lee las listas de baños de las ciudades en 6 países, además de OpenStreetMap.",
+      "de": "Rund 850 öffentliche Toiletten mehr aus den offiziellen Listen der Städte: etwa 520 in Spanien (Valencia, Barcelona, Madrid, wo alle kostenlos sind, mit Wickeltisch und für alle Menschen gestaltet) und etwa 330 in Italien (Mailand, Genua, Bologna, Florenz, Bari). WaterNow liest jetzt die Toilettenlisten der Städte in 6 Ländern, zusätzlich zu OpenStreetMap.",
+      "pt": "Cerca de 850 banheiros públicos a mais das listas oficiais das cidades: uns 520 na Espanha (Valência, Barcelona e Madri, onde todos são gratuitos, com trocador e pensados para todas as pessoas) e uns 330 na Itália (Milão, Gênova, Bolonha, Florença, Bari). O WaterNow agora lê as listas de banheiros das cidades em 6 países, além do OpenStreetMap.",
+      "ja": "自治体の公式リストから公衆トイレを約850か所追加：スペインで約520か所（バレンシア、バルセロナ、マドリード。マドリードはすべて無料、おむつ交換台付き、誰でも使える設計）、イタリアで約330か所（ミラノ、ジェノヴァ、ボローニャ、フィレンツェ、バーリ）。OpenStreetMapに加えて、6か国の自治体のトイレ一覧を読み込むようになりました。"
+    }
+  },
+  {
+    "versionCode": 78,
+    "versionName": "1.78",
+    "publishedAt": "2026-10-16T19:02:04Z",
+    "notes": {
+      "en": "About 2,000 more public toilets from official lists: some 1,300 in Germany (Berlin, Munich, Dortmund, Herne, Würzburg, Rostock, Dresden, Kiel, Leipzig and more, plus the Nette Toilette cafés of Freiburg and Chemnitz) and some 700 in the UK (Bristol, Sheffield, the Highlands, Northern Ireland and more). When a city says a toilet costs something, it no longer shows as free.",
+      "fr": "Environ 2 000 toilettes publiques de plus, tirées de listes officielles : quelque 1 300 en Allemagne (Berlin, Munich, Dortmund, Herne, Wurtzbourg, Rostock, Dresde, Kiel, Leipzig et d'autres, plus les cafés Nette Toilette de Fribourg et Chemnitz) et environ 700 au Royaume-Uni (Bristol, Sheffield, les Highlands, l'Irlande du Nord et d'autres). Quand la ville indique que des toilettes sont payantes, elles ne sont plus affichées comme gratuites.",
+      "es": "Unos 2000 baños públicos más de listas oficiales: unos 1300 en Alemania (Berlín, Múnich, Dortmund, Herne, Wurzburgo, Rostock, Dresde, Kiel, Leipzig y más, además de los cafés Nette Toilette de Friburgo y Chemnitz) y unos 700 en el Reino Unido (Bristol, Sheffield, las Highlands, Irlanda del Norte y más). Cuando la ciudad indica que un baño es de pago, ya no aparece como gratuito.",
+      "de": "Rund 2.000 öffentliche Toiletten mehr aus offiziellen Listen: etwa 1.300 in Deutschland (Berlin, München, Dortmund, Herne, Würzburg, Rostock, Dresden, Kiel, Leipzig und mehr, dazu die Nette-Toilette-Cafés in Freiburg und Chemnitz) und etwa 700 im Vereinigten Königreich (Bristol, Sheffield, die Highlands, Nordirland und mehr). Gibt die Stadt eine Gebühr an, wird die Toilette nicht mehr als kostenlos angezeigt.",
+      "pt": "Cerca de 2.000 banheiros públicos a mais de listas oficiais: uns 1.300 na Alemanha (Berlim, Munique, Dortmund, Herne, Würzburg, Rostock, Dresden, Kiel, Leipzig e mais, além dos cafés Nette Toilette de Friburgo e Chemnitz) e uns 700 no Reino Unido (Bristol, Sheffield, as Highlands, a Irlanda do Norte e mais). Quando a cidade informa que um banheiro é pago, ele não aparece mais como gratuito.",
+      "ja": "公式リストから公衆トイレを約2,000か所追加：ドイツで約1,300か所（ベルリン、ミュンヘン、ドルトムント、ヘルネ、ヴュルツブルク、ロストック、ドレスデン、キール、ライプツィヒなど。フライブルクとケムニッツのネッテ・トワレッテ協力店も）、イギリスで約700か所（ブリストル、シェフィールド、ハイランド、北アイルランドなど）。自治体が有料と示すトイレは無料と表示されなくなりました。"
+    }
+  },
+  {
+    "versionCode": 73,
+    "versionName": "1.73",
+    "publishedAt": "2026-10-16T13:32:56Z",
+    "notes": {
+      "en": "Every water point with a dog bowl now shows under the Dogs filter, all-gender toilets show whatever the source, and toilets with water show with fountains. The map stays where you left it after another tab or the planner, pinching while it follows you zooms around you without sliding away, a tap on the dropped pin keeps it, and dragging the map closes the search. The classic OpenStreetMap map is gone from the layers: everyone gets the WaterNow map.",
+      "fr": "Tous les points d'eau avec un bol pour chien apparaissent maintenant dans le filtre Chiens, les toilettes non genrées apparaissent quelle que soit la source, et les toilettes avec eau apparaissent avec les fontaines. La carte reste où tu l'as laissée après un autre onglet ou le planificateur, pincer pendant qu'elle te suit zoome autour de toi sans la faire glisser, toucher le point posé le garde, et faire glisser la carte ferme la recherche. La carte OpenStreetMap classique quitte les calques : tout le monde a la carte WaterNow.",
+      "es": "Todos los puntos de agua con bebedero para perros aparecen ahora en el filtro Perros, los baños para todos aparecen sea cual sea la fuente y los baños con agua aparecen con las fuentes. El mapa se queda donde lo dejaste tras otra pestaña o el planificador, pellizcar mientras te sigue hace zoom a tu alrededor sin deslizarlo, tocar el punto marcado lo conserva y arrastrar el mapa cierra la búsqueda. El mapa clásico de OpenStreetMap sale de las capas: todos tienen el mapa WaterNow.",
+      "de": "Alle Wasserstellen mit Hundenapf erscheinen jetzt im Filter Hunde, Toiletten für alle erscheinen unabhängig von der Quelle und Toiletten mit Wasser bei den Trinkbrunnen. Die Karte bleibt nach einem anderen Tab oder dem Planer, wo du sie gelassen hast, Aufziehen beim Folgen zoomt um dich herum, ohne zu verrutschen, ein Tippen auf den gesetzten Punkt behält ihn, und Ziehen der Karte schließt die Suche. Die klassische OpenStreetMap-Karte verlässt die Ebenen: Alle bekommen die WaterNow-Karte.",
+      "pt": "Todos os pontos de água com tigela para cães aparecem agora no filtro Cães, banheiros para todos aparecem seja qual for a fonte, e banheiros com água aparecem com os bebedouros. O mapa fica onde você deixou depois de outra aba ou do planejador, a pinça enquanto ele segue você dá zoom ao seu redor sem deslizar, tocar no ponto marcado o mantém, e arrastar o mapa fecha a busca. O mapa clássico do OpenStreetMap sai das camadas: todos usam o mapa WaterNow.",
+      "ja": "犬用の水入れがある給水スポットはすべて「犬」フィルターに表示されるようになりました。男女共用トイレはデータの出どころに関係なく表示され、水のあるトイレは水飲み場と一緒に表示されます。ほかのタブやプランナーから戻っても地図は元の位置のまま、追従中のピンチは地図がずれずに現在地を中心にズーム、置いたピンをタップしても消えず、地図をドラッグすると検索が閉じます。従来のOpenStreetMap地図はレイヤーから外れ、全員がWaterNow地図になります。"
+    }
+  },
+  {
+    "versionCode": 71,
+    "versionName": "1.71",
+    "publishedAt": "2026-10-16T01:23:56Z",
+    "notes": {
+      "en": "Navigation like the big apps: the route line starts at you and your dot stays on the road, a wrong turn is caught within seconds and rerouted right away, and a trip without water stops gets the best way from where you are. Precise GPS every 2 s while guiding (battery saver keeps the lighter mode).",
+      "fr": "Une navigation comme les grandes applis : la ligne du trajet part de toi et ton point reste sur la route, une erreur de chemin est repérée en quelques secondes et recalculée tout de suite, et un trajet sans arrêt d'eau prend le meilleur chemin depuis là où tu es. GPS précis toutes les 2 s en guidage (l'économiseur de batterie garde le mode léger).",
+      "es": "Navegación como las grandes apps: la línea de la ruta empieza en ti y tu punto se queda en la calle, un giro equivocado se detecta en segundos y se recalcula al instante, y un trayecto sin paradas de agua toma el mejor camino desde donde estás. GPS preciso cada 2 s al guiar (el ahorro de batería mantiene el modo ligero).",
+      "de": "Navigation wie bei den großen Apps: Die Routenlinie beginnt bei dir und dein Punkt bleibt auf der Straße, ein falsches Abbiegen wird in Sekunden erkannt und sofort neu berechnet, und eine Strecke ohne Wasserstopps nimmt den besten Weg von dort, wo du bist. Genaues GPS alle 2 s bei der Führung (der Energiesparmodus bleibt sparsam).",
+      "pt": "Navegação como nos grandes apps: a linha da rota começa em você e seu ponto fica na rua, uma curva errada é detectada em segundos e recalculada na hora, e um trajeto sem paradas de água pega o melhor caminho de onde você está. GPS preciso a cada 2 s na navegação (a economia de bateria mantém o modo leve).",
+      "ja": "大手ナビのような案内に：ルートの線は現在地から始まり、現在地の点は道路の上にとどまります。道を間違えても数秒で検知してすぐに再計算し、給水ポイントのないルートでは今いる場所から最適なルートを案内します。案内中は2秒ごとに高精度GPS（バッテリーセーバー中は省電力モード）。"
+    }
+  },
+  {
+    "versionCode": 69,
+    "versionName": "1.69",
+    "publishedAt": "2026-10-16T00:17:07Z",
+    "notes": {
+      "en": "Toilets from official lists: about 12,900 across Japan (52 lists: Tokyo and its wards, Saitama, Hiroshima, Yamagata, Okayama...) and Seoul's 4,455, showing wheelchair access, changing tables, all-gender and 24/7 where the city says so. One place, one pin: no more duplicates.",
+      "fr": "Des toilettes tirées de listes officielles : environ 12 900 au Japon (52 listes : Tokyo et ses arrondissements, Saitama, Hiroshima, Yamagata, Okayama...) et les 4 455 de Séoul, avec l'accès en fauteuil, la table à langer, les toilettes mixtes et le 24 h/24 quand la ville le précise. Un lieu, un point : fini les doublons.",
+      "es": "Baños de listas oficiales: unos 12 900 en Japón (52 listas: Tokio y sus distritos, Saitama, Hiroshima, Yamagata, Okayama...) y los 4455 de Seúl, con acceso en silla de ruedas, cambiador, baños para todos y 24 h cuando la ciudad lo indica. Un lugar, un punto: sin duplicados.",
+      "de": "Toiletten aus offiziellen Listen: rund 12.900 in Japan (52 Listen: Tokio und seine Bezirke, Saitama, Hiroshima, Yamagata, Okayama...) und die 4.455 von Seoul, mit Rollstuhlzugang, Wickeltisch, Toiletten für alle und 24/7, wo die Stadt es angibt. Ein Ort, ein Punkt: keine Doppelten mehr.",
+      "pt": "Banheiros de listas oficiais: cerca de 12.900 no Japão (52 listas: Tóquio e seus distritos, Saitama, Hiroshima, Yamagata, Okayama...) e os 4.455 de Seul, com acesso para cadeira de rodas, trocador, banheiros para todos e 24 h quando a cidade informa. Um lugar, um ponto: sem duplicados.",
+      "ja": "公式リストのトイレを追加：日本全国で約12,900か所（東京都と各区、埼玉、広島、山形、岡山など52のリスト）とソウルの4,455か所。自治体の情報があれば車椅子対応、おむつ交換台、男女共用、24時間利用可を表示。同じ場所は1つのピンにまとめ、重複をなくしました。"
+    }
+  },
+  {
+    "versionCode": 66,
+    "versionName": "1.66",
+    "publishedAt": "2026-10-10T22:17:59Z",
+    "notes": {
+      "en": "Adding a point is faster: tick everything that's there (toilets with a fountain = one point), answer only the questions that fit (drinkable? closed in winter? toilet type), the address fills itself in from the photo and the place's names are offered. A point already within 25 m? Add your photo to it. A preview shows your point, and it waits for you if the app closes.",
+      "fr": "Ajouter un point est plus rapide : coche tout ce qu'il y a ici (toilettes avec fontaine = un seul point), réponds seulement aux questions utiles (potable ? fermé l'hiver ? type de toilettes), l'adresse se remplit toute seule à partir de la photo et les noms du lieu te sont proposés. Un point existe déjà à moins de 25 m ? Ajoute-lui ta photo. Un aperçu montre ton point, et il t'attend si l'app se ferme.",
+      "es": "Añadir un punto es más rápido: marca todo lo que hay aquí (baños con fuente = un solo punto), responde solo a las preguntas que procedan (¿potable? ¿cerrado en invierno? tipo de baño), la dirección se completa sola a partir de la foto y se te proponen los nombres del lugar. ¿Ya hay un punto a menos de 25 m? Añádele tu foto. Una vista previa muestra tu punto, y te espera si la app se cierra.",
+      "de": "Einen Ort hinzufügen geht schneller: Wähle alles, was es hier gibt (Toiletten mit Trinkbrunnen = ein Ort), beantworte nur die passenden Fragen (Trinkwasser? im Winter geschlossen? Toilettenart), die Adresse füllt sich anhand des Fotos aus und Namen des Ortes werden vorgeschlagen. Schon ein Ort in weniger als 25 m? Füge dort dein Foto hinzu. Eine Vorschau zeigt deinen Ort, und er wartet auf dich, wenn sich die App schließt.",
+      "pt": "Adicionar um ponto ficou mais rápido: marque tudo o que tem aqui (banheiros com bebedouro = um só ponto), responda só às perguntas que fazem sentido (potável? fechado no inverno? tipo de banheiro), o endereço se preenche sozinho a partir da foto e os nomes do lugar são sugeridos. Já existe um ponto a menos de 25 m? Adicione sua foto a ele. Uma prévia mostra seu ponto, e ele espera por você se o app fechar.",
+      "ja": "地点の追加がもっと簡単に：ここにあるものをすべて選択（トイレと水飲み場＝1つの地点）、関係する質問だけに回答（飲用可否、冬季閉鎖、トイレの種類）。住所は写真の場所から自動入力され、場所の名前が候補に表示されます。25 m以内に既存の地点があれば写真を追加できます。プレビューで確認でき、アプリが閉じても続きから再開できます。"
+    }
+  },
+  {
+    "versionCode": 64,
+    "versionName": "1.64",
+    "publishedAt": "2026-10-10T13:01:52Z",
+    "notes": {
+      "en": "More water in Asia: over 1,000 new points in Taiwan (public buildings with a water dispenser in New Taipei, Taichung, Tainan, Kaohsiung, Taoyuan, Hsinchu and Chiayi, plus fire and police stations that offer water) and Macao's 78 public fountains, checked every day. 189 official lists in all, in Profile › Data sources.",
+      "fr": "Plus d'eau en Asie : plus de 1 000 nouveaux points à Taïwan (bâtiments publics avec fontaine à New Taipei, Taichung, Tainan, Kaohsiung, Taoyuan, Hsinchu et Chiayi, plus les casernes et postes de police qui offrent de l'eau) et les 78 fontaines publiques de Macao, vérifiées chaque jour. 189 listes officielles en tout, dans Profil › Sources des données.",
+      "es": "Más agua en Asia: más de 1000 puntos nuevos en Taiwán (edificios públicos con dispensador de agua en Nuevo Taipéi, Taichung, Tainan, Kaohsiung, Taoyuan, Hsinchu y Chiayi, además de estaciones de bomberos y de policía que ofrecen agua) y las 78 fuentes públicas de Macao, comprobadas cada día. 189 listas oficiales en total, en Perfil › Fuentes de datos.",
+      "de": "Mehr Wasser in Asien: über 1.000 neue Orte in Taiwan (öffentliche Gebäude mit Wasserspender in Neu-Taipeh, Taichung, Tainan, Kaohsiung, Taoyuan, Hsinchu und Chiayi, dazu Feuerwachen und Polizeistationen, die Wasser anbieten) und die 78 öffentlichen Trinkbrunnen von Macau, täglich geprüft. Insgesamt 189 offizielle Listen, unter Profil › Datenquellen.",
+      "pt": "Mais água na Ásia: mais de 1.000 pontos novos em Taiwan (prédios públicos com bebedouro em Nova Taipé, Taichung, Tainan, Kaohsiung, Taoyuan, Hsinchu e Chiayi, além de quartéis de bombeiros e delegacias que oferecem água) e os 78 bebedouros públicos de Macau, verificados todos os dias. 189 listas oficiais no total, em Perfil › Fontes de dados.",
+      "ja": "アジアの給水スポットを拡充：台湾で1,000か所以上を追加（新北、台中、台南、高雄、桃園、新竹、嘉義の給水機のある公共施設と、水を提供する消防署・警察署）。マカオの公共水飲み場78か所も毎日確認して表示します。公式リストは合計189件、「プロフィール › データソース」で確認できます。"
+    }
+  },
+  {
+    "versionCode": 62,
+    "versionName": "1.62",
+    "publishedAt": "2026-10-09T00:04:26Z",
+    "notes": {
+      "en": "More than 510,000 water points worldwide: all the drinking water in OpenStreetMap plus official city lists (new: Seoul, Cologne, Freiburg, Antwerp, Brussels, Verona, Bologna, Kyiv, Sofia and more). Fill up at campsites, huts and cafés that refill bottles. The count and its sources are in Profile › Data sources.",
+      "fr": "Plus de 510 000 points d'eau dans le monde : toute l'eau potable d'OpenStreetMap, plus les listes officielles des villes (nouveau : Séoul, Cologne, Fribourg-en-Brisgau, Anvers, Bruxelles, Vérone, Bologne, Kyiv, Sofia et plus). Remplis ta gourde aux campings, refuges et cafés. Le compte et ses sources sont dans Profil › Sources des données.",
+      "es": "Más de 510 000 puntos de agua en el mundo: toda el agua potable de OpenStreetMap, más las listas oficiales de las ciudades (nuevo: Seúl, Colonia, Friburgo, Amberes, Bruselas, Verona, Bolonia, Kiev, Sofía y más). Rellena en campings, refugios y cafeterías. La cifra y sus fuentes están en Perfil › Fuentes de datos.",
+      "de": "Über 510.000 Wasserstellen weltweit: alles Trinkwasser aus OpenStreetMap plus offizielle Städtelisten (neu: Seoul, Köln, Freiburg, Antwerpen, Brüssel, Verona, Bologna, Kyjiw, Sofia und mehr). Auffüllen an Campingplätzen, Hütten und Cafés. Die Zahl und ihre Quellen stehen unter Profil › Datenquellen.",
+      "pt": "Mais de 510 mil pontos de água no mundo: toda a água potável do OpenStreetMap, mais as listas oficiais das cidades (novo: Seul, Colônia, Friburgo, Antuérpia, Bruxelas, Verona, Bolonha, Kiev, Sófia e mais). Encha a garrafa em campings, refúgios e cafés. A contagem e as fontes estão em Perfil › Fontes de dados.",
+      "ja": "世界の給水スポット51万か所以上：OpenStreetMapのすべての飲料水に、各都市の公式リストを追加（新規：ソウル、ケルン、フライブルク、アントワープ、ブリュッセル、ヴェローナ、ボローニャ、キーウ、ソフィアなど）。キャンプ場、山小屋、カフェでも給水できます。数とその出典は「プロフィール › データソース」で確認できます。"
+    }
+  },
+  {
+    "versionCode": 60,
+    "versionName": "1.60",
+    "publishedAt": "2026-10-06T23:14:53Z",
+    "notes": {
+      "en": "Zoom into every photo: pinch or double-tap, feed photos included. A smoother map: following glides with your dot, and the map no longer jumps away from what you were looking at. Plus map fixes.",
+      "fr": "Zoom sur toutes les photos : pince ou touche deux fois, celles du fil comprises. Une carte plus fluide : le suivi glisse avec ton point, et la carte ne repart plus loin de ce que tu regardais. Et des corrections sur la carte.",
+      "es": "Zoom en todas las fotos: pellizca o toca dos veces, también las del feed. Un mapa más fluido: el seguimiento se desliza con tu punto y el mapa ya no se aleja de lo que mirabas. Y correcciones en el mapa.",
+      "de": "Zoom in jedes Foto: aufziehen oder doppelt tippen, auch im Feed. Eine flüssigere Karte: Das Folgen gleitet mit deinem Punkt, und die Karte springt nicht mehr weg. Dazu Karten-Fixes.",
+      "pt": "Zoom em todas as fotos: faça pinça ou toque duas vezes, inclusive no feed. Um mapa mais fluido: o acompanhamento desliza com seu ponto e o mapa não se afasta mais do que você via. E correções no mapa.",
+      "ja": "すべての写真をズーム：ピンチやダブルタップで、フィードの写真も拡大できます。なめらかなマップ：追従が現在地の点と一緒に動き、見ていた場所から勝手に離れません。マップの不具合も修正。"
+    }
+  },
+  {
+    "versionCode": 58,
+    "versionName": "1.58",
+    "publishedAt": "2026-10-06T22:11:19Z",
+    "notes": {
+      "en": "A clearer map: the credits moved under the tabs, and the time and battery stay readable over the map. The location button always flies back to you; hold it for compass mode.",
+      "fr": "Une carte plus dégagée : les crédits passent sous les onglets, et l'heure et la batterie restent lisibles sur la carte. Le bouton de position te ramène toujours ; appui long pour le mode boussole.",
+      "es": "Un mapa más despejado: los créditos pasan bajo las pestañas, y la hora y la batería se leen bien sobre el mapa. El botón de ubicación siempre te devuelve; mantenlo pulsado para el modo brújula.",
+      "de": "Eine aufgeräumtere Karte: Die Quellen stehen unter den Tabs, Uhrzeit und Akku bleiben über der Karte lesbar. Die Standort-Taste bringt dich immer zurück; lang drücken für den Kompassmodus.",
+      "pt": "Um mapa mais limpo: os créditos foram para baixo das abas, e a hora e a bateria ficam legíveis sobre o mapa. O botão de localização sempre volta até você; segure para o modo bússola.",
+      "ja": "すっきりしたマップ：クレジットをタブの下に移動し、マップ上でも時刻やバッテリーが見やすくなりました。現在地ボタンでいつでも現在地へ。長押しでコンパスモード。"
+    }
+  },
+  {
+    "versionCode": 55,
+    "versionName": "1.55",
+    "publishedAt": "2026-10-06T21:05:59Z",
+    "notes": {
+      "en": "The location button now flies back to you on every tap, with its animation. Compass mode moved to a long press on the same button. Plus a map fix.",
+      "fr": "Le bouton de position te ramène maintenant à chaque appui, avec son animation. Le mode boussole passe en appui long sur ce bouton. Et une correction sur la carte.",
+      "es": "El botón de ubicación te devuelve a tu posición en cada toque, con su animación. El modo brújula pasa a una pulsación larga en ese botón. Y una corrección en el mapa.",
+      "de": "Die Standort-Taste fliegt jetzt bei jedem Tippen zu dir zurück, mit Animation. Der Kompassmodus liegt nun auf langem Drücken derselben Taste. Dazu ein Karten-Fix.",
+      "pt": "O botão de localização agora volta até você a cada toque, com a animação. O modo bússola passou para um toque longo no mesmo botão. E uma correção no mapa.",
+      "ja": "現在地ボタンをタップするたびに、アニメーション付きで現在地へ戻るようになりました。コンパスモードは同じボタンの長押しに移動。マップの不具合も修正しました。"
+    }
+  },
+  {
+    "versionCode": 53,
+    "versionName": "1.53",
+    "publishedAt": "2026-10-06T20:29:57Z",
+    "notes": {
+      "en": "Security clean-up: unused sign-in code, permissions and server access are gone, and live-location links are shorter. Lighter and safer.",
+      "fr": "Grand ménage de sécurité : code de connexion, permissions et accès serveur inutilisés retirés, et liens de position en direct plus courts. Plus léger et plus sûr.",
+      "es": "Limpieza de seguridad: se eliminan código de inicio de sesión, permisos y accesos al servidor sin uso, y los enlaces de ubicación en vivo son más cortos. Más ligera y segura.",
+      "de": "Sicherheits-Aufräumen: Ungenutzter Anmeldecode, Berechtigungen und Serverzugänge sind weg, Live-Standort-Links sind kürzer. Leichter und sicherer.",
+      "pt": "Limpeza de segurança: código de login, permissões e acessos ao servidor sem uso foram removidos, e os links de localização ao vivo ficaram mais curtos. Mais leve e seguro.",
+      "ja": "セキュリティを整理：使われていないログインコード、権限、サーバーへのアクセスを削除し、リアルタイム位置情報のリンクを短くしました。より軽く、より安全に。"
+    }
+  },
+  {
+    "versionCode": 51,
+    "versionName": "1.51",
+    "publishedAt": "2026-10-06T17:48:20Z",
+    "notes": {
+      "en": "Cleaner settings: the developer Cloud page is gone and your sync status now sits in Profile › Data, with a Sync now button. Safer and lighter.",
+      "fr": "Réglages plus clairs : la page Cloud pour développeurs disparaît et l'état de synchro est dans Profil › Données, avec un bouton Synchroniser. Plus sûr et plus léger.",
+      "es": "Ajustes más claros: desaparece la página Nube para desarrolladores y el estado de sincronización está en Perfil › Datos, con un botón Sincronizar. Más seguro y ligero.",
+      "de": "Übersichtlichere Einstellungen: Die Cloud-Seite für Entwickler ist weg, der Sync-Status steht unter Profil › Daten mit einer Synchronisieren-Taste. Sicherer und leichter.",
+      "pt": "Configurações mais claras: a página Nuvem para desenvolvedores saiu e o status de sincronização está em Perfil › Dados, com um botão Sincronizar. Mais seguro e leve.",
+      "ja": "設定をすっきり：開発者向けのクラウド画面を削除し、同期状況はプロフィール › データに「今すぐ同期」ボタン付きで表示。より安全で軽く。"
+    }
+  },
+  {
+    "versionCode": 49,
+    "versionName": "1.49",
+    "publishedAt": "2026-10-06T15:53:30Z",
+    "notes": {
+      "en": "\"Did it work?\" after a refill, see how many people filled their bottle at your point, suggest corrections, report a bug from a screenshot, and a What's new screen.",
+      "fr": "« Ça a fonctionné ? » après un remplissage, découvre combien de personnes ont rempli leur gourde à ton point, propose des corrections, signale un bug depuis une capture, et un écran Nouveautés.",
+      "es": "«¿Funcionaba?» después de recargar, mira cuántas personas llenaron su botella en tu punto, sugiere correcciones, informa de un error desde una captura y una pantalla de novedades.",
+      "de": "„Hat es funktioniert?“ nach dem Auffüllen, sieh, wie viele Leute an deinem Punkt aufgefüllt haben, schlage Korrekturen vor, melde Fehler per Screenshot, und ein Neuigkeiten-Bildschirm.",
+      "pt": "\"Funcionou?\" depois de reabastecer, veja quantas pessoas encheram a garrafa no seu ponto, sugira correções, relate um erro por captura de tela e uma tela de novidades.",
+      "ja": "給水後の「使えましたか？」、あなたのスポットで何人が水を汲んだか、修正の提案、スクリーンショットからの不具合報告、そして新機能の画面。"
+    }
+  },
+  {
+    "versionCode": 47,
+    "versionName": "1.47",
+    "publishedAt": "2026-10-06T11:47:36Z",
+    "notes": {
+      "en": "Admin tools: co-admins, two-factor sign-in for admins, warnings and suspensions, photo moderation and blur, verified points, announcements and a maintenance screen. Zoom in photos.",
+      "fr": "Outils admin : co-admins, double authentification pour les admins, avertissements et suspensions, modération et floutage des photos, points vérifiés, annonces et écran de maintenance. Zoom dans les photos.",
+      "es": "Herramientas de administración: coadministradores, doble autenticación, avisos y suspensiones, moderación y difuminado de fotos, puntos verificados, anuncios y pantalla de mantenimiento. Zoom en las fotos.",
+      "de": "Admin-Werkzeuge: Co-Admins, Zwei-Faktor-Anmeldung, Verwarnungen und Sperren, Foto-Moderation und Unschärfe, verifizierte Punkte, Ankündigungen und Wartungsbildschirm. Zoom in Fotos.",
+      "pt": "Ferramentas de administração: coadministradores, autenticação em dois fatores, avisos e suspensões, moderação e desfoque de fotos, pontos verificados, anúncios e tela de manutenção. Zoom nas fotos.",
+      "ja": "管理ツール：共同管理者、管理者の二段階認証、警告と利用停止、写真の確認とぼかし、認証済みスポット、お知らせとメンテナンス画面。写真の拡大表示。"
+    }
+  },
+  {
+    "versionCode": 45,
+    "versionName": "1.45",
+    "publishedAt": "2026-10-06T00:12:02Z",
+    "notes": {
+      "en": "3D map like Google Maps: tilt with two fingers, 2D/3D button, compass and scale bar. Community data protected, WaterNow mark on photos, and fixes.",
+      "fr": "Carte 3D façon Google Maps : incline à deux doigts, bouton 2D/3D, boussole et échelle. Données de la communauté protégées, filigrane WaterNow sur les photos, et corrections.",
+      "es": "Mapa 3D como Google Maps: inclina con dos dedos, botón 2D/3D, brújula y escala. Datos de la comunidad protegidos, marca de agua WaterNow en las fotos y correcciones.",
+      "de": "3D-Karte wie bei Google Maps: mit zwei Fingern neigen, 2D/3D-Taste, Kompass und Maßstab. Geschützte Community-Daten, WaterNow-Wasserzeichen auf Fotos und Fehlerbehebungen.",
+      "pt": "Mapa 3D como o Google Maps: incline com dois dedos, botão 2D/3D, bússola e escala. Dados da comunidade protegidos, marca d'água WaterNow nas fotos e correções.",
+      "ja": "Googleマップのような3D地図：2本指で傾けて、2D/3Dボタン、コンパス、縮尺。コミュニティのデータを保護し、写真にWaterNowの透かしを追加、その他の修正。"
+    }
+  },
+  {
+    "versionCode": 43,
+    "versionName": "1.43",
+    "publishedAt": "2026-10-05T16:38:00Z",
+    "notes": {
+      "en": "WaterNow now has its own map: our colors in light and dark, place names in your language, smooth 3D, a density heatmap and walking-time zones. Compare it with the classic OpenStreetMap map in Map layers.",
+      "fr": "WaterNow a maintenant sa propre carte : nos couleurs en clair et en sombre, les noms dans ta langue, une 3D fluide, une carte de chaleur et des zones de marche. Compare-la avec la carte OpenStreetMap classique dans Calques de la carte.",
+      "es": "WaterNow ya tiene su propio mapa: nuestros colores en claro y oscuro, nombres en tu idioma, 3D fluido, mapa de calor y zonas a pie. Compáralo con el mapa clásico de OpenStreetMap en las capas del mapa.",
+      "de": "WaterNow hat jetzt eine eigene Karte: unsere Farben hell und dunkel, Ortsnamen in deiner Sprache, flüssiges 3D, eine Heatmap und Gehzeit-Zonen. Vergleiche sie mit der klassischen OpenStreetMap-Karte in den Kartenebenen.",
+      "pt": "O WaterNow agora tem seu próprio mapa: nossas cores no claro e no escuro, nomes no seu idioma, 3D fluido, mapa de calor e zonas a pé. Compare com o mapa clássico do OpenStreetMap nas camadas do mapa.",
+      "ja": "WaterNow独自の地図になりました。ライト／ダークのオリジナル配色、表示言語の地名、なめらかな3D、密度ヒートマップ、徒歩圏表示。マップのレイヤーから従来のOpenStreetMap地図と比較できます。"
+    }
+  },
+  {
+    "versionCode": 41,
+    "versionName": "1.41",
+    "publishedAt": "2026-10-05T00:16:48Z",
+    "notes": {
+      "en": "Reviews show in your language, translated on your phone (tap for the original, long-press to copy). Pick an offline area on a map before saving it. Your activity history now follows your account.",
+      "fr": "Les avis s'affichent dans ta langue, traduits sur ton téléphone (touche pour l'original, appui long pour copier). Choisis ta zone hors ligne sur une carte avant de l'enregistrer. Ton historique d'activité suit maintenant ton compte.",
+      "es": "Las reseñas aparecen en tu idioma, traducidas en tu teléfono (toca para ver el original, mantén pulsado para copiar). Elige tu zona sin conexión en un mapa antes de guardarla. Tu historial de actividad ahora va con tu cuenta.",
+      "de": "Bewertungen erscheinen in deiner Sprache, übersetzt auf deinem Handy (tippen fürs Original, lange drücken zum Kopieren). Wähle dein Offline-Gebiet auf einer Karte, bevor du es speicherst. Dein Aktivitätsverlauf folgt jetzt deinem Konto.",
+      "pt": "As avaliações aparecem no seu idioma, traduzidas no seu celular (toque para ver o original, toque longo para copiar). Escolha sua área offline em um mapa antes de salvá-la. Seu histórico de atividade agora acompanha sua conta.",
+      "ja": "レビューが端末上で表示言語に翻訳されます（タップで原文、長押しでコピー）。オフラインエリアは地図で選んでから保存できます。アクティビティ履歴がアカウントに保存されるようになりました。"
+    }
+  },
+  {
+    "versionCode": 39,
+    "versionName": "1.39",
+    "publishedAt": "2026-10-04T21:13:23Z",
+    "notes": {
+      "en": "Now fully in Spanish, German, Portuguese and Japanese. Stronger security and many fixes: your profile name, offline map areas, location permission, favorites on a new phone, units and more.",
+      "fr": "Maintenant entièrement en espagnol, allemand, portugais et japonais. Sécurité renforcée et plein de corrections : nom du profil, cartes hors ligne, permission de localisation, favoris sur un nouveau téléphone, unités et plus.",
+      "es": "Ahora totalmente en español, alemán, portugués y japonés. Más seguridad y muchas correcciones: tu nombre de perfil, mapas sin conexión, permiso de ubicación, favoritos en un teléfono nuevo, unidades y más.",
+      "de": "Jetzt komplett auf Spanisch, Deutsch, Portugiesisch und Japanisch. Mehr Sicherheit und viele Korrekturen: dein Profilname, Offline-Karten, Standortberechtigung, Favoriten auf einem neuen Handy, Einheiten und mehr.",
+      "pt": "Agora totalmente em espanhol, alemão, português e japonês. Mais segurança e muitas correções: seu nome de perfil, mapas offline, permissão de localização, favoritos em um celular novo, unidades e mais.",
+      "ja": "スペイン語・ドイツ語・ポルトガル語・日本語に完全対応しました。セキュリティを強化し、プロフィール名、オフラインマップ、位置情報の許可、新しい端末でのお気に入り、単位表示などを修正しました。"
+    }
+  },
+  {
+    "versionCode": 37,
+    "versionName": "1.37",
+    "publishedAt": "2026-10-04T18:46:48Z",
+    "notes": {
+      "en": "New icon and an opening animation: the drop fills with water.",
+      "fr": "Nouvelle icône et une animation d'ouverture : la goutte se remplit d'eau."
+    }
+  },
+  {
+    "versionCode": 34,
+    "versionName": "1.34",
+    "publishedAt": "2026-10-04T17:53:51Z",
+    "notes": {
+      "en": "First published release: updates right inside the app, share links and live location.",
+      "fr": "Première version publiée : mises à jour directement dans l'app, liens de partage et position en direct."
+    }
+  },
+  {
+    "versionCode": 31,
+    "versionName": "1.31",
+    "publishedAt": "2026-10-04T00:00:00Z",
+    "notes": {
+      "en": "Placeholder: run scripts/publish-release.sh to publish the first real release.",
+      "fr": "Provisoire : lance scripts/publish-release.sh pour publier la première vraie version."
+    }
+  }
+]
