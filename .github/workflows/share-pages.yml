@@ -1,0 +1,42 @@
+# Every 30 minutes: the link previews (e/<slug>/, p/<slug>/) of the events and partners published since the last
+# release. The app's scripts/deploy-site.sh publishes this repo as ONE commit, force-pushed; this job adds at most one
+# commit on top of it, replaced at each change (never stacked), and never pushes over a newer deploy.
+name: Link previews
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: link-previews
+  cancel-in-progress: false
+jobs:
+  previews:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # The server unreachable (or being updated) changes nothing: no red run every 30 minutes for it, the shares still
+      # reach the live page through 404.html.
+      - name: Write the previews
+        continue-on-error: true
+        run: node .github/gen-share-pages.mjs .
+      - name: Publish them
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          git add -A e p
+          if git diff --cached --quiet; then echo "No change."; exit 0; fi
+          head=$(git rev-parse HEAD)
+          base=$(git rev-list --max-parents=0 HEAD | head -n 1)
+          next=$(git commit-tree "$(git write-tree)" -p "$base" -m "Link previews")
+          if ! git push --force-with-lease="main:$head" origin "$next:refs/heads/main"; then
+            # Refused because a deploy came first: the next run catches up. Any other refusal fails the job.
+            [ "$(git ls-remote origin refs/heads/main | cut -f1)" != "$head" ] || exit 1
+          fi
