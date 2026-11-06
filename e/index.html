@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>An event on WaterNow</title>
+<meta name="description" content="An event shared from WaterNow: its dates, route and water stations are in the app.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="An event on WaterNow">
+<meta property="og:description" content="Dates, route and water stations, in the WaterNow app.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-kind="event">
+<header class="bar"><a class="brand" href="../"><span class="logo" aria-hidden="true">W</span>WaterNow</a></header>
+<main class="page">
+  <img class="cover hidden" id="cover" alt="">
+
+  <section class="card" id="page" aria-live="polite">
+    <p class="eyebrow" id="eyebrow">Event</p>
+    <h1 id="title">An event on WaterNow</h1>
+    <p class="muted" id="text">Its dates, route and water stations are in the app.</p>
+    <ul class="facts hidden" id="facts"></ul>
+    <p class="note hidden" id="note" role="status"></p>
+    <div class="actions fit">
+      <a class="btn primary" id="open" href="#">Open in WaterNow</a>
+      <a class="btn hidden" id="ics" href="#">Add to calendar</a>
+    </div>
+  </section>
+
+  <section class="card hidden" id="route">
+    <h2 id="routeTitle">Route and water stations</h2>
+    <svg class="sketch hidden" id="sketch" viewBox="0 0 320 200" role="img" aria-label="Route"></svg>
+    <ol class="stations" id="stations"></ol>
+  </section>
+
+  <section class="card hidden" id="about">
+    <h2 id="aboutTitle">About</h2>
+    <p class="prose" id="description"></p>
+  </section>
+
+  <section class="card hidden" id="bad" role="status">
+    <h1 id="badTitle">Link incomplete</h1>
+    <p class="muted" id="badText">This link is damaged. Ask for it again.</p>
+  </section>
+
+  <section class="card">
+    <h2 id="getTitle">No WaterNow yet?</h2>
+    <p class="muted" id="getText">Free drinking water near you, on a map the community keeps up to date.</p>
+    <a class="btn wide" id="get" href="../">Get WaterNow</a>
+  </section>
+
+  <p class="foot muted" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/page-data.js"></script>
+<script src="../assets/page.js"></script>
+</body>
+</html>
