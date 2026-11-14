@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; script-src 'self'; connect-src https://pkqsvlbiznrqxfckaxll.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>WaterNow account</title>
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/hold.js"></script>
+</head>
+<body>
+<header class="bar"><a class="brand" href="../"><img class="logo" src="../assets/icon.svg" alt="" width="32" height="32">WaterNow</a></header>
+<!-- The card starts at the top and only grows down: centred, it moved whole each time its content changed (CLS 0.07). -->
+<main class="page hold">
+  <section class="card account" id="app">
+    <img class="app-icon" src="../assets/icon.svg" alt="" width="48" height="48">
+    <div aria-live="polite"><h1 id="title">WaterNow</h1><p class="muted" id="text"></p></div>
+  </section>
+</main>
+<!-- Its own file, not inline: the page holds a sign-in token, so its CSP runs no inline script. -->
+<script src="auth.js"></script>
+</body>
+</html>

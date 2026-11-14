@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://pkqsvlbiznrqxfckaxll.supabase.co; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co https://tiles.openfreemap.org; worker-src blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin">
+<meta name="color-scheme" content="light dark">
+<!-- WaterNow's server: the public RPCs (commons_list, commons_project) and the commons-checkout edge function. The local
+     preview (scripts/console-preview.mjs) points it at itself. -->
+<meta name="wn-api" content="https://pkqsvlbiznrqxfckaxll.supabase.co">
+<title>The Community Fountain · WaterNow</title>
+<meta name="description" content="The WaterNow community funds a real bottle refill station, in a place it chooses: where it goes, who builds it, what it costs, who gave.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="The Community Fountain · WaterNow">
+<meta property="og:description" content="Together, the community funds a real water fountain. See where, who builds it and how much.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.css"
+      integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/map.css">
+<link rel="stylesheet" href="../assets/fontaine.css">
+<script src="../assets/hold.js"></script>
+</head>
+<body data-page="project" data-root="../">
+<header class="bar"><a class="brand" href="../"><img class="logo" src="../assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page fontaine hold">
+  <div class="cover sk" id="coverBox"><span class="cover-city" id="coverCity" aria-hidden="true"></span></div>
+
+  <section class="card" id="head" aria-live="polite">
+    <h1 id="title">The Community Fountain</h1>
+    <p class="muted subline" id="sub">The Community Fountain</p>
+    <p class="status-row"><span class="status" id="status"></span><span class="muted small" id="ends"></span></p>
+    <div class="thermo hidden" id="thermo">
+      <p class="thermo-figs"><b id="raised"></b> <span class="muted" id="goal"></span></p>
+      <div class="track" aria-hidden="true"><span class="fill" id="fill"></span><span class="fill matched" id="fillMatched"></span></div>
+      <p class="muted small" id="thermoLine"></p>
+    </div>
+    <p class="muted" id="text">Together, the WaterNow community funds a real bottle refill station, in a place it chooses.</p>
+    <p class="rollover hidden" id="rollover"></p>
+    <div class="actions fit" id="headActions">
+      <a class="btn primary hidden" id="giveLink" href="#give">Give</a>
+      <button class="btn" type="button" id="share">Share</button>
+    </div>
+    <p class="muted small share-msg" id="shareMsg" role="status"></p>
+    <p class="note hidden" id="note" role="status"></p>
+  </section>
+
+  <section class="card match hidden" id="match">
+    <p class="match-text" id="matchText"></p>
+    <p class="small" id="matchLeft"></p>
+  </section>
+
+  <section class="card hidden" id="where">
+    <h2 id="whereTitle">Exactly where</h2>
+    <p class="place hidden" id="place"><b id="placeName"></b><span class="muted small" id="placeAddress"></span></p>
+    <div class="map" id="map"></div>
+    <h3 class="sub hidden" id="sitesTitle">The candidate sites</h3>
+    <ol class="sites" id="sites"></ol>
+    <p class="muted small hidden" id="votesHidden"></p>
+    <div class="vote-box hidden" id="voteBox">
+      <h3 id="voteTitle">Vote in the app</h3>
+      <p class="muted small" id="voteText"></p>
+      <p class="small" id="voteDates"></p>
+      <div class="actions fit">
+        <a class="btn primary" id="voteOpen" href="#">Open in WaterNow</a>
+        <a class="btn go" id="voteGet" href="../">Get WaterNow</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="card hidden" id="who">
+    <h2 id="whoTitle">Who builds it</h2>
+    <dl class="who" id="whoList"></dl>
+  </section>
+
+  <section class="card hidden" id="budget">
+    <h2 id="budgetTitle">How much</h2>
+    <ul class="bars" id="bars"></ul>
+    <p class="bars-total"><span id="totalLabel">Total</span><b id="total"></b></p>
+  </section>
+
+  <section class="card hidden" id="impact">
+    <h2 id="impactTitle">Since it opened</h2>
+    <div class="impact-figs"><p><b id="refills"></b></p><p><b id="bottles"></b></p></div>
+    <p class="muted small" id="bottleNote"></p>
+    <p class="small" id="opened"></p>
+    <a class="btn wide go" id="fountainLink" href="../f/">See the fountain's page</a>
+  </section>
+
+  <section class="card give hidden" id="give">
+    <h2 id="giveTitle">Give</h2>
+    <fieldset class="seg">
+      <legend class="sr-only" id="freqLegend">How often</legend>
+      <label><input type="radio" name="freq" value="once" id="once" checked><span id="onceText">One time</span></label>
+      <label><input type="radio" name="freq" value="monthly" id="monthly"><span id="monthlyText">Monthly</span></label>
+    </fieldset>
+    <p class="muted small hidden" id="monthlyNote"></p>
+    <fieldset class="amounts">
+      <legend id="amountLegend">Amount</legend>
+      <label><input type="radio" name="amount" value="500" id="amt500"><span id="amt500Text">5 $</span></label>
+      <label><input type="radio" name="amount" value="1000" id="amt1000"><span id="amt1000Text">10 $</span></label>
+      <label><input type="radio" name="amount" value="2500" id="amt2500" checked><span id="amt2500Text">25 $</span></label>
+      <label><input type="radio" name="amount" value="5000" id="amt5000"><span id="amt5000Text">50 $</span></label>
+      <label><input type="radio" name="amount" value="10000" id="amt10000"><span id="amt10000Text">100 $</span></label>
+      <span class="other"><label class="sr-only" for="otherAmount" id="otherLabel">Other amount</label><input class="input" type="text" id="otherAmount" inputmode="decimal" autocomplete="off" maxlength="12" placeholder="Other amount"></span>
+    </fieldset>
+    <p class="muted small" id="otherHint"></p>
+    <label class="field" for="donorName" id="nameLabel">Your name on the wall</label>
+    <input class="input" type="text" id="donorName" autocomplete="name" maxlength="40">
+    <label class="check"><input type="checkbox" id="anon"><span id="anonText">Give anonymously</span></label>
+    <label class="check"><input type="checkbox" id="showAmount"><span id="showAmountText">Show the amount on the wall</span></label>
+    <label class="field" for="donorMsg" id="msgLabel">A short message (optional)</label>
+    <textarea class="input" id="donorMsg" maxlength="140" rows="2"></textarea>
+    <p class="muted small counter" id="msgLeft"></p>
+    <p class="rollover" id="rollover2"></p>
+    <button class="btn primary wide" type="button" id="giveSubmit">Give</button>
+    <p class="small no-tax" id="noTax">This gift isn't tax-deductible.</p>
+    <p class="msg" id="giveMsg" role="status"></p>
+    <p class="muted small" id="secure"></p>
+  </section>
+
+  <section class="card hidden" id="closed">
+    <p id="closedText"></p>
+    <a class="btn wide go hidden" id="nextLink" href="./">See the next project</a>
+  </section>
+
+  <section class="card hidden" id="donors">
+    <h2 id="donorsTitle">Donor wall</h2>
+    <ul class="wall" id="wall"></ul>
+  </section>
+
+  <section class="card hidden" id="sponsors">
+    <h2 id="sponsorsTitle">Sponsors</h2>
+    <div class="tiers" id="tiers"></div>
+  </section>
+
+  <section class="card hidden" id="bad" role="status">
+    <h1 id="badTitle">Link incomplete</h1>
+    <p class="muted" id="badText">This link is damaged. Ask for it again.</p>
+  </section>
+
+  <section class="card getcard waiting">
+    <img class="app-icon" src="../assets/icon.svg" alt="" width="48" height="48">
+    <h2 id="getTitle">No WaterNow yet?</h2>
+    <p class="muted small" id="getText">Free drinking water near you, on a map the community keeps up to date.</p>
+    <a class="btn wide go" id="get" href="../">Get WaterNow</a>
+  </section>
+
+  <p class="foot muted waiting" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../assets/motion.js"></script>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/page-data.js"></script>
+<script src="../assets/fontaine-data.js"></script>
+<script src="../assets/map.js"></script>
+<script src="../assets/fontaine.js"></script>
+<!-- Last: the page's words and its read are under way before this big file comes; fontaine.js starts the map once it
+     has run (DOMContentLoaded). -->
+<script src="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.js"
+        integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin=""></script>
+</body>
+</html>

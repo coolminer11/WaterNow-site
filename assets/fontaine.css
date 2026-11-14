@@ -1,0 +1,165 @@
+/*
+ * « Fontaine commune » pages (fontaine/, fontaine/merci/, f/): site.css's cards, tokens and motion, plus the candidate
+ * sites, the budget bars, the donor wall, the sponsors and the « Donner » form. Every text colour is a token pair that
+ * contrast.test.js measures, light and dark; motion only with prefers-reduced-motion: no-preference.
+ */
+.page.fontaine { max-width: 640px; }
+
+/* The cover's place without a picture: the project's city, poster style (white on the cover's blue, measured). */
+.cover-city { position: absolute; left: 20px; bottom: 16px; color: #fff; font-size: clamp(28px, 8vw, 44px); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+.cover.sk .cover-city { display: none; }
+
+/* The line under the title: « La Fontaine commune · Montréal » (no label above the title). */
+.subline { margin-top: 2px; }
+.status-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; min-height: 24px; margin: 2px 0 4px; }
+.status {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  font-size: 12px; line-height: 16px; font-weight: 700; color: var(--on-accent-soft); background: var(--accent-soft);
+}
+.status:empty { display: none; }
+.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.status.funding::before, .status.built::before { background: var(--ok); }
+.status.archived::before { background: var(--muted); }
+
+.thermo { margin: 14px 0 10px; }
+.thermo-figs b { font-size: 28px; line-height: 34px; font-weight: 800; letter-spacing: -.02em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.rollover { margin-top: 12px; padding: 10px 12px; border-radius: 12px; font-size: 14px; line-height: 20px; color: var(--fg); background: var(--soft); }
+.share-msg:empty { display: none; }
+.share-msg { margin-top: 8px; overflow-wrap: anywhere; }
+.prose { white-space: pre-line; overflow-wrap: anywhere; }
+
+/* The matching campaign: one calm banner. */
+.match { border-color: transparent; color: var(--on-accent-soft); background: var(--accent-soft); }
+.match-text { font-weight: 700; }
+.match .small:empty { display: none; }
+.match .small { margin-top: 4px; }
+
+/* Where: the chosen site, or the candidates during the vote. */
+.place { display: grid; gap: 2px; margin: 4px 0 12px; }
+.fontaine .map { height: 300px; min-height: 0; }
+.sub { font-size: 16px; line-height: 24px; font-weight: 600; margin: 18px 0 0; }
+.sites { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px; }
+.sites:empty { display: none; }
+.sites > li { display: grid; grid-template-columns: 32px 1fr; gap: 12px; padding: 12px 14px; border-radius: 12px; background: var(--soft); }
+.sites > li > div { display: grid; gap: 2px; min-width: 0; overflow-wrap: anywhere; }
+.sites .facts { margin-top: 6px; gap: 2px; }
+.sites .won { box-shadow: inset 0 0 0 2px var(--ok); }
+.sites ~ .small { margin-top: 10px; }
+.letter, .site-pin {
+  display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--on-accent);
+  font-weight: 800; font-size: 15px; line-height: 1;
+}
+.site-pin { width: 30px; height: 30px; border: 3px solid #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .35); font-size: 13px; }
+.votes { font-weight: 600; }
+.won-chip { justify-self: start; margin-top: 6px; padding: 2px 8px; border-radius: 999px; font-size: 12px; line-height: 16px; font-weight: 700; color: var(--ok); background: var(--card); }
+.vote-box { margin-top: 14px; padding: 16px; border-radius: 12px; color: var(--on-accent-soft); background: var(--accent-soft); }
+.vote-box .muted { color: inherit; }
+.vote-box h3 { margin: 0 0 4px; font-size: 16px; line-height: 24px; }
+.vote-box .small { margin-top: 4px; }
+.vote-box .actions { margin-top: 12px; }
+
+/* Who builds it. */
+.who { display: grid; grid-template-columns: max-content 1fr; gap: 12px 16px; margin: 10px 0 0; }
+.who dt { color: var(--muted); font-size: 14px; line-height: 24px; }
+.who dd { margin: 0; display: grid; gap: 2px; min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 420px) { .who { grid-template-columns: 1fr; gap: 0; } .who dd { margin-bottom: 12px; } }
+
+/* The budget: each line against the whole. */
+.bars { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 12px; }
+.bar-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; line-height: 20px; }
+.bar-top b { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bud-bar { display: block; height: 8px; margin-top: 6px; border-radius: 999px; background: var(--soft); overflow: hidden; }
+.bud-bar > span { display: block; height: 100%; width: var(--w, 0); border-radius: 999px; background: var(--accent); }
+.bars-total { display: flex; justify-content: space-between; gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); font-weight: 600; }
+.bars-total b { font-variant-numeric: tabular-nums; }
+
+/* A built fountain's counts. */
+.impact-figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin: 10px 0 8px; }
+.impact-figs p { padding: 14px; border-radius: 12px; background: var(--soft); }
+.impact-figs b { font-size: 20px; line-height: 26px; color: var(--accent); }
+.built-by { margin-top: 2px; font-weight: 700; color: var(--ok); }
+
+/* The donor wall: names (or « Anonyme »), amounts only when shown, messages; in the server's order (newest first), no ranking. */
+.wall { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+.wall li { display: grid; gap: 4px; align-content: start; padding: 12px 14px; border-radius: 12px; background: var(--soft); overflow-wrap: anywhere; }
+.who-gave { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.amount { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.said { font-size: 14px; line-height: 20px; }
+.when { font-size: 12px; line-height: 16px; color: var(--muted); }
+.wall .empty { grid-column: 1 / -1; color: var(--muted); }
+
+/* Sponsors by tier, gold first: the logo (WaterNow's storage only) over its initial, the name under it. */
+.tiers { display: grid; gap: 18px; margin-top: 10px; }
+.tier-name { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--muted); }
+.tier-name::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: #b0703c; }
+.tier.gold .tier-name::before { background: #c9a227; }
+.tier.silver .tier-name::before { background: #9ca3af; }
+.logos { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 14px; }
+.logos a, .logos li > span { display: grid; justify-items: center; align-content: start; gap: 6px; width: 112px; color: var(--fg); text-align: center; text-decoration: none; font-size: 14px; line-height: 18px; overflow-wrap: anywhere; }
+.logos a:hover .sponsor-name { text-decoration: underline; }
+.logos .plogo { margin: 0; }
+.tier.gold .plogo { width: 88px; height: 88px; font-size: 34px; }
+.tier.bronze .plogo { width: 52px; height: 52px; font-size: 22px; border-radius: 13px; }
+.plogo img { opacity: 0; }
+.plogo.has-logo { background: var(--logo-tile); }
+/* Once the logo is drawn its initial goes: through a transparent logo it read 3.05:1 on the white tile in dark. */
+.plogo.has-logo > span { visibility: hidden; }
+.plogo.has-logo img { opacity: 1; object-fit: contain; padding: 6px; }
+
+/* The « Donner » form. */
+.give fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.give legend { padding: 0; margin: 16px 0 8px; font-size: 14px; line-height: 20px; font-weight: 600; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; margin-top: 12px; border-radius: 12px; background: var(--soft); }
+.seg label, .amounts label { position: relative; display: block; }
+/* The real radios stay (keyboard, screen readers), unseen over their label. */
+.seg input, .amounts input[type="radio"] { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.seg span { display: grid; place-items: center; min-height: 44px; border-radius: 9px; font-weight: 600; color: var(--muted); transition: background-color .2s, color .2s; }
+.seg input:checked + span { color: var(--fg); background: var(--card); box-shadow: 0 1px 3px rgba(24, 24, 27, .14); }
+.seg input:focus-visible + span, .amounts input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+/* The 5 presets on one row, the other amount under them, full width (its placeholder never cut on a phone). */
+.amounts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.amounts .other { grid-column: 1 / -1; }
+.amounts span {
+  display: grid; place-items: center; min-height: 48px; border-radius: 12px; border: 1px solid var(--border); background: var(--card);
+  color: var(--fg); font-weight: 700; font-variant-numeric: tabular-nums; transition: border-color .2s, background-color .2s, transform .18s var(--ease);
+}
+.amounts input:checked + span { border-color: var(--accent); color: var(--on-accent-soft); background: var(--accent-soft); }
+@media (hover: hover) { .amounts label:hover span { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); } }
+.amounts label:active span { transform: scale(.97); }
+.amounts .other .input { text-align: center; min-height: 48px; padding: 12px 8px; }
+.give .input {
+  display: block; width: 100%; min-height: 48px; padding: 12px 14px; border-radius: 12px; font: inherit; color: var(--fg); background: var(--card);
+  border: 1px solid var(--muted); border-color: color-mix(in srgb, var(--muted) 72%, var(--card)); transition: border-color .2s;
+}
+.give textarea.input { min-height: 72px; resize: vertical; }
+.give .input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-color: var(--accent); }
+.give .input:disabled { color: var(--muted); background: var(--soft); }
+.give .input::placeholder { color: var(--muted); opacity: 1; }
+.give .field { display: block; margin: 16px 0 6px; font-size: 14px; line-height: 20px; font-weight: 600; }
+.give #otherHint { margin-top: 6px; }
+.check { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; line-height: 20px; cursor: pointer; }
+.check input { flex: none; width: 20px; height: 20px; margin: 0; accent-color: var(--accent); }
+.counter { margin-top: 4px; text-align: right; }
+.give .rollover { margin-top: 14px; }
+.give .btn.wide { margin-top: 14px; cursor: pointer; }
+.give .btn[aria-disabled="true"] { cursor: default; }
+.give .msg { min-height: 20px; margin-top: 10px; font-size: 14px; line-height: 20px; color: var(--fg); }
+.give .msg.err { color: var(--err); }
+.give .no-tax { margin-top: 10px; text-align: center; font-weight: 600; color: var(--fg); }
+.give #secure { margin-top: 6px; }
+.closed-text { font-weight: 600; }
+
+/* Thank you: the drop with a tick that draws itself once. */
+.thanks .drop { margin-bottom: 10px; }
+.drop .tick { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 24; }
+.project-name { margin-top: 12px; font-weight: 700; }
+.stop-monthly { margin-top: 12px; padding: 10px 12px; border-radius: 12px; color: var(--fg); background: var(--soft); }
+
+@keyframes wn-tick { from { stroke-dashoffset: 24; } }
+@media (prefers-reduced-motion: no-preference) {
+  /* The thermometer and the budget fill up once on screen (motion.js adds .in; at once without motion). */
+  .thermo:not(.in) .fill, .bars:not(.in) .bud-bar > span { width: 0; }
+  .fill, .bud-bar > span { transition: width 1.1s var(--ease); }
+  .fill.matched { transition-delay: .45s; }
+  .drop .tick { animation: wn-tick .7s var(--ease) .35s backwards; }
+}

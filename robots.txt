@@ -1,0 +1,6 @@
+# The private statistics console is for the team, partners and cities: not for search engines.
+# (Crawlers read robots.txt at a domain's root: this file takes effect once the site has its own domain; the page also
+# says noindex.)
+User-agent: *
+Disallow: /console/
+Disallow: /WaterNow-site/console/

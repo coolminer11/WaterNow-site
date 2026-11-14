@@ -1,0 +1,102 @@
+/* WaterNow Statistics, private console: « Fontaine commune » (fontaine.js), in the console's tokens; its plaque, a sheet
+   printed alone (Letter or A4, portrait), light even in dark mode. */
+#fontaine h2 { margin-bottom: 4px; }
+#fontaine > .card-head .ghost { flex: none; }
+.fc-grid { display: grid; grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); gap: 16px; margin-top: 14px; align-items: start; }
+.fc-list { display: grid; gap: 8px; }
+.fc-item {
+  display: grid; gap: 4px; width: 100%; padding: 12px 14px; text-align: left; border-radius: 14px; border: 1px solid var(--line); background: var(--card);
+  transition: border-color .18s, box-shadow .18s, background-color .18s;
+}
+.fc-item:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); box-shadow: var(--shadow); }
+.fc-item[aria-pressed="true"] { background: var(--soft); border-color: var(--accent); }
+.fc-item-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.fc-item-top b { min-width: 0; overflow-wrap: anywhere; }
+.chip.fc-funding, .chip.fc-built { color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, transparent); }
+.chip.fc-vote, .chip.fc-building { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.chip.fc-draft, .chip.fc-archived { color: var(--muted); }
+.fc-main { min-width: 0; }
+.fc-tabs { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 14px; background: var(--soft); }
+.fc-body { padding-top: 6px; }
+.fc-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0 14px; }
+.fc-f { min-width: 0; }
+textarea.input.fc-text { min-height: 90px; font: inherit; }
+.fc-save { width: auto; padding: 10px 18px; }
+.fc-acts { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 18px; }
+.fc-acts .fc-save { margin-top: 0; }
+.fc-h3 { margin: 22px 0 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.fc-now { margin-top: 10px; font-weight: 650; }
+.fc-step { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; padding: 12px 14px; margin-top: 12px; border-radius: 14px; background: var(--soft); }
+.fc-step .fc-f { flex: 1 1 220px; }
+.fc-step .fc-f label.field { margin-top: 0; }
+.fc-step .fc-save, .fc-step .ghost { margin-top: 0; }
+.fc-danger { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 40%, var(--line)); }
+.fc-url { font: 12.5px/1.45 ui-monospace, Consolas, monospace; overflow-wrap: anywhere; margin-top: 10px; }
+
+/* Sites: a card per candidate, its letter as on the map's pin. */
+.fc-site { padding: 12px 14px 14px; margin-top: 12px; border-radius: 14px; background: var(--soft); }
+.fc-site-h { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.fc-site-h .ghost { margin-left: auto; }
+.fc-site-h .ghost[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.fc-site .input { background: var(--card); }
+.fc-letter, .fc-pin {
+  display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: var(--on-accent);
+  font-weight: 800; font-size: 13px; line-height: 1;
+}
+.fc-pin { width: 30px; height: 30px; border: 3px solid #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .35); cursor: grab; }
+
+/* Budget lines. */
+.fc-line { display: grid; grid-template-columns: minmax(140px, 1fr) minmax(0, 2fr) minmax(100px, 1fr) auto; gap: 0 10px; align-items: end; }
+.fc-line .small-btn { margin-bottom: 6px; }
+.fc-total { margin-top: 12px; font-weight: 650; font-variant-numeric: tabular-nums; }
+@media (max-width: 640px) { .fc-line { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+.fc-sponsors { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.fc-sponsors li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; background: var(--soft); }
+.fc-sponsors .fc-url { margin: 0; }
+/* A picture field: « Choisir une image » under the address, and the picture as sent. */
+.fc-pic { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.fc-pic-prev { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); background: #fff; }
+.fc-sponsors li .small-btn:first-of-type { margin-left: auto; }
+.chip.fc-tier-gold { color: #8a6a00; background: #f7ecc4; }
+.chip.fc-tier-silver { color: var(--muted); }
+.chip.fc-tier-bronze { color: #8a4b1f; background: #f6e2d2; }
+
+/* Donations: full details for receipts. */
+.fc-scroll { overflow-x: auto; margin-top: 10px; }
+.fc-don { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.fc-don td { padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.fc-don td:first-child { display: grid; gap: 2px; }
+.fc-don td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 650; }
+.fc-don .fc-msg { display: block; overflow-wrap: anywhere; }
+.fc-don .is-hidden .fc-msg { color: var(--muted); text-decoration: line-through; }
+.fc-don .is-refunded td { color: var(--muted); }
+.fc-fund { border-style: dashed; }
+.fc-roll { flex: 1 1 260px; margin: 0; }
+.fc-active { padding: 10px 12px; border-radius: 12px; background: var(--soft); font-weight: 600; }
+
+@media (max-width: 900px) { .fc-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* The plaque: a white sheet over the console, the only thing printed (report.css hides the rest of the page). */
+.plaque-sheet { max-width: 560px; text-align: center; }
+.plaque-sheet .bar { justify-content: flex-end; }
+.pl-brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; letter-spacing: -.01em; }
+.pl-brand .mark { width: 36px; height: 36px; }
+.pl-eyebrow { margin-top: 26px; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #0a3ccb; }
+.plaque-sheet .pl-name { margin-top: 8px; font-size: 32px; line-height: 1.15; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.pl-built { margin-top: 8px; font-size: 18px; font-weight: 650; color: #12805c; }
+.pl-qr { display: block; width: min(300px, 70vw); height: auto; margin: 26px auto 10px; shape-rendering: crispEdges; }
+.pl-qr path { fill: #0b1220; }
+.pl-scan { font-size: 15px; color: #334155; }
+.pl-url { margin-top: 6px; font: 12px/1.4 ui-monospace, Consolas, monospace; color: #5b6474; overflow-wrap: anywhere; }
+.pl-sponsors { margin-top: 26px; padding-top: 16px; border-top: 1px solid #e3e8f0; }
+.pl-with { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #5b6474; }
+.pl-names { margin-top: 6px; font-size: 17px; font-weight: 650; }
+.pl-demo { margin-top: 18px; font-size: 12px; font-weight: 700; color: #b45309; }
+@page plaque { size: portrait; margin: 14mm; @top-left { content: none; } @bottom-left { content: none; } @bottom-right { content: none; } }
+@media print {
+  .plaque-sheet { page: plaque; max-width: none; margin: 0 auto; padding-top: 18mm !important; }
+  .plaque-sheet .pl-name { font-size: 30pt; }
+  .pl-qr { width: 90mm; margin-top: 12mm; }
+  .pl-sponsors { margin-top: 14mm; }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<!-- Stripe Checkout comes back here after a gift: fontaine/merci/?p=<id>. -->
+<meta name="wn-api" content="https://pkqsvlbiznrqxfckaxll.supabase.co">
+<title>Thank you · WaterNow</title>
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/fontaine.css">
+<script src="../../assets/hold.js"></script>
+</head>
+<body data-page="thanks" data-root="../../">
+<header class="bar"><a class="brand" href="../../"><img class="logo" src="../../assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page fontaine hold">
+  <section class="card thanks" id="head" aria-live="polite">
+    <svg class="drop" viewBox="0 0 56 56" aria-hidden="true">
+      <path class="body" d="M28 5C22 14 12 25 12 37a16 16 0 0 0 32 0C44 25 34 14 28 5Z"/>
+      <path class="rim" d="M28 5C22 14 12 25 12 37a16 16 0 0 0 32 0C44 25 34 14 28 5Z"/>
+      <path class="tick" d="M20.5 37.5l5.2 5 9.8-11"/>
+    </svg>
+    <h1 id="title">Thank you!</h1>
+    <p class="muted" id="text">Your gift is on its way. It will show on the wall in a moment.</p>
+    <p class="small stop-monthly hidden" id="stopMonthly"><span id="stopMonthlyText"></span> <a id="writeUs" href="../../privacy/">Write to us</a></p>
+    <p class="project-name hidden" id="projectName"></p>
+    <div class="thermo hidden" id="thermo">
+      <p class="thermo-figs"><b id="raised"></b> <span class="muted" id="goal"></span></p>
+      <div class="track" aria-hidden="true"><span class="fill" id="fill"></span><span class="fill matched" id="fillMatched"></span></div>
+      <p class="muted small" id="thermoLine"></p>
+    </div>
+    <div class="actions fit" id="headActions">
+      <button class="btn primary" type="button" id="share">Share</button>
+      <a class="btn" id="back" href="../">Back to the project</a>
+    </div>
+    <p class="muted small share-msg" id="shareMsg" role="status"></p>
+    <p class="note hidden" id="note" role="status"></p>
+  </section>
+
+  <section class="card getcard waiting">
+    <img class="app-icon" src="../../assets/icon.svg" alt="" width="48" height="48">
+    <h2 id="getTitle">No WaterNow yet?</h2>
+    <p class="muted small" id="getText">Free drinking water near you, on a map the community keeps up to date.</p>
+    <a class="btn wide go" id="get" href="../../">Get WaterNow</a>
+  </section>
+
+  <p class="foot muted waiting" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../../assets/motion.js"></script>
+<script src="../../assets/spot-params.js"></script>
+<script src="../../assets/page-data.js"></script>
+<script src="../../assets/fontaine-data.js"></script>
+<script src="../../assets/fontaine.js"></script>
+</body>
+</html>

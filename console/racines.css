@@ -1,0 +1,48 @@
+/* WaterNow Statistics, private console: « Racines et Plus » (racines.js), in the console's tokens (console.css). */
+#racines h2 { margin-bottom: 4px; }
+.rc-tabs { margin-top: 14px; }
+.rc-body { padding-top: 14px; }
+.rc-kpis { margin-top: 2px; }
+.rc-kpis .kpi { box-shadow: none; background: var(--soft); border-color: transparent; }
+.rc-h3 { margin: 22px 0 8px; font-size: 15px; font-weight: 700; }
+.rc-lead { max-width: 70ch; }
+
+/* Subscribers by plan and period, the monthly lots: plain tables, figures right-aligned in tabular digits. */
+.rc-scroll { overflow-x: auto; margin-top: 8px; }
+table.rc-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.rc-table th, .rc-table td { padding: 9px 10px; text-align: left; border-top: 1px solid var(--line); white-space: nowrap; }
+.rc-table thead th { border-top: 0; font-size: 12.5px; font-weight: 650; color: var(--muted); }
+.rc-table tbody th { font-weight: 650; }
+.rc-table .n { text-align: right; font-variant-numeric: tabular-nums; }
+.rc-table .rc-total th, .rc-table .rc-total td { font-weight: 750; border-top: 2px solid var(--line); }
+.rc-table td.rc-wrap { white-space: normal; min-width: 180px; overflow-wrap: anywhere; }
+.rc-table a { color: var(--accent); font-weight: 600; }
+.rc-ref { font: 12.5px/1.4 ui-monospace, Consolas, monospace; }
+.rc-error { color: var(--bad); }
+.rc-due { margin-top: 10px; font-weight: 650; }
+.chip.rc-planted, .chip.rc-shown { color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, transparent); }
+.chip.rc-open { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.chip.rc-failed { color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, transparent); }
+.chip.rc-hidden, .chip.rc-unknown, .chip.rc-test { color: var(--muted); }
+.chip.rc-test { margin-left: 6px; }
+
+/* Companies: the list beside the editor and the corporate trees form. */
+.rc-grid { display: grid; grid-template-columns: minmax(220px, 320px) minmax(0, 1fr); gap: 18px; margin-top: 12px; align-items: start; }
+@media (max-width: 760px) { .rc-grid { grid-template-columns: minmax(0, 1fr); } }
+.rc-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rc-list li { display: grid; gap: 4px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); }
+.rc-list li .small-btn { justify-self: start; margin-top: 4px; }
+.rc-list li .small-btn[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.rc-item-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rc-item-top b { min-width: 0; overflow-wrap: anywhere; }
+.rc-new { margin-top: 10px; }
+.rc-forms { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; align-items: start; min-width: 0; }
+.rc-form { padding: 4px 16px 16px; border-radius: 14px; background: var(--soft); }
+.rc-form .input { background: var(--card); }
+.rc-f { min-width: 0; }
+.rc-check { display: flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 10px; font-size: 14px; cursor: pointer; }
+.rc-check input { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); }
+.rc-acts { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 16px; }
+.rc-acts .primary { width: auto; margin-top: 0; padding: 10px 18px; }
+.rc-pic { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.rc-danger { margin-left: auto; color: var(--bad); border-color: color-mix(in srgb, var(--bad) 40%, var(--line)); }

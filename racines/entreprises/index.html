@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin">
+<meta name="color-scheme" content="light dark">
+<!-- Corporate planting: how it works, the companies that agreed to be shown (racines_companies, section 90; logos only
+     from WaterNow's own storage) and how to write to us. -->
+<meta name="wn-api" content="https://pkqsvlbiznrqxfckaxll.supabase.co">
+<!-- The legal pages' contact address (app/src/main/assets/legal/versions.json): scripts/legal-fill.js writes it here
+     too. Empty: the page says the address is coming. -->
+<meta name="wn-contact" content="">
+<title>Companies plant trees with WaterNow</title>
+<meta name="description" content="Trees in bulk, planted by Tree-Nation in your company's name, with their certificates. Price on request.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="Companies plant trees with WaterNow">
+<meta property="og:description" content="Trees in bulk, planted by Tree-Nation in your company's name, with their certificates.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/racines.css">
+<script src="../../assets/hold.js"></script>
+</head>
+<body data-page="companies" data-root="../../">
+<header class="bar"><a class="brand" href="../../"><img class="logo" src="../../assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page racines hold">
+  <section class="card r-hero">
+    <svg class="sprout" viewBox="0 0 56 56" aria-hidden="true">
+      <circle class="ground" cx="28" cy="28" r="27"/>
+      <path class="stem" d="M28 45V22"/>
+      <path class="leaf l1" d="M28 33c-8.5 0-13.6-4.6-14.6-12.6 8 .2 13.4 4.6 14.6 12.6Z"/>
+      <path class="leaf l2" d="M28 26.5c.6-9 5.6-14.4 14.6-15.2.2 9-5 14.4-14.6 15.2Z"/>
+      <path class="soil" d="M17 45h22"/>
+    </svg>
+    <h1 id="coTitle">Plant trees with WaterNow, as a company</h1>
+    <p class="muted lead" id="coLead">Trees in bulk, planted by Tree-Nation in your company's name, for your team or your customers, with their certificates.</p>
+  </section>
+
+  <section class="card">
+    <h2 id="howTitle">How it works</h2>
+    <ol class="stations steps">
+      <li><span class="num" aria-hidden="true">1</span><span id="step1">You choose how many trees: 100, 500 or more.</span></li>
+      <li><span class="num" aria-hidden="true">2</span><span id="step2">We agree on the price: it depends on the quantity (on request).</span></li>
+      <li><span class="num" aria-hidden="true">3</span><span id="step3">Tree-Nation plants them; each tree has its public certificate.</span></li>
+      <li><span class="num" aria-hidden="true">4</span><span id="step4">If you like, your company shows on this page, with its logo and its trees.</span></li>
+    </ol>
+    <p class="free" id="coPrice">For example: 500 trees. Price on request.</p>
+    <p class="muted small co-commons" id="coCommons">10% of the margin also goes to the Community Fountain.</p>
+  </section>
+
+  <section class="card">
+    <h2 id="contactTitle">Write to us</h2>
+    <p id="contact"></p>
+  </section>
+
+  <!-- The companies that agreed to be shown, in the server's order (no ranking); hidden while the server doesn't have
+       the list yet. -->
+  <section class="card" id="list">
+    <h2 id="listTitle">They plant trees with WaterNow</h2>
+    <ul class="companies" id="companies" aria-live="polite">
+      <li class="sk-co"><span class="plogo sk"></span><span class="sk-line"></span><span class="sk-line short"></span></li>
+      <li class="sk-co"><span class="plogo sk"></span><span class="sk-line"></span><span class="sk-line short"></span></li>
+      <li class="sk-co"><span class="plogo sk"></span><span class="sk-line"></span><span class="sk-line short"></span></li>
+    </ul>
+    <p class="muted hidden" id="coEmpty"></p>
+    <p class="note hidden" id="note" role="status"></p>
+  </section>
+
+  <p class="r-back waiting"><a class="btn go" id="back" href="../">Racines and Plus</a></p>
+  <p class="foot muted waiting" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../../assets/motion.js"></script>
+<script src="../../assets/spot-params.js"></script>
+<script src="../../assets/page-data.js"></script>
+<script src="../../assets/racines-data.js"></script>
+<script src="../../assets/racines.js"></script>
+</body>
+</html>

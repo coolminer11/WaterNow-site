@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co https://tiles.openfreemap.org; worker-src blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin">
+<meta name="color-scheme" content="light dark">
+<title>WaterNow live impact</title>
+<meta name="description" content="Plastic bottles avoided, litres refilled and the top cities of the WaterNow community, live. Counts only, never a person.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="WaterNow live impact">
+<meta property="og:description" content="Plastic bottles avoided, litres refilled and the top cities of the WaterNow community, live.">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.css"
+      integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/map.css">
+<link rel="stylesheet" href="../assets/stats.css">
+<script src="../assets/hold.js"></script>
+</head>
+<body>
+<header class="bar"><a class="brand" href="../"><img class="logo" src="../assets/icon.svg" alt="" width="32" height="32">WaterNow</a></header>
+<main class="page stats hold">
+  <section class="card hero">
+    <h1 id="title">Live impact</h1>
+    <p class="muted" id="lead">What the WaterNow community does, together, right now.</p>
+    <span id="status" class="badge">Loading…</span>
+    <p id="statusLive" class="sr-only" role="status"></p>
+  </section>
+
+  <section class="card big">
+    <div class="count sk" id="bottles">–</div>
+    <div class="label" id="bottlesLabel">plastic bottles avoided</div>
+    <div class="split"><span><b class="sk" id="bottlesMonth">–</b> <span id="monthLabel">this month</span></span>
+      <span><b class="sk" id="bottlesToday">–</b> <span id="todayLabel">today</span></span></div>
+  </section>
+
+  <section class="tiles">
+    <div class="card tile"><div class="count sk" id="litres">–</div><div class="label" id="litresLabel">litres of water refilled</div>
+      <div class="split small"><span><b class="sk" id="litresMonth">–</b> <span id="litresMonthLabel">this month</span></span>
+      <span><b class="sk" id="litresToday">–</b> <span id="litresTodayLabel">today</span></span></div></div>
+    <div class="card tile"><div class="count sk" id="refillsToday">–</div><div class="label" id="refillsTodayLabel">refills today</div></div>
+    <div class="card tile"><div class="over" id="waterOver"></div><div class="count sk" id="water">–</div><div class="label" id="waterLabel">water points</div></div>
+    <div class="card tile"><div class="over" id="toiletsOver"></div><div class="count sk" id="toilets">–</div><div class="label" id="toiletsLabel">toilets</div></div>
+    <div class="card tile"><div class="count sk" id="cities">–</div><div class="label" id="citiesLabel">cities</div></div>
+    <div class="card tile"><div class="count sk" id="countries">–</div><div class="label" id="countriesLabel">countries</div></div>
+  </section>
+  <p class="muted small lists" id="lists"></p>
+
+  <section class="card">
+    <h2 id="mapTitle">Where people refill</h2>
+    <p class="muted small" id="mapNote">Areas with at least 10 refills by 3 people or more, shown 1 to 2 days later. Never a person.</p>
+  </section>
+  <div class="map" id="map"></div>
+
+  <section class="card">
+    <h2 id="topTitle">Top cities</h2>
+    <p class="muted small" id="topNote">A friendly race between cities, never between people.</p>
+    <ol class="top" id="topList">
+      <li class="sk-row" aria-hidden="true"><span class="sk-line"></span></li><li class="sk-row" aria-hidden="true"><span class="sk-line"></span></li>
+      <li class="sk-row" aria-hidden="true"><span class="sk-line"></span></li><li class="sk-row" aria-hidden="true"><span class="sk-line"></span></li>
+      <li class="sk-row" aria-hidden="true"><span class="sk-line"></span></li>
+    </ol>
+    <p class="muted" id="topEmpty"></p>
+  </section>
+
+  <section class="tiles">
+    <div class="card soon"><h2 id="fontaineTitle">The Community Fountain</h2>
+      <p class="muted small" id="fontaineText">Coming soon: together, the community funds a real bottle refill station, in a place it chooses.</p></div>
+    <div class="card soon"><h2 id="racinesTitle">WaterNow Racines</h2>
+      <div class="count sk" id="trees">–</div><div class="label" id="treesLabel">trees planted</div>
+      <p class="muted small" id="racinesText">Coming soon: a real tree planted every month.</p></div>
+  </section>
+
+  <section class="card cta">
+    <h2 id="ctaTitle">Join them: get WaterNow</h2>
+    <p class="muted" id="ctaText">Free, no ads, no trackers. Find water near you and count the bottles you avoid.</p>
+    <div class="get">
+      <div class="qrbox hidden" id="qrBox">
+        <svg class="qr" id="qr" viewBox="0 0 29 29" role="img" aria-label="QR code to download WaterNow"><rect width="100%" height="100%"/><path id="qrPath" d=""/></svg>
+        <p class="muted small" id="qrText">Scan to get it on your phone</p>
+      </div>
+      <div class="buttons">
+        <a class="btn primary wide go" id="download" href="../">Download for Android</a>
+        <span class="btn wide disabled" id="appStore">App Store: coming soon</span>
+      </div>
+    </div>
+  </section>
+
+  <p class="muted small" id="privacy">Totals only: never a person, an account or an exact time.</p>
+</main>
+<script src="../assets/motion.js"></script>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/map.js"></script>
+<script src="../assets/vendor/qrcodegen/qrcodegen.js"></script>
+<script src="../assets/stats.js"></script>
+<!-- Last: the words, the skeletons and the read are in place before this big file comes; stats.js starts the map once
+     it has run (DOMContentLoaded). -->
+<script src="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.js"
+        integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin=""></script>
+</body>
+</html>

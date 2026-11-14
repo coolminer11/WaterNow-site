@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co https://tiles.openfreemap.org https://overpass.openstreetmap.fr https://overpass.kumi.systems https://overpass.private.coffee; worker-src blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="color-scheme" content="light dark">
+<meta name="wn-api" content="https://pkqsvlbiznrqxfckaxll.supabase.co">
+<!-- The population blocks (scripts/build-population-tiles.mjs): their public base URL, ending with "/", once uploaded
+     (docs/15_STATISTICS.md, "Population: hosting"); add its origin to connect-src above. Empty: no population. -->
+<meta name="wn-pop" content="">
+<!-- The simulator's Overpass answers: empty, the app's mirrors (connect-src above); the preview points it at a recorded file. -->
+<meta name="wn-osm" content="">
+<title>WaterNow Statistics</title>
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.css"
+      integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="">
+<link rel="stylesheet" href="../assets/map.css">
+<link rel="stylesheet" href="console.css">
+<link rel="stylesheet" href="../assets/console-sim.css">
+<link rel="stylesheet" href="report.css">
+<link rel="stylesheet" href="intro.css">
+<link rel="stylesheet" href="fontaine.css">
+<link rel="stylesheet" href="builders.css">
+<link rel="stylesheet" href="racines.css">
+<script src="intro.js"></script>
+</head>
+<body>
+<!-- Private: not linked from the public pages, noindex, robots.txt Disallow. Every figure comes from section 80's
+     functions, which check the account, its second factor and its scope themselves. Text goes in with textContent. -->
+<header class="top">
+  <div class="brand"><span class="mark" aria-hidden="true"></span><span id="brand">WaterNow Statistics</span>
+    <span class="pill" id="privatePill">Private console</span><span class="pill demo hidden" id="demoPill">Demo data</span></div>
+  <div class="top-actions hidden" id="topActions">
+    <label class="select"><span class="sr" id="scopeLabel">View</span><select id="scope"></select></label>
+    <button class="ghost" type="button" id="signOut">Sign out</button>
+  </div>
+</header>
+
+<main id="gate" class="gate" aria-live="polite">
+  <section class="auth card" id="authCard">
+    <div class="auth-mark" aria-hidden="true"></div>
+    <h1 id="authTitle">Sign in to the console</h1>
+    <p class="muted" id="authLead"></p>
+    <div id="authBody"></div>
+    <p class="msg" id="authMsg" role="status"></p>
+  </section>
+</main>
+
+<main id="app" class="app hidden">
+  <div class="invites" id="invites"></div>
+  <section class="toolbar">
+    <div class="seg" id="periods" role="group"></div>
+    <div class="toolbar-end">
+      <span class="range" id="range"></span>
+      <button class="ghost" type="button" id="reportBtn">Monthly report</button>
+    </div>
+  </section>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="main">
+    <div class="card mapcard">
+      <div class="card-head">
+        <div><h2 id="mapTitle">1 km grid</h2><p class="muted small" id="mapLead"></p></div>
+        <div class="head-actions"><button class="ghost small-btn hidden" type="button" id="simBtn" aria-pressed="false">Simulator</button>
+          <button class="ghost small-btn" type="button" id="csvGrid">Grid (CSV)</button></div>
+      </div>
+      <div class="chips" id="layers" role="group"></div>
+      <div class="mapwrap"><div class="map" id="map" role="img"></div><div class="legend" id="legend"></div></div>
+      <p class="muted tiny" id="pointsNote"></p>
+    </div>
+    <aside class="card panel" id="panel" aria-live="polite"><div id="panelBody"></div></aside>
+    <aside class="card panel simpanel hidden" id="simPanel"></aside>
+  </section>
+
+  <section class="card hidden" id="simCompare"></section>
+
+  <section class="duo">
+    <div class="card"><div class="card-head"><div><h2 id="trendTitle">Trend</h2><p class="muted small" id="trendLead"></p></div></div>
+      <div class="chart" id="trend"></div></div>
+    <div class="card"><div class="card-head"><div><h2 id="needTitle">Where water is missing</h2><p class="muted small" id="needLead"></p></div></div>
+      <ol class="need" id="need"></ol></div>
+  </section>
+
+  <section class="metrics hidden" id="metrics"></section>
+
+  <section class="card hidden" id="cities"></section>
+
+  <!-- « Fontaine commune » (admins: fontaine.js, section 85's admin RPCs). -->
+  <section class="card hidden" id="fontaine"></section>
+
+  <!-- « Racines et Plus » (admins: racines.js, section 90's admin RPCs; aggregates only). -->
+  <section class="card hidden" id="racines"></section>
+
+  <footer class="foot">
+    <p class="muted small" id="privacy"></p>
+    <p class="muted tiny" id="popNote"></p>
+    <p class="muted tiny" id="daysNote"></p>
+  </footer>
+</main>
+
+<section class="report hidden" id="report" aria-modal="true" role="dialog"></section>
+<section class="report hidden" id="simReport" aria-modal="true" role="dialog"></section>
+<section class="report hidden" id="plaque" aria-modal="true" role="dialog"></section>
+
+<script src="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.js"
+        integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin=""></script>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/map.js"></script>
+<script src="../assets/vendor/qrcodegen/qrcodegen.js"></script>
+<script src="core.js"></script>
+<script src="i18n.js"></script>
+<script src="sim-core.js"></script>
+<script src="sim-i18n.js"></script>
+<script src="console.js"></script>
+<script src="simulator.js"></script>
+<script src="coverage.js"></script>
+<script src="impact.js"></script>
+<script src="report-i18n.js"></script>
+<script src="report.js"></script>
+<script src="../assets/page-data.js"></script>
+<script src="../assets/fontaine-data.js"></script>
+<script src="builders.js"></script>
+<script src="fontaine.js"></script>
+<script src="racines.js"></script>
+</body>
+</html>

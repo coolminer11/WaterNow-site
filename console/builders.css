@@ -1,0 +1,65 @@
+/* WaterNow Statistics, private console: the Fontaine commune's builders (builders.js), inside fontaine.css's card and in
+   the console's tokens. A chip's words are its colour mixed with --fg on a 10 % tint: 5.7:1 or more, light and dark. */
+.bc-lead { margin-bottom: 10px; }
+.bc-top { margin-top: 12px; }
+.bc-filters { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 0 12px; align-items: end; }
+.bc-list { display: grid; gap: 8px; margin-top: 16px; }
+.bc-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip.bc-approved, .chip.bc-bid-chosen { color: color-mix(in srgb, var(--ok) 72%, var(--fg)); background: color-mix(in srgb, var(--ok) 10%, transparent); }
+.chip.bc-pending, .chip.bc-bid-submitted { color: color-mix(in srgb, var(--warn) 72%, var(--fg)); background: color-mix(in srgb, var(--warn) 10%, transparent); }
+.chip.bc-badge, .chip.bc-role { color: color-mix(in srgb, var(--accent) 72%, var(--fg)); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.chip.bc-draft, .chip.bc-hidden, .chip.bc-bid-declined, .chip.bc-bid-withdrawn { color: var(--muted); }
+
+/* A card: its form, the team's check, its status. */
+.bc-back { margin-top: 12px; }
+.bc-h { margin: 16px 0 2px; font-size: 15px; font-weight: 650; overflow-wrap: anywhere; }
+.bc-box { padding: 4px 14px 14px; margin-top: 18px; border-radius: 14px; background: var(--soft); }
+.bc-box .input, .bc-item .input { background: var(--card); }
+.bc-state { margin-top: 8px; font-weight: 600; font-size: 14px; }
+.bc-preview { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
+.bc-box .fc-acts { margin-top: 14px; }
+.bc-status { justify-content: space-between; align-items: center; }
+.bc-status-info { display: grid; gap: 6px; justify-items: start; flex: 1 1 260px; }
+
+/* Claims and edits: one soft block each, its diff as a table (now struck out, proposed on a green tint). */
+.bc-item { padding: 12px 14px 14px; margin-top: 12px; border-radius: 14px; background: var(--soft); }
+.bc-item-title { display: block; overflow-wrap: anywhere; }
+.bc-item .small { margin-top: 4px; overflow-wrap: anywhere; }
+.bc-note { margin-top: 8px; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.bc-item .fc-acts { margin-top: 12px; }
+.bc-diff { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 10px; }
+.bc-diff th, .bc-diff td { padding: 8px 6px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.bc-diff thead th { font-size: 12.5px; font-weight: 650; color: var(--muted); }
+.bc-diff tbody th { font-weight: 600; white-space: nowrap; }
+.bc-diff td { white-space: pre-wrap; overflow-wrap: anywhere; min-width: 120px; }
+.bc-diff del { color: var(--muted); }
+.bc-diff ins { text-decoration: none; padding: 1px 4px; border-radius: 6px; background: color-mix(in srgb, var(--ok) 12%, transparent); }
+.bc-diff .fc-url { margin: 0; font-size: 12px; }
+
+/* Participants and bids. */
+.bc-parts { margin-top: 12px; }
+.bc-parts li .small-btn { margin-left: auto; }
+.bc-bids th { padding: 8px 6px; text-align: left; font-size: 12.5px; font-weight: 650; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; }
+.bc-bids th.n { text-align: right; }
+.bc-bids td.bc-who { display: table-cell; }
+.bc-who .chip { margin-top: 4px; }
+.bc-who b, .bc-who .muted { display: block; }
+.bc-acts { white-space: nowrap; }
+.bc-acts .small-btn + .small-btn { margin-left: 6px; }
+.bc-acts .fc-save { margin-top: 0; }
+a.bc-pdf { display: inline-flex; align-items: center; text-decoration: none; color: var(--accent); }
+
+@media (max-width: 640px) {
+  .bc-filters { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .bc-filters .fc-f:first-child { grid-column: 1 / -1; }
+  /* A bid per block, each value after its column's name. */
+  .bc-bids thead { display: none; }
+  .bc-bids, .bc-bids tbody, .bc-bids tr { display: block; }
+  .bc-bids tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .bc-bids td, .bc-bids td.bc-who, .bc-bids td.n { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 0; border: 0; text-align: left; white-space: normal; }
+  .bc-bids td[data-label]::before { content: attr(data-label); font-size: 12.5px; font-weight: 650; color: var(--muted); }
+  .bc-bids td.bc-who { display: block; }
+  .bc-bids td.bc-who::before { content: none; }
+  .bc-bids td.bc-acts { justify-content: flex-start; padding-top: 8px; }
+  .bc-bids td.bc-acts:empty { display: none; }
+}

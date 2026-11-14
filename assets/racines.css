@@ -1,0 +1,119 @@
+/*
+ * WaterNow Racines et Plus pages (racines/, racines/merci/, racines/entreprises/): site.css's cards, tokens and motion,
+ * plus the plans, the monthly report's figures, the names and the companies. Every text colour is a token pair that
+ * contrast.test.js measures, light and dark; nothing loops; motion only with prefers-reduced-motion: no-preference.
+ */
+.page.racines { max-width: 640px; }
+
+/* The hero: a sprout in a soft green circle (it grows once as the page comes). */
+.r-hero { position: relative; overflow: hidden; padding: 26px 20px 22px; }
+.r-hero::before {
+  content: ""; position: absolute; inset: -40% -30% auto auto; width: 70%; aspect-ratio: 1; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, color-mix(in srgb, var(--ok) 14%, transparent), transparent 68%);
+}
+.r-hero > * { position: relative; }
+.r-hero .lead { margin-top: 8px; font-size: 16px; line-height: 24px; }
+.sprout { display: block; width: 56px; height: 56px; margin-bottom: 12px; }
+.sprout .ground { fill: color-mix(in srgb, var(--ok) 14%, var(--card)); }
+.sprout .stem, .sprout .soil { fill: none; stroke: var(--ok); stroke-width: 2.4; stroke-linecap: round; }
+.sprout .soil { stroke: color-mix(in srgb, var(--ok) 45%, var(--card)); }
+.sprout .leaf { fill: var(--ok); }
+.sprout .l2 { fill: color-mix(in srgb, var(--ok) 70%, var(--card)); }
+
+/* « Tout ce qui est utile reste gratuit », and the corporate price line: a calm soft box. */
+.free { margin-top: 14px; padding: 12px 14px; border-radius: 12px; font-size: 14px; line-height: 20px; color: var(--fg); background: var(--soft); }
+
+/* The plans: side by side from 560 px, one under the other on a phone; Plus lifted a little, never louder. */
+.plans { display: grid; gap: 14px; }
+@media (min-width: 560px) { .plans { grid-template-columns: 1fr 1fr; } }
+.plan { display: grid; align-content: start; gap: 2px; }
+.plan h2 { margin: 0; }
+.plan .price { margin-top: 6px; }
+.plan .price b { font-size: 28px; line-height: 34px; font-weight: 800; letter-spacing: -.02em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.plan .price .per { font-weight: 600; color: var(--muted); }
+.plan.plus { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); box-shadow: var(--lift); }
+.plan .features { margin-top: 14px; gap: 10px; }
+.plan .features li { grid-template-columns: 24px 1fr; gap: 10px; font-size: 14px; line-height: 20px; }
+.plan .features li::before { content: "\2713"; width: 24px; height: 24px; margin-top: -2px; border-radius: 8px; font-size: 12px; }
+.sub-note { margin-top: 12px; }
+.extra { margin-top: 8px; }
+
+/* Where the money goes: three lines, each with a small drawn mark (a leaf, a drop, a tile). */
+.r-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 12px; }
+.r-list li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; }
+.r-list li::before { content: ""; width: 14px; height: 14px; margin: 5px 7px; background: var(--ok); border-radius: 0 70% 0 70%; }
+.r-list .t-drop::before { background: var(--accent); border-radius: 50% 0 50% 50%; transform: rotate(-45deg); }
+.r-list .t-app::before { background: var(--muted); border-radius: 4px; }
+
+/* The monthly report: the month picker by the title, three figures (their place kept while the read is on its way),
+   the line in words, the projects, the certificates. */
+.report-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.report-head h2 { margin: 0; }
+/* The select's arrow is two gradients (the CSP allows no data: image). Its edge at 3:1 against the card, like a field. */
+.month-pick select {
+  -webkit-appearance: none; appearance: none; min-height: 44px; padding: 10px 38px 10px 14px; border-radius: 12px; font: inherit; font-weight: 600;
+  color: var(--fg); cursor: pointer; border: 1px solid var(--muted); border-color: color-mix(in srgb, var(--muted) 72%, var(--card));
+  background: var(--card) no-repeat;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 52%, calc(100% - 15px) 52%; background-size: 5px 5px;
+}
+.month-pick select:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-color: var(--accent); }
+.figs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+@media (max-width: 420px) { .figs { grid-template-columns: 1fr 1fr; } .fig:first-child { grid-column: 1 / -1; } }
+.fig { display: grid; align-content: start; gap: 2px; min-width: 0; padding: 14px; border-radius: 12px; background: var(--soft); }
+.fig b { justify-self: start; font-size: 28px; line-height: 34px; font-weight: 800; letter-spacing: -.02em; color: var(--accent); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.fig b.sk { min-width: 4ch; }
+.fig .small { overflow-wrap: anywhere; }
+.report-line { margin-top: 14px; min-height: 24px; font-weight: 600; }
+.report-line .sk-line { height: 14px; margin: 5px 0; }
+#members { margin-top: 6px; }
+.report .sub { margin: 18px 0 0; font-size: 16px; line-height: 24px; font-weight: 600; }
+.links .plain { display: grid; gap: 2px; padding: 12px 14px; border-radius: 12px; background: var(--soft); font-weight: 600; overflow-wrap: anywhere; }
+.links .plain .muted { font-weight: 400; font-size: 14px; line-height: 20px; }
+/* « Bientôt »: the server doesn't have the report yet. One calm soft-blue box, never an error. */
+.soon { margin-top: 14px; padding: 16px; border-radius: 12px; color: var(--on-accent-soft); background: var(--accent-soft); }
+.soon .muted { color: inherit; }
+.soon-title { font-weight: 700; }
+.soon p + p { margin-top: 4px; }
+.r-more .links { margin: 0; }
+
+/* « Merci à… »: names in alphabetical order, flowing (no rank, no count). */
+.how { margin-top: 12px; padding: 10px 12px; border-radius: 12px; color: var(--fg); background: var(--soft); }
+.names { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.names li { padding: 6px 12px; border-radius: 999px; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--fg); background: var(--soft); overflow-wrap: anywhere; }
+#empty { margin-top: 14px; }
+
+/* Companies: how it works (site.css's numbered stations), then a tile per company: its logo (WaterNow's storage only)
+   over its initial, its name, its trees, since when. In the server's order: no ranking. */
+.steps { margin-top: 12px; }
+.co-commons { margin-top: 8px; }
+.companies { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.companies a, .companies .plain, .sk-co {
+  display: grid; justify-items: start; align-content: start; gap: 4px; height: 100%; padding: 14px; border-radius: 12px;
+  background: var(--soft); color: var(--fg); text-decoration: none; overflow-wrap: anywhere; transition: background-color .2s;
+}
+.companies .plogo { width: 56px; height: 56px; margin: 0 0 6px; font-size: 24px; }
+.companies .plogo img { opacity: 0; }
+.companies .plogo.has-logo { background: var(--logo-tile); }
+/* Once the logo is drawn its initial goes (through a transparent logo, the dark accent read 3.05:1 on the white tile). */
+.companies .plogo.has-logo > span { visibility: hidden; }
+.companies .plogo.has-logo img { opacity: 1; object-fit: contain; padding: 6px; }
+.co-name { font-weight: 700; }
+.companies a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (hover: hover) {
+  .companies a:hover { background: color-mix(in srgb, var(--accent) 10%, var(--soft)); }
+  .companies a:hover .co-name { text-decoration: underline; }
+}
+.sk-co .plogo { border: 0; }
+.sk-co .sk-line { width: 80%; }
+.sk-co .sk-line.short { width: 50%; }
+.r-back { text-align: center; }
+
+@keyframes wn-grow { from { stroke-dashoffset: 24; } }
+@media (prefers-reduced-motion: no-preference) {
+  .sprout .stem { stroke-dasharray: 24; animation: wn-grow .7s var(--ease) .2s backwards; }
+  .sprout .leaf { transform-box: fill-box; animation: wn-pop .5s var(--ease) .6s backwards; }
+  .sprout .l1 { transform-origin: 100% 100%; }
+  .sprout .l2 { transform-origin: 0 100%; animation-delay: .75s; }
+  .figs.in .fig b:not(.sk), .names li:not(.sk), .companies li:not(.sk-co) { animation: wn-fade .5s var(--ease) backwards; }
+}

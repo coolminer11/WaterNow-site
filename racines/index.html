@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin">
+<meta name="color-scheme" content="light dark">
+<!-- WaterNow's server: the public monthly report (racines_public_report, section 90). The local preview
+     (scripts/console-preview.mjs) points it at itself. -->
+<meta name="wn-api" content="https://pkqsvlbiznrqxfckaxll.supabase.co">
+<title>WaterNow Racines and Plus</title>
+<meta name="description" content="A real tree planted every month by Tree-Nation, certificate included, and a share for the Community Fountain. Everything useful in WaterNow stays free.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="WaterNow Racines and Plus">
+<meta property="og:description" content="A real tree planted every month, certificate included. The community's trees, month by month.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/racines.css">
+<script src="../assets/hold.js"></script>
+</head>
+<body data-page="report" data-root="../">
+<header class="bar"><a class="brand" href="../"><img class="logo" src="../assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page racines hold">
+  <section class="card r-hero">
+    <svg class="sprout" viewBox="0 0 56 56" aria-hidden="true">
+      <circle class="ground" cx="28" cy="28" r="27"/>
+      <path class="stem" d="M28 45V22"/>
+      <path class="leaf l1" d="M28 33c-8.5 0-13.6-4.6-14.6-12.6 8 .2 13.4 4.6 14.6 12.6Z"/>
+      <path class="leaf l2" d="M28 26.5c.6-9 5.6-14.4 14.6-15.2.2 9-5 14.4-14.6 15.2Z"/>
+      <path class="soil" d="M17 45h22"/>
+    </svg>
+    <h1 id="title">WaterNow Racines and Plus</h1>
+    <p class="muted lead" id="lead">A real tree planted every month in your name by Tree-Nation, certificate included. And a hand for the Community Fountain.</p>
+    <p class="free" id="free">Everything useful stays free: the map, search, directions, offline maps, adding points, safety and accessibility. No existing feature ever becomes paid.</p>
+  </section>
+
+  <div class="plans">
+    <section class="card plan" aria-labelledby="racinesName">
+      <h2 id="racinesName">Racines</h2>
+      <p class="price"><b id="racinesMonth">$3.25</b> <span class="per" id="racinesPer">/ month</span></p>
+      <p class="muted small" id="racinesYear">or $35.75 a year · 1 month free</p>
+      <ul class="features">
+        <li id="ri1">1 tree planted every month by Tree-Nation</li>
+        <li id="ri2">Your forest in the app, each tree with its certificate</li>
+        <li id="ri3">The Racines badge, discreet, only if you want it</li>
+        <li id="ri4">3 app icons</li>
+        <li id="ri5">Your share for the Community Fountain</li>
+      </ul>
+    </section>
+    <section class="card plan plus" aria-labelledby="plusName">
+      <h2 id="plusName">Plus</h2>
+      <p class="price"><b id="plusMonth">$5.99</b> <span class="per" id="plusPer">/ month</span></p>
+      <p class="muted small" id="plusYear">or $65.89 a year · 1 month free</p>
+      <ul class="features">
+        <li id="pi1">2 trees planted every month</li>
+        <li id="pi2">Everything in Racines</li>
+        <li id="pi3">Themes: map, pins, widget and every app icon</li>
+        <li id="pi4">WaterNow Wrapped, every December</li>
+        <li id="pi5">Ride extras: elevation, segments, GPX export with your water stops</li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card">
+    <!-- The app's Racines and Plus screen (waternow://racines); the APK beside it for a phone without the app. -->
+    <div class="actions fit">
+      <a class="btn primary" id="subscribe" href="waternow://racines">Subscribe in the app</a>
+      <a class="btn go" id="get" href="../">Get WaterNow</a>
+    </div>
+    <p class="muted small sub-note" id="subNote">On Android for now; iPhone will follow. Secure payment by Stripe, and you cancel in one tap, whenever you like.</p>
+    <p class="small extra" id="extra">Want to plant more? Extra trees, one at a time or in packs, in the app.</p>
+  </section>
+
+  <section class="card">
+    <h2 id="moneyTitle">Where the money goes</h2>
+    <ul class="r-list">
+      <li class="t-tree" id="moneyTrees">Every tree is planted by Tree-Nation in a real reforestation project, with a public certificate.</li>
+      <li class="t-drop" id="moneyCommons">10% of the margin goes to the Community Fountain: the community funds a real bottle refill station, in a place it chooses.</li>
+      <li class="t-app" id="moneyRest">The rest keeps WaterNow going: servers, the map and new features, with no ads and no trackers.</li>
+    </ul>
+    <a class="btn wide go" id="commonsLink" href="../fontaine/">See the Community Fountain</a>
+  </section>
+
+  <!-- The monthly report (racines_public_report): the community's trees, no name, no id. Its figures keep their place
+       while the read is on its way (a shimmer); « bientôt » while the server doesn't have it yet. -->
+  <section class="card report" id="report">
+    <div class="report-head">
+      <h2 id="reportTitle">Monthly report</h2>
+      <label class="month-pick hidden" id="monthBox"><span class="sr-only" id="monthLabel">Month</span><select id="month"></select></label>
+    </div>
+    <div class="figs" id="figs">
+      <p class="fig"><b class="sk" id="planted">000</b><span class="muted small" id="plantedLabel">trees planted</span></p>
+      <p class="fig"><b class="sk" id="pending">00</b><span class="muted small" id="pendingLabel">waiting to be planted</span></p>
+      <p class="fig"><b class="sk" id="commons">00 $</b><span class="muted small" id="commonsLabel">for the Community Fountain</span></p>
+    </div>
+    <p class="report-line" id="line" aria-live="polite"><span class="sk-line"></span></p>
+    <p class="muted small hidden" id="total"></p>
+    <p class="muted small hidden" id="members"></p>
+    <h3 class="sub hidden" id="projectsTitle">The projects</h3>
+    <ul class="links hidden" id="projects"></ul>
+    <a class="btn wide go hidden" id="certs" href="#" rel="noopener noreferrer">See the certificates on Tree-Nation</a>
+    <div class="soon hidden" id="soon"><p class="soon-title" id="soonTitle"></p><p class="muted small" id="soonText"></p></div>
+    <p class="note hidden" id="note" role="status"></p>
+  </section>
+
+  <nav class="card r-more waiting">
+    <ul class="links">
+      <li><a href="merci/"><span id="thanksLink">Thanks to…</span><span class="muted" id="thanksSub">The members who chose to show their name</span></a></li>
+      <li><a href="entreprises/"><span id="companiesLink">Companies</span><span class="muted" id="companiesSub">Plant trees in bulk with WaterNow</span></a></li>
+    </ul>
+  </nav>
+
+  <p class="foot muted waiting" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../assets/motion.js"></script>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/page-data.js"></script>
+<script src="../assets/racines-data.js"></script>
+<script src="../assets/racines.js"></script>
+</body>
+</html>
