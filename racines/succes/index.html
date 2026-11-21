@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<!-- Stripe Checkout comes back here after a purchase (billing-checkout: racines/succes/?k=subscription|trees|pack); its
+     cancel goes back to racines/. Nothing is read: the app shows the trees (waternow://forest). -->
+<title>Thank you · WaterNow Racines</title>
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/racines.css">
+<script src="../../assets/hold.js"></script>
+</head>
+<body data-page="ok" data-root="../../">
+<header class="bar"><a class="brand" href="../../"><img class="logo" src="../../assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page racines hold">
+  <section class="card r-hero">
+    <svg class="sprout" viewBox="0 0 56 56" aria-hidden="true">
+      <circle class="ground" cx="28" cy="28" r="27"/>
+      <path class="stem" d="M28 45V22"/>
+      <path class="leaf l1" d="M28 33c-8.5 0-13.6-4.6-14.6-12.6 8 .2 13.4 4.6 14.6 12.6Z"/>
+      <path class="leaf l2" d="M28 26.5c.6-9 5.6-14.4 14.6-15.2.2 9-5 14.4-14.6 15.2Z"/>
+      <path class="soil" d="M17 45h22"/>
+    </svg>
+    <h1 id="okTitle">Thank you!</h1>
+    <p class="muted lead" id="okText">Thank you for planting trees with WaterNow.</p>
+    <p class="free ok-open" id="okOpen">Open WaterNow to see your forest.</p>
+    <!-- Ta forêt in the app; the APK beside it for a phone without the app (like the other pages' app links). -->
+    <div class="actions fit">
+      <a class="btn primary" id="forestBtn" href="waternow://forest">Open Your forest</a>
+      <a class="btn go" id="get" href="../../">Get WaterNow</a>
+    </div>
+    <p class="muted small sub-note" id="okReceipt">Stripe sends you the receipt by email.</p>
+    <p class="muted small hidden" id="okManage">You can manage or cancel your subscription in one tap from the Racines screen in the app.</p>
+  </section>
+
+  <p class="r-back waiting"><a class="btn go" id="back" href="../">Racines and Plus</a></p>
+  <p class="foot muted waiting" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../../assets/motion.js"></script>
+<script src="../../assets/spot-params.js"></script>
+<script src="../../assets/page-data.js"></script>
+<script src="../../assets/racines-data.js"></script>
+<script src="../../assets/racines.js"></script>
+</body>
+</html>

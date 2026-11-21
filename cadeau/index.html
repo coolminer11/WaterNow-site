@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<!-- A WaterNow gift card: cadeau/?c=<code> → gift_preview(p_code) (section 95). Opens in the app: waternow://gift/<code>. -->
+<meta name="wn-api" content="https://pkqsvlbiznrqxfckaxll.supabase.co">
+<title>A WaterNow gift</title>
+<meta name="description" content="A gift card for WaterNow Plus or Racines: open it in the app to activate it.">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/gift.css">
+<script src="../assets/hold.js"></script>
+</head>
+<body data-page="gift" data-root="../">
+<header class="bar"><a class="brand" href="../"><img class="logo" src="../assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page gift hold">
+  <!-- One live region, always in the page: what appears inside it (the card, a refusal, the offline note) is announced. -->
+  <div id="live" aria-live="polite">
+  <section class="card gift-card hidden" id="card">
+    <div class="gift-ticket">
+      <p class="gift-lead" id="lead">A gift card for</p>
+      <h1 id="title" tabindex="-1">WaterNow</h1>
+      <p class="gift-months" id="months"></p>
+    </div>
+    <p class="gift-from" id="from"></p>
+    <p class="gift-message hidden" id="message"></p>
+    <p class="muted small" id="perks"></p>
+    <p class="gift-how" id="how"></p>
+    <div class="actions fit">
+      <a class="btn primary" id="open" href="#">Open in the app</a>
+    </div>
+    <p class="gift-code" id="codeLine"></p>
+  </section>
+
+  <section class="card hidden" id="bad">
+    <h1 id="badTitle" tabindex="-1">Link incomplete</h1>
+    <p class="muted" id="badText">This link is damaged. Ask for it again.</p>
+  </section>
+
+  <p class="note hidden" id="note"></p>
+  </div>
+  <p class="gift-again hidden" id="againBox"><button class="btn" id="again" type="button">Try again</button></p>
+
+  <section class="card getcard waiting">
+    <img class="app-icon" src="../assets/icon.svg" alt="" width="48" height="48">
+    <h2 id="getTitle">No WaterNow yet?</h2>
+    <p class="muted small" id="getText">Free drinking water near you, on a map the community keeps up to date.</p>
+    <a class="btn wide go" id="get" href="../">Get WaterNow</a>
+  </section>
+
+  <p class="foot muted waiting" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/page-data.js"></script>
+<script src="../assets/gift.js"></script>
+</body>
+</html>

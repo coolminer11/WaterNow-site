@@ -1,0 +1,50 @@
+/* WaterNow's map (assets/map.js): the marker, the loading shimmer, and MapLibre's controls in the page's light or dark. */
+:root { --pulse: rgba(0, 102, 204, .4); }
+/* MapLibre's zoom and compass buttons are 29 px by default: 44 px touch targets. */
+.maplibregl-ctrl-group button { width: 44px; height: 44px; }
+.maplibregl-ctrl-group { border-radius: 12px !important; overflow: hidden; box-shadow: 0 6px 18px -8px rgba(0, 0, 0, .35) !important; }
+/* Keyboard focus on the map and on its buttons, drawn inside them: the map's rounded box and the buttons' group clip
+   anything outside, so the site's ring (and MapLibre's glow) showed as a thin line, or not at all. */
+.maplibregl-canvas:focus-visible, .maplibregl-ctrl-group button:focus:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: -3px; box-shadow: none;
+}
+/* The credits' links too (live/ has no site.css: the browser's 1 px ring). */
+.maplibregl-ctrl-attrib a:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; border-radius: 4px; }
+@media screen and (prefers-color-scheme: dark) {
+  :root { --pulse: rgba(51, 149, 255, .4); }
+  .maplibregl-ctrl-group { background: #27272a; }
+  .maplibregl-ctrl-group button + button { border-top-color: #3f3f46; }
+  .maplibregl-ctrl button .maplibregl-ctrl-icon { filter: invert(1); }
+  .maplibregl-ctrl.maplibregl-ctrl-attrib { background: rgba(9, 9, 11, .65); color: #a1a1aa; }
+  .maplibregl-ctrl-attrib a { color: #d4d4d8; }
+}
+/* Until the first full draw: a shimmer where the map will be, then the map fades in. */
+.is-loading { background: linear-gradient(90deg, #f4f4f5 25%, #e8e8eb 50%, #f4f4f5 75%) 0 0 / 200% 100%; }
+.is-loading .maplibregl-canvas, .is-loading .maplibregl-marker { opacity: 0; }
+@media screen and (prefers-color-scheme: dark) { .is-loading { background-image: linear-gradient(90deg, #27272a 25%, #34343a 50%, #27272a 75%); } }
+.wn-marker {
+  width: 22px; height: 22px; border-radius: 50%; background: var(--accent); border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+}
+.wn-marker.live { animation: wn-pulse 2s ease-out infinite; }
+@keyframes wn-pulse {
+  from { box-shadow: 0 1px 4px rgba(0, 0, 0, .35), 0 0 0 0 var(--pulse); }
+  to { box-shadow: 0 1px 4px rgba(0, 0, 0, .35), 0 0 0 18px transparent; }
+}
+/* live/ while its badge isn't green (live.js: unreachable, being updated, 2 minutes old): the marker stays, no pulse, no ring. */
+.stale .wn-marker.live { animation: none; box-shadow: 0 1px 4px rgba(0, 0, 0, .35); }
+@keyframes wn-map-shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+@keyframes wn-drop-in { from { opacity: 0; scale: .4; } 60% { scale: 1.15; } }
+@media (prefers-reduced-motion: no-preference) {
+  .is-loading { animation: wn-map-shimmer 1.6s linear infinite; }
+  .maplibregl-canvas { transition: opacity .7s cubic-bezier(.22, .8, .24, 1); }
+  /* "scale", not "transform": MapLibre places the marker with its transform. */
+  .wn-marker { animation: wn-drop-in .6s cubic-bezier(.22, .8, .24, 1) .3s backwards; }
+  .wn-marker.live { animation: wn-drop-in .6s cubic-bezier(.22, .8, .24, 1) .3s backwards, wn-pulse 2s ease-out .9s infinite; }
+  .stale .wn-marker.live { animation: wn-drop-in .6s cubic-bezier(.22, .8, .24, 1) .3s backwards; } /* the drop-in isn't replayed */
+}
+@media (prefers-reduced-motion: reduce) {
+  .wn-marker.live { animation: none; box-shadow: 0 1px 4px rgba(0, 0, 0, .35), 0 0 0 6px var(--pulse); }
+}
+/* Paper: the zoom and compass buttons and the credits' toggle (a stray triangle) stay on screen; the credits print. */
+@media print { .maplibregl-ctrl-group, .maplibregl-ctrl-attrib-button { display: none !important; } }

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<!-- A friend's referral link: r/?c=<code>. Nothing is read (the page names nobody); the app attaches the code: waternow://r/<code>. -->
+<title>Join WaterNow</title>
+<meta name="description" content="A friend invites you to WaterNow: free drinking water near you.">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/gift.css">
+<script src="../assets/hold.js"></script>
+</head>
+<body data-page="ref" data-root="../">
+<header class="bar"><a class="brand" href="../"><img class="logo" src="../assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page gift hold">
+  <section class="card gift-card" id="card">
+    <div class="gift-ticket ref-ticket">
+      <h1 id="title">A friend invites you to WaterNow</h1>
+      <p class="gift-lead" id="lead">Open this link in the app: your friend becomes your referrer.</p>
+    </div>
+    <p class="gift-from" id="perk"></p>
+    <p class="muted small" id="when"></p>
+    <div class="actions fit">
+      <a class="btn primary" id="open" href="#">Open in the app</a>
+    </div>
+    <p class="gift-code" id="codeLine"></p>
+  </section>
+
+  <section class="card hidden" id="bad" role="status">
+    <h1 id="badTitle">Link incomplete</h1>
+    <p class="muted" id="badText">This link is damaged. Ask for it again.</p>
+  </section>
+
+  <section class="card getcard waiting">
+    <img class="app-icon" src="../assets/icon.svg" alt="" width="48" height="48">
+    <h2 id="getTitle">No WaterNow yet?</h2>
+    <p class="muted small" id="getText">Free drinking water near you, on a map the community keeps up to date.</p>
+    <a class="btn wide go" id="get" href="../">Get WaterNow</a>
+  </section>
+
+  <p class="foot muted waiting" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/page-data.js"></script>
+<script src="../assets/gift.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* WaterNow gift cards (cadeau/) and referrals (r/): a ticket in the plan's colours, the code in a mono line people can
+   select. Texts on the ticket are white on colours at AA (4.5:1 or more); nothing moves. */
+.gift-card { overflow: hidden; }
+/* Each gradient sits on a solid colour of its own range (white on it: #0058b0 6.9:1, #166534 7.1:1, #0f766e 5.5:1), so
+   the ticket's computed background is never the white card under it (light and dark: the ticket keeps its colours). */
+.gift-ticket { position: relative; margin: 0 0 16px; padding: 22px 20px 20px; border-radius: 18px; color: #ffffff; overflow: hidden;
+  background-color: #0058b0; background-image: linear-gradient(135deg, #0a3ccb, #0058b0 55%, #0f766e); }
+body[data-plan="racines"] .gift-ticket { background-color: #166534; background-image: linear-gradient(135deg, #14532d, #166534 60%, #0f766e); }
+.ref-ticket { background-color: #0f766e; background-image: linear-gradient(135deg, #0f766e, #0058b0); }
+.gift-ticket::after { content: ""; position: absolute; right: -36px; top: -36px; width: 150px; height: 150px; border-radius: 50%;
+  background: rgba(255, 255, 255, .08); pointer-events: none; } /* 8 %: white text under it stays at 4.6:1 even on the teal end */
+.gift-ticket h1 { position: relative; margin: 2px 0 6px; font-size: 30px; line-height: 36px; color: #ffffff; overflow-wrap: anywhere; }
+.ref-ticket h1 { font-size: 26px; line-height: 32px; }
+.gift-lead { position: relative; margin: 0; font-size: 15px; line-height: 21px; color: #ffffff; }
+.gift-months { position: relative; margin: 0; font-size: 18px; line-height: 24px; font-weight: 700; color: #ffffff; }
+.gift-from { margin: 0 0 8px; font-size: 16px; line-height: 22px; font-weight: 600; }
+.gift-message { margin: 0 0 12px; padding: 10px 14px; border-radius: 14px; background: var(--soft); font-size: 15px; line-height: 21px;
+  overflow-wrap: anywhere; }
+.gift-how { margin: 12px 0 2px; font-size: 15px; line-height: 21px; }
+.gift-code { margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 20px; overflow-wrap: anywhere; }
+.gift-code code { color: var(--fg); font: 600 15px/20px ui-monospace, Consolas, monospace; letter-spacing: .05em; user-select: all; }
+.gift-again { margin: 0; text-align: center; }
+@media (max-width: 380px) { .gift-ticket h1 { font-size: 26px; line-height: 32px; } }
