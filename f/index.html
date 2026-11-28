@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob: https://pkqsvlbiznrqxfckaxll.supabase.co; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co https://tiles.openfreemap.org; worker-src blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin">
+<meta name="color-scheme" content="light dark">
+<!-- The plaque's QR code opens this page: f/?s=<spotId> → commons_fountain(p_spot). -->
+<meta name="wn-api" content="https://pkqsvlbiznrqxfckaxll.supabase.co">
+<title>A Community Fountain · WaterNow</title>
+<meta name="description" content="A water fountain built by the WaterNow community: who gave, its sponsors and the bottles it has saved since it opened.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="A Community Fountain · WaterNow">
+<meta property="og:description" content="Built by the community: who gave, its sponsors and the bottles it has saved.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.css"
+      integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/map.css">
+<link rel="stylesheet" href="../assets/fontaine.css">
+<script src="../assets/hold.js"></script>
+</head>
+<body data-page="fountain" data-root="../">
+<header class="bar"><a class="brand" href="../"><img class="logo" src="../assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page fontaine hold">
+  <div class="cover sk" id="coverBox"><span class="cover-city" id="coverCity" aria-hidden="true"></span></div>
+
+  <section class="card" id="head" aria-live="polite">
+    <h1 id="title">A Community Fountain</h1>
+    <p class="built-by" id="builtBy">Built by the community</p>
+    <p class="muted small" id="opened"></p>
+    <p class="muted hidden" id="text"></p>
+    <div class="actions fit" id="headActions">
+      <a class="btn primary" id="open" href="#">Open in WaterNow</a>
+      <a class="btn" id="onMap" href="../s/">See on the map</a>
+    </div>
+    <p class="note hidden" id="note" role="status"></p>
+  </section>
+
+  <section class="card hidden" id="impact">
+    <h2 id="impactTitle">Since it opened</h2>
+    <div class="impact-figs"><p><b id="refills"></b></p><p><b id="bottles"></b></p></div>
+    <p class="muted small" id="bottleNote"></p>
+  </section>
+
+  <section class="card hidden" id="where">
+    <p class="place" id="place"><b id="placeName"></b><span class="muted small" id="placeAddress"></span></p>
+    <div class="map" id="map"></div>
+  </section>
+
+  <section class="card hidden" id="donors">
+    <h2 id="donorsTitle">Donor wall</h2>
+    <ul class="wall" id="wall"></ul>
+  </section>
+
+  <section class="card hidden" id="sponsors">
+    <h2 id="sponsorsTitle">Sponsors</h2>
+    <div class="tiers" id="tiers"></div>
+  </section>
+
+  <section class="card hidden" id="story">
+    <a class="btn wide go" id="projectLink" href="../fontaine/">See the project</a>
+  </section>
+
+  <section class="card hidden" id="bad" role="status">
+    <h1 id="badTitle">Link incomplete</h1>
+    <p class="muted" id="badText">This link is damaged. Ask for it again.</p>
+  </section>
+
+  <section class="card getcard waiting">
+    <img class="app-icon" src="../assets/icon.svg" alt="" width="48" height="48">
+    <h2 id="getTitle">No WaterNow yet?</h2>
+    <p class="muted small" id="getText">Free drinking water near you, on a map the community keeps up to date.</p>
+    <a class="btn wide go" id="get" href="../">Get WaterNow</a>
+  </section>
+
+  <p class="foot muted waiting" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../assets/motion.js"></script>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/page-data.js"></script>
+<script src="../assets/fontaine-data.js"></script>
+<script src="../assets/map.js"></script>
+<script src="../assets/fontaine.js"></script>
+<script src="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.js"
+        integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin=""></script>
+</body>
+</html>

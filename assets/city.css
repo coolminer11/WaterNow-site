@@ -1,0 +1,96 @@
+/*
+ * City pages (villes/, written by scripts/gen-city-pages.mjs), on site.css's tokens: a hero with the app's guidance in a
+ * phone, the eight promises, two more screens, three steps, the FAQ (native <details>), the download once more.
+ * Mobile first; from 880 px the hero splits in two and the cards line up. No colour of its own: every text pair is one
+ * site.css already measures (contrast.test.js).
+ */
+.page.city { max-width: 1040px; gap: 18px; }
+.city h2 { margin-bottom: 12px; }
+.city h3 { font-size: 16px; line-height: 22px; font-weight: 600; margin: 0 0 4px; }
+
+/* Hero: the words, the button, three chips; the phone peeks up from the card's bottom edge. */
+.city-hero { display: grid; gap: 22px; padding: 28px 20px 0; overflow: hidden; }
+.city-hero h1 { font-size: clamp(30px, 7.4vw, 46px); line-height: 1.08; letter-spacing: -.03em; margin: 6px 0 12px; }
+.city-hero .lead { font-size: 17px; line-height: 26px; }
+.city-hero .btn.wide { margin-top: 22px; min-height: 56px; font-size: 17px; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; }
+.chips li {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 9px; border-radius: 999px;
+  font-size: 14px; line-height: 20px; font-weight: 600; color: var(--on-accent-soft); background: var(--accent-soft);
+}
+.chips li::before { content: "\2713"; font-weight: 800; font-size: 12px; }
+.hero-shot { height: 300px; overflow: hidden; display: flex; justify-content: center; }
+
+/* A phone: the screen in a dark frame (the captures are the app's own, cropped to 9:19.5). */
+.phone {
+  width: min(270px, 72vw); height: max-content; padding: 7px; border-radius: 36px; background: #0b0b0e;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--fg) 10%, transparent), 0 24px 44px -24px rgba(24, 24, 27, .38);
+}
+.phone img { display: block; width: 100%; height: auto; border-radius: 29px; background: var(--soft); }
+
+/* The eight promises: one column on a phone, two, then four. */
+.why > h2, .how > h2 { margin: 10px 4px 12px; }
+.feats, .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.feats { grid-template-columns: repeat(auto-fill, minmax(min(100%, 228px), 1fr)); }
+/* On a phone the icon sits beside its words (eight stacked cards were a long scroll); from 600 px, above them. */
+.feat { padding: 16px; display: grid; grid-template-columns: 40px 1fr; column-gap: 14px; align-content: start; }
+.feat .ico {
+  grid-row: span 2; display: block; width: 40px; height: 40px; padding: 8px; border-radius: 12px;
+  color: var(--accent); background: var(--accent-soft); fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+@media (min-width: 600px) {
+  .feat { display: block; padding: 18px; }
+  .feat .ico { margin-bottom: 12px; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .feat { transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+  .feat:hover { transform: translateY(-2px); box-shadow: 0 2px 6px rgba(24, 24, 27, .06), 0 16px 32px -18px rgba(24, 24, 27, .24); }
+}
+
+/* Two more screens side by side, even on a phone. */
+.shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; justify-items: center; margin-top: 4px; }
+.shot { margin: 0; display: grid; gap: 10px; justify-items: center; width: 100%; }
+.shot .phone { width: min(100%, 260px); padding: 5px; border-radius: 28px; }
+.shot .phone img { border-radius: 23px; }
+.shot figcaption { font-size: 14px; line-height: 20px; color: var(--muted); text-align: center; text-wrap: balance; }
+
+/* Three steps, numbered. */
+.steps { counter-reset: step; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 40px 1fr; column-gap: 14px; align-items: start; padding: 18px; }
+.steps li::before {
+  content: counter(step); grid-row: span 2; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  font-weight: 700; color: var(--on-accent); background: var(--accent);
+}
+
+/* FAQ: native disclosure, a plus that turns into a cross. */
+.faq details { border-top: 1px solid var(--border); }
+.faq summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 12px 0;
+  font-weight: 600; cursor: pointer; list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; font-size: 22px; line-height: 1; color: var(--accent); transition: transform .25s var(--ease); }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.faq details p { padding: 0 0 16px; }
+
+/* The last call: centred, a soft blue glow. */
+.cta { text-align: center; padding: 28px 20px; background-image: radial-gradient(40rem 14rem at 50% 120%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%); }
+.cta .btn.wide { max-width: 420px; }
+
+.city-foot { display: grid; gap: 4px; justify-items: center; text-align: center; padding: 8px 0 16px; font-size: 14px; line-height: 20px; }
+.city-foot .foot-links a, .city-foot .langs a, .city-foot .langs span { display: inline-block; padding: 12px 4px; }
+.city-foot .langs span { font-weight: 600; }
+
+@media (min-width: 880px) {
+  .city-hero { grid-template-columns: 1.2fr .8fr; align-items: end; gap: 36px; padding: 44px 44px 0; }
+  .city-hero .hero-text { padding-bottom: 44px; }
+  .city-hero .btn.wide { width: auto; padding: 14px 28px; }
+  .hero-shot { height: 470px; }
+  .phone { width: 270px; }
+  .steps { grid-template-columns: repeat(3, 1fr); }
+  .shots, .faq, .cta { padding: 28px 32px; }
+}
+
+/* Japanese titles break between phrases (Chrome 119+), not in the middle of a word like シティー. */
+.city:lang(ja) h1, .city:lang(ja) h2 { word-break: auto-phrase; }

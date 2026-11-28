@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://tiles.openfreemap.org; worker-src blob:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<title>A shared location · WaterNow</title>
+<meta name="description" content="A location shared from WaterNow: see it on the map, get directions or open it in the app.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="A shared location">
+<meta property="og:description" content="See it on the map, get directions or open it in WaterNow.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.css"
+      integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/map.css">
+<script src="../assets/hold.js"></script>
+</head>
+<body>
+<header class="bar"><a class="brand" href="../"><img class="logo" src="../assets/icon.svg" alt="" width="32" height="32">WaterNow</a></header>
+<main class="page hold">
+  <div id="map" class="map"></div>
+
+  <section class="card" id="place" aria-live="polite">
+    <div class="kicker"><p class="eyebrow" id="kicker">Shared location</p></div>
+    <h1 id="title">Here's where they are</h1>
+    <p class="muted coords" id="coords"></p>
+    <div class="actions">
+      <a class="btn primary" id="open" href="#">Open in WaterNow</a>
+      <a class="btn" id="dir" href="#" rel="noopener noreferrer">Directions</a>
+    </div>
+    <p class="note" id="note">This location lives only in this link: WaterNow doesn't keep it.</p>
+  </section>
+
+  <section class="card hidden" id="bad" role="status">
+    <h1 id="badTitle">Link incomplete</h1>
+    <p class="muted" id="badText">This link to a location is damaged. Ask for it again.</p>
+  </section>
+
+  <section class="card getcard" id="getCard">
+    <img class="app-icon" src="../assets/icon.svg" alt="" width="48" height="48">
+    <h2 id="getTitle">No WaterNow yet?</h2>
+    <p class="muted small" id="getText">Free drinking water near you, on a map the community keeps up to date.</p>
+    <a class="btn wide go" id="get" href="../">Get WaterNow</a>
+  </section>
+
+  <p class="foot muted" id="foot">No trackers, no cookies.</p>
+</main>
+<script src="../assets/motion.js"></script>
+<script src="../assets/spot-params.js"></script>
+<script src="../assets/map.js"></script>
+<script src="app.js"></script>
+<script src="../assets/vendor/maplibre-gl-5.24.0/maplibre-gl.js"
+        integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin=""></script>
+</body>
+</html>

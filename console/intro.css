@@ -1,0 +1,214 @@
+/* WaterNow Statistics, the opening (intro.js; docs/work/console-intro.md, "v3.1 — 3D and the 1 km grid"). Everything
+   here is scoped to .wn-intro* and html.wn-intro-*: without intro.js nothing applies. Transform and opacity only. Two
+   failsafes hide the field on their own (wn-intro-gone) if the script dies midway: the console underneath is never held.
+   The tokens are the app's (shared-ui theme/Theme.kt, Color.kt), its map style's (site/assets/map/waternow-*.json: the
+   flat layers, building-3d's fill-extrusion-color stops) and the console's grid (console.js: the blue ramp, reversed on
+   a dark map, the cell lines, the selected cell's line); light by default, dark with the system, as the app; the
+   canvas reads the --wn-m-* ones. */
+.wn-intro, html.wn-intro-boot body::after {
+  --wn-bg: #ffffff; --wn-fg: #09090b; --wn-surface: #ffffff; --wn-muted: #f4f4f5; --wn-muted-fg: #6b6b73; --wn-border: #e4e4e7;
+  --wn-accent: #0066cc; --wn-on-accent: #ffffff; --wn-tint: rgba(0, 102, 204, .12); --wn-halo: rgba(0, 102, 204, .2); --wn-chalo: rgba(0, 102, 204, .235);
+  --wn-ok-bg: rgba(21, 128, 61, .14); --wn-ok-fg: #166534; --wn-inverse: #18181b; --wn-on-inverse: #fafafa;
+  --wn-skel-hi: rgba(255, 255, 255, .65); --wn-pin-shadow: rgba(0, 0, 0, .27);
+  --wn-m-bg: #F7F7F8; --wn-m-park: #DDF0DF; --wn-m-wood: #CFE8D1; --wn-m-water: #A9D4FF; --wn-m-bld: #ECECEF; --wn-m-path: #A1A1AA;
+  --wn-m-road: #FFFFFF; --wn-m-road2: #FFFFFF; --wn-m-road3: #FFFFFF; --wn-m-case: #E4E4E7; --wn-m-case2: #D4D4D8; --wn-m-case3: #C4C4CC;
+  --wn-m-ext: #E7E7EC; --wn-m-ext2: #DADBE3; --wn-m-cline: rgba(15, 23, 42, .14); --wn-m-csel: #0f172a;
+  --wn-m-r0: #cfe3ff; --wn-m-r1: #9cc6ff; --wn-m-r2: #5fa2f7; --wn-m-r3: #2f7fe6; --wn-m-r4: #1560c7; --wn-m-r5: #0b3f8f;
+}
+@media (prefers-color-scheme: dark) {
+  .wn-intro, html.wn-intro-boot body::after {
+    --wn-bg: #09090b; --wn-fg: #fafafa; --wn-surface: #09090b; --wn-muted: #27272a; --wn-muted-fg: #a1a1aa; --wn-border: #27272a;
+    --wn-accent: #3395ff; --wn-on-accent: #09090b; --wn-tint: rgba(51, 149, 255, .12); --wn-halo: rgba(51, 149, 255, .2); --wn-chalo: rgba(51, 149, 255, .235);
+    --wn-ok-bg: rgba(22, 163, 74, .14); --wn-ok-fg: #16a34a; --wn-inverse: #fafafa; --wn-on-inverse: #18181b;
+    --wn-skel-hi: rgba(255, 255, 255, .07);
+    --wn-m-bg: #0E0E11; --wn-m-park: #13241A; --wn-m-wood: #112016; --wn-m-water: #10294A; --wn-m-bld: #1C1C21; --wn-m-path: #52525B;
+    --wn-m-road: #232329; --wn-m-road2: #2A2A31; --wn-m-road3: #34343C; --wn-m-case: #16161A; --wn-m-case2: #16161A; --wn-m-case3: #16161A;
+    --wn-m-ext: #26262C; --wn-m-ext2: #2C2D35; --wn-m-cline: rgba(255, 255, 255, .18); --wn-m-csel: #ffffff;
+    --wn-m-r0: #0b3f8f; --wn-m-r1: #1560c7; --wn-m-r2: #2f7fe6; --wn-m-r3: #5fa2f7; --wn-m-r4: #9cc6ff; --wn-m-r5: #cfe3ff;
+  }
+}
+
+/* Before the overlay exists (intro.js runs in <head>): the app's background from the very first paint. */
+html.wn-intro-boot body::after {
+  content: ""; position: fixed; inset: 0; z-index: 9999; pointer-events: none; background: var(--wn-bg);
+  animation: wn-intro-gone 1ms linear 12s forwards;
+}
+@keyframes wn-intro-gone { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+
+.wn-intro {
+  position: fixed; inset: 0; z-index: 9999; overflow: hidden; contain: strict; cursor: default; touch-action: none;
+  -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; color: var(--wn-fg);
+  font: 14px/20px system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Hiragino Sans", sans-serif;
+  animation: wn-intro-gone 1ms linear 12s forwards; /* intro.js sets the delay to its length + 1.5 s */
+}
+.wn-intro.wn-intro-out { pointer-events: none; } /* the field fades: clicks reach the page again */
+.wn-intro-bg, .wn-intro-app, .wn-intro-pins, .wn-intro-splash, .wn-intro-scrim { position: absolute; inset: 0; }
+.wn-intro-bg, .wn-intro-splash { background: var(--wn-bg); }
+.wn-intro-app { transform-origin: 50% 50%; }
+.wn-intro-map { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.wn-intro-ic { display: block; flex: none; fill: currentColor; }
+
+/* The app's pins (MapMarkers.kt): an accent disc in a light ring (dark theme: near-black), the drop, a 3 dp shadow;
+   selected: larger, a halo in the accent with its ring; clusters: accent core, light ring, soft halo, the count. */
+.wn-intro-pin, .wn-intro-cluster {
+  position: absolute; left: 0; top: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%;
+  background: var(--wn-accent); color: var(--wn-on-accent); opacity: 0; will-change: transform, opacity;
+}
+.wn-intro-pin { width: 26px; height: 26px; margin: -13px 0 0 -13px; box-shadow: 0 0 0 2px var(--wn-on-accent), 0 1px 3px 2px var(--wn-pin-shadow); }
+.wn-intro-pin .wn-intro-ic { width: 15.75px; height: 15.75px; }
+.wn-intro-sel {
+  width: 36px; height: 36px; margin: -18px 0 0 -18px; outline: 2px solid var(--wn-accent); outline-offset: 6px;
+  box-shadow: 0 0 0 2px var(--wn-on-accent), 0 1px 3px 2px var(--wn-pin-shadow), 0 0 0 8px var(--wn-halo);
+}
+.wn-intro-sel .wn-intro-ic { width: 21px; height: 21px; }
+.wn-intro-cluster { font-weight: 700; font-size: 13px; line-height: 1; box-shadow: 0 0 0 2.5px var(--wn-on-accent), 0 1px 3px 2.5px var(--wn-pin-shadow), 0 0 0 7.5px var(--wn-chalo); }
+.wn-intro-cluster.wn-intro-t0 { width: 29px; height: 29px; margin: -14.5px 0 0 -14.5px; }
+.wn-intro-cluster.wn-intro-t1 { width: 37px; height: 37px; margin: -18.5px 0 0 -18.5px; }
+.wn-intro-cluster.wn-intro-t2 { width: 45px; height: 45px; margin: -22.5px 0 0 -22.5px; }
+
+/* The map's search bar (WnSearchBar): a full pill, surface, 1 dp border, 6 dp shadow, the search icon, the placeholder. */
+.wn-intro-search {
+  position: absolute; top: 16px; left: 16px; right: 16px; max-width: 560px; margin: 0 auto; height: 52px; padding: 0 16px;
+  display: flex; align-items: center; gap: 10px; border-radius: 999px; background: var(--wn-surface); border: 1px solid var(--wn-border);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .08); color: var(--wn-muted-fg); opacity: 0;
+}
+.wn-intro-search .wn-intro-ic { width: 20px; height: 20px; }
+.wn-intro-search span { font-size: 16px; line-height: 24px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* The cell's card: the console's cell panel (title, figures in muted tiles) in the app's floating card (16 dp corners,
+   1 dp border, the search bar's shadow), the cell's class as the console's legend chip; tabular digits for the count. */
+.wn-intro-card {
+  position: absolute; left: 0; right: 0; bottom: 24px; width: 340px; max-width: calc(100% - 32px); margin: 0 auto; padding: 16px;
+  box-sizing: border-box; border-radius: 16px; background: var(--wn-surface); border: 1px solid var(--wn-border);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .08); opacity: 0;
+}
+.wn-intro-card-head { display: flex; align-items: center; gap: 8px; }
+.wn-intro-card-title { flex: 1; min-width: 0; font-size: 16px; line-height: 24px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wn-intro-chip { width: 12px; height: 12px; flex: none; border-radius: 3px; }
+.wn-intro-chip.wn-intro-c0 { background: var(--wn-m-r0); } .wn-intro-chip.wn-intro-c1 { background: var(--wn-m-r1); } .wn-intro-chip.wn-intro-c2 { background: var(--wn-m-r2); }
+.wn-intro-chip.wn-intro-c3 { background: var(--wn-m-r3); } .wn-intro-chip.wn-intro-c4 { background: var(--wn-m-r4); } .wn-intro-chip.wn-intro-c5 { background: var(--wn-m-r5); }
+.wn-intro-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+.wn-intro-stat { min-width: 0; padding: 10px 12px; border-radius: 12px; background: var(--wn-muted); }
+.wn-intro-num { font-size: 20px; line-height: 26px; font-weight: 600; letter-spacing: -.015em; font-variant-numeric: tabular-nums; }
+.wn-intro-lbl { margin-top: 2px; font-size: 12px; line-height: 16px; font-weight: 500; color: var(--wn-muted-fg); }
+
+/* The app's toast (WnSnackbarHost): inverse surface, 12 dp corners, bodyMedium. */
+.wn-intro-toast {
+  position: absolute; left: 0; right: 0; bottom: 24px; width: max-content; max-width: calc(100% - 32px); margin: 0 auto;
+  min-height: 48px; padding: 14px 16px; border-radius: 12px; background: var(--wn-inverse); color: var(--wn-on-inverse);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px rgba(0, 0, 0, .14); opacity: 0;
+}
+
+/* The point's sheet (SpotSheet.kt, ModalBottomSheet): scrim 32 %, surface, top corners 20, the drag handle, 640 wide at most. */
+.wn-intro-scrim { background: rgba(0, 0, 0, .32); opacity: 0; }
+.wn-intro-sheet {
+  position: absolute; left: 0; right: 0; bottom: 0; max-width: 640px; margin: 0 auto; padding-bottom: 24px;
+  background: var(--wn-surface); border-radius: 20px 20px 0 0; opacity: 0; transform: translate3d(0, 104%, 0); will-change: transform;
+}
+.wn-intro-handle { display: block; width: 32px; height: 4px; margin: 22px auto; border-radius: 2px; background: var(--wn-border); }
+.wn-intro-sheet-in { padding: 0 16px; }
+.wn-intro-slot { position: relative; }
+.wn-intro-real { opacity: 0; }
+.wn-intro-skel { position: absolute; inset: 0; }
+.wn-intro-sk { position: absolute; top: 0; left: 0; overflow: hidden; border-radius: 8px; background: var(--wn-muted); }
+.wn-intro-sk b { position: absolute; top: 0; bottom: 0; left: 0; width: 160px; background: linear-gradient(90deg, transparent, var(--wn-skel-hi), transparent); }
+.wn-intro-sk.wn-intro-k-hero { right: 0; bottom: 0; border-radius: 12px; }
+.wn-intro-sk.wn-intro-k-tile { width: 48px; height: 48px; }
+.wn-intro-sk.wn-intro-k-l1 { left: 60px; top: 5px; width: 46%; height: 18px; border-radius: 6px; }
+.wn-intro-sk.wn-intro-k-l2 { left: 60px; top: 29px; width: 26%; height: 14px; border-radius: 6px; }
+.wn-intro-sk.wn-intro-k-p1, .wn-intro-sk.wn-intro-k-p2, .wn-intro-sk.wn-intro-k-p3, .wn-intro-sk.wn-intro-k-p4 { height: 22px; border-radius: 999px; }
+.wn-intro-sk.wn-intro-k-p1 { width: 74px; } .wn-intro-sk.wn-intro-k-p2 { left: 80px; width: 92px; } .wn-intro-sk.wn-intro-k-p3 { left: 178px; width: 66px; } .wn-intro-sk.wn-intro-k-p4 { width: 176px; }
+.wn-intro-sk.wn-intro-k-b1, .wn-intro-sk.wn-intro-k-b2 { width: calc(50% - 4px); height: 44px; border-radius: 12px; }
+.wn-intro-sk.wn-intro-k-b2 { left: auto; right: 0; }
+.wn-intro-loading {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0 16px;
+  font-weight: 500; color: var(--wn-muted-fg); text-align: center;
+}
+.wn-intro-spin { width: 16px; height: 16px; flex: none; }
+.wn-intro-spin circle { fill: none; stroke: var(--wn-accent); stroke-width: 2; stroke-linecap: round; }
+.wn-intro-hero { height: 132px; border-radius: 12px; background: var(--wn-muted); display: flex; align-items: center; justify-content: center; }
+.wn-intro-photo { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 12px; line-height: 16px; font-weight: 500; color: var(--wn-muted-fg); }
+.wn-intro-photo .wn-intro-ic { width: 28px; height: 28px; }
+.wn-intro-s-head { margin-top: 16px; }
+.wn-intro-s-head .wn-intro-real { display: flex; align-items: center; gap: 12px; }
+.wn-intro-tile { width: 48px; height: 48px; flex: none; display: flex; align-items: center; justify-content: center; border-radius: 8px; background: var(--wn-tint); color: var(--wn-accent); }
+.wn-intro-tile .wn-intro-ic { width: 24px; height: 24px; }
+.wn-intro-titles { flex: 1; min-width: 0; }
+.wn-intro-name { font-size: 20px; line-height: 26px; font-weight: 600; letter-spacing: -.015em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wn-intro-sub { color: var(--wn-muted-fg); }
+.wn-intro-s-badges { margin-top: 12px; }
+.wn-intro-s-badges .wn-intro-real { display: flex; flex-wrap: wrap; gap: 6px; }
+.wn-intro-s-trust { margin-top: 8px; }
+.wn-intro-s-actions { margin-top: 16px; }
+.wn-intro-s-actions .wn-intro-real { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+/* WnBadge (pills, labelSmall) and WnButton (12 dp corners, labelLarge, 44 high). */
+.wn-intro-badge {
+  display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 999px; font-size: 12px; line-height: 16px;
+  font-weight: 500; white-space: nowrap;
+}
+.wn-intro-badge .wn-intro-ic { width: 12px; height: 12px; }
+.wn-intro-badge .wn-intro-ic.wn-intro-off { display: none; }
+.wn-intro-badge.wn-intro-b-sec { background: var(--wn-muted); color: var(--wn-fg); }
+.wn-intro-badge.wn-intro-b-ok { background: var(--wn-ok-bg); color: var(--wn-ok-fg); }
+.wn-intro-badge.wn-intro-b-out { padding: 2px 7px; border: 1px solid var(--wn-border); color: var(--wn-fg); }
+.wn-intro-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 0; height: 44px; padding: 0 16px; border-radius: 12px;
+  font-weight: 500; white-space: nowrap;
+}
+.wn-intro-btn span { overflow: hidden; text-overflow: ellipsis; }
+.wn-intro-btn .wn-intro-ic { width: 18px; height: 18px; }
+.wn-intro-btn.wn-intro-b-p { background: var(--wn-accent); color: var(--wn-on-accent); }
+.wn-intro-btn.wn-intro-b-s { background: var(--wn-muted); color: var(--wn-fg); }
+
+/* The launch screen: the official icon (site/assets/icon.svg as it is) and the ring its exit ripples out. */
+.wn-intro-sicon, .wn-intro-ripple {
+  --s: 96px; position: absolute; left: 50%; top: 50%; width: var(--s); height: var(--s); margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
+  opacity: 0;
+}
+.wn-intro-sicon { display: block; }
+.wn-intro-ripple { box-sizing: border-box; border: 3px solid var(--wn-accent); border-radius: 50%; }
+
+/* The logo screen: the sign-in screen's lockup (the icon, the name in the headline style, a muted line, a badge). */
+.wn-intro-stage {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 0 16px 4vh; text-align: center; pointer-events: none;
+}
+.wn-intro-logo { display: block; width: 88px; height: 88px; flex: none; transform-origin: 0 0; opacity: 0; will-change: transform, opacity; }
+.wn-intro-word {
+  margin-top: 24px; font-size: 28px; line-height: 34px; font-weight: 700; letter-spacing: -.018em; white-space: nowrap;
+  transform-origin: 0 50%; opacity: 0; will-change: transform, opacity;
+}
+.wn-intro-cap { margin-top: 8px; max-width: 100%; font-size: 16px; line-height: 24px; color: var(--wn-muted-fg); opacity: 0; }
+.wn-intro-session { margin-top: 16px; opacity: 0; }
+
+/* Esc, on keyboards only: on touch screens the intro plays in full (owner, 2026-11-13). */
+.wn-intro-esc { position: absolute; left: 16px; bottom: 16px; display: flex; align-items: center; gap: 6px; font-size: 12px; line-height: 16px; font-weight: 500; color: var(--wn-muted-fg); opacity: 0; }
+.wn-intro-esc kbd { font: inherit; padding: 1px 6px; border: 1px solid var(--wn-border); border-radius: 6px; background: var(--wn-surface); }
+@media (hover: none) and (pointer: coarse) { .wn-intro-esc { display: none; } } /* no Esc key on a phone */
+@media (max-width: 640px) {
+  .wn-intro-toast, .wn-intro-card { width: auto; left: 16px; right: 16px; }
+  .wn-intro-hero { height: 112px; }
+  .wn-intro-sicon, .wn-intro-ripple { --s: 88px; }
+}
+.wn-intro-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* The page rises under the fading field: the header fades in (the logo lands on it), then the sign-in card or the
+   dashboard's rows, one after the other. Only elements the console never animates itself, so nothing replays after. */
+html.wn-intro-reveal .top { animation: wn-intro-fade .7s cubic-bezier(.2, .8, .2, 1) both; }
+/* The header's mark and name wait for the docking logo and name and take over as they land (intro.js TL.dock). */
+html.wn-intro-reveal .top .mark, html.wn-intro-reveal #brand { animation: wn-intro-fade .12s linear .31s both; }
+html.wn-intro-reveal #gate,
+html.wn-intro-reveal #app > .toolbar, html.wn-intro-reveal #app > .kpis, html.wn-intro-reveal #app > .main,
+html.wn-intro-reveal #app > .duo, html.wn-intro-reveal #app > .foot { animation: wn-intro-rise .95s cubic-bezier(.16, 1, .3, 1) both; }
+html.wn-intro-reveal #gate { animation-delay: 60ms; }
+html.wn-intro-reveal #app > .kpis { animation-delay: 70ms; }
+html.wn-intro-reveal #app > .main { animation-delay: 150ms; }
+html.wn-intro-reveal #app > .duo { animation-delay: 230ms; }
+html.wn-intro-reveal #app > .foot { animation-delay: 300ms; }
+@keyframes wn-intro-rise { from { opacity: 0; transform: translate3d(0, 28px, 0) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes wn-intro-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  html.wn-intro-reveal .top, html.wn-intro-reveal .top .mark, html.wn-intro-reveal #brand,
+  html.wn-intro-reveal #gate, html.wn-intro-reveal #app > * { animation: none; }
+}

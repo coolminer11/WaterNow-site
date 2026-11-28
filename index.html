@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://pkqsvlbiznrqxfckaxll.supabase.co; base-uri 'none'; form-action 'none'">
+<!-- WaterNow's server, for the « Fontaine commune » entry (commons_list). The local preview points it at itself. -->
+<meta name="wn-api" content="https://pkqsvlbiznrqxfckaxll.supabase.co">
+<meta name="referrer" content="strict-origin">
+<meta name="color-scheme" content="light dark">
+<title>WaterNow: free drinking water near you</title>
+<meta name="description" content="WaterNow finds free drinking water near you: fountains, refill stations and more, on a map the community keeps up to date.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WaterNow">
+<meta property="og:title" content="WaterNow: free drinking water near you">
+<meta property="og:description" content="Fountains, refill stations and more, on a map the community keeps up to date. Android app, no ads, no trackers.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/hold.js"></script>
+</head>
+<body>
+<header class="bar"><a class="brand" href="./"><img class="logo" src="assets/icon.svg" alt="" width="32" height="32">WaterNow</a><span class="demo-pill hidden" id="demo">Demo data</span></header>
+<main class="page hold">
+  <section class="card hero">
+    <svg class="drop" viewBox="0 0 56 56" aria-hidden="true">
+      <defs><clipPath id="dropClip"><path d="M28 5C22 14 12 25 12 37a16 16 0 0 0 32 0C44 25 34 14 28 5Z"/></clipPath></defs>
+      <path class="body" d="M28 5C22 14 12 25 12 37a16 16 0 0 0 32 0C44 25 34 14 28 5Z"/>
+      <g clip-path="url(#dropClip)">
+        <path class="w1 wave" d="M-28 36q7-4 14 0t14 0 14 0 14 0 14 0 14 0 14 0 14 0V60H-28Z"/>
+        <path class="w2 wave slow" d="M-28 40q7-3.4 14 0t14 0 14 0 14 0 14 0 14 0 14 0 14 0V60H-28Z"/>
+      </g>
+      <path class="rim" d="M28 5C22 14 12 25 12 37a16 16 0 0 0 32 0C44 25 34 14 28 5Z"/>
+      <path class="shine" d="M21 26q-3.6 4.6-3.8 9.6"/>
+    </svg>
+    <p class="eyebrow" id="kicker">Android app · free, no ads</p>
+    <h1 id="title">Free drinking water, near you</h1>
+    <p class="muted lead" id="lead">WaterNow shows fountains, bottle refill stations, water for dogs and toilets on a map, with directions, even offline.</p>
+    <ul class="features" id="points">
+      <li id="p1">Points checked by the community: see what works right now.</li>
+      <li id="p2">Add a water point, a photo or a review in a few taps.</li>
+      <li id="p3">Track the plastic bottles you avoid, and take on weekly challenges.</li>
+    </ul>
+    <a class="btn primary wide go pending" id="download" href="#">Download for Android</a>
+    <p class="muted foot" id="version"></p>
+    <p class="stats-link"><a id="statsLink" href="stats/">See the community's live impact</a></p>
+  </section>
+
+  <!-- « Fontaine commune »: the current project, only when there is one (home.js; hidden when the read fails). -->
+  <a class="card commons-entry hidden" id="commons" href="fontaine/">
+    <span class="commons-title" id="commonsTitle"></span>
+    <span class="track hidden" id="commonsTrack" aria-hidden="true"><span class="fill" id="commonsFill"></span></span>
+    <span class="muted small" id="commonsLine"></span>
+  </a>
+  <!-- During its vote: the project in the app (waternow://commons/<id>); the download button above is the way to get it. -->
+  <p class="commons-app hidden" id="commonsApp"><a class="btn go" id="commonsVote" href="fontaine/">Vote in the app</a></p>
+
+  <!-- WaterNow Racines et Plus: a quiet card-link to its page. It waits unseen with the card below (the Fontaine
+       commune entry above it comes after its read: it never pushes this one once seen). -->
+  <a class="card commons-entry racines-entry waiting" id="racines" href="racines/">
+    <span class="commons-title" id="racinesTitle">WaterNow Racines</span>
+    <span class="muted small" id="racinesLine">A real tree planted every month, certificate included. Everything useful stays free.</span>
+  </a>
+
+  <section class="card waiting" id="privacyCard">
+    <h2 id="privacyTitle">Privacy</h2>
+    <p class="muted" id="privacy">This site has no trackers, no ads and no cookies. The app uses your location to find the water around you and guide you there. What you add (points, photos, reviews, checks) is shared with the community, and you can export or delete your data from the app at any time.</p>
+    <p class="terms-link"><a id="privacyLink" href="privacy/">Privacy policy</a> · <a id="terms" href="terms/">Terms of use</a></p>
+  </section>
+
+</main>
+<script src="assets/motion.js"></script>
+<script src="assets/spot-params.js"></script>
+<script src="assets/page-data.js"></script>
+<script src="assets/fontaine-data.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>

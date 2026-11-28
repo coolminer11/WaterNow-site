@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Written by scripts/gen-city-pages.mjs (the home page and the city pages): run it again after adding a city. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://coolminer11.github.io/WaterNow-site/</loc></url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/montreal/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/montreal/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/montreal/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/montreal/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/montreal/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/montreal/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/montreal/ro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/montreal/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/quebec/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/quebec/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/quebec/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/quebec/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/quebec/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/quebec/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+  </url>
+  <url>
+    <loc>https://coolminer11.github.io/WaterNow-site/villes/quebec/ro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/ro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://coolminer11.github.io/WaterNow-site/villes/quebec/"/>
+  </url>
+</urlset>

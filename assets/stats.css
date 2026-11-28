@@ -1,0 +1,87 @@
+/* WaterNow Statistics (stats/): site.css's cards, plus big counters, the cities' race and the "get the app" card. */
+.page.stats { max-width: 760px; }
+/* A grid item's long word or wide child never widens the page past a phone's width (320 px and up, 16 px gutters). */
+.page.stats > * { min-width: 0; }
+/* "more than": its line is kept even before the answer, so the tiles don't grow when it comes. */
+.over { color: var(--muted); font-size: 14px; line-height: 20px; min-height: 20px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; font-size: 12px; line-height: 16px; font-weight: 600;
+  padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.badge.ok { color: var(--ok); border-color: currentColor; }
+.badge.warn { color: var(--warn); border-color: currentColor; }
+/* A still dot by "Updated N min ago": totals a few minutes old are not a live feed (only live/ breathes, while a share moves). */
+.badge.ok::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.count { font-size: 28px; line-height: 34px; font-weight: 800; letter-spacing: -.5px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.count.sk { width: min(7ch, 70%); }
+.split b { display: inline-block; }
+.split b.sk { min-width: 3.5ch; }
+.big { padding: 26px 20px 22px; position: relative; overflow: hidden; }
+.big::after {
+  content: ""; position: absolute; inset: 15% -30% -95% 52%; aspect-ratio: 1; border-radius: 50%; pointer-events: none;
+  background: repeating-radial-gradient(circle, color-mix(in srgb, var(--accent) 6%, transparent) 0 1.5px, transparent 1.5px 24px);
+}
+.big > * { position: relative; }
+.big .count { font-size: clamp(44px, 13vw, 76px); line-height: 1.05; letter-spacing: -2px; color: var(--accent); }
+.big .count.sk { width: min(5.5ch, 70%); }
+.label { color: var(--muted); font-size: 14px; line-height: 20px; margin-top: 2px; }
+.big .label { font-size: 16px; line-height: 24px; }
+.split { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-variant-numeric: tabular-nums; }
+.lists { min-height: 40px; padding: 0 4px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
+.tile { transition: transform .25s var(--ease), box-shadow .3s var(--ease), border-color .3s; }
+@media (hover: hover) { .tile:hover { transform: translateY(-2px); box-shadow: var(--lift); border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); } }
+
+/* The cities' race: a rank, the city and its counts, a thin bar of its refills against the leader's. */
+.top { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.top li {
+  position: relative; display: grid; grid-template-columns: 28px 1fr; align-items: center; gap: 2px 12px;
+  padding: 10px 12px; border-radius: 12px; background: var(--soft);
+}
+.top li.bar { padding-bottom: 16px; }
+.top li.bar::after {
+  content: ""; position: absolute; left: 52px; bottom: 7px; height: 3px; border-radius: 3px;
+  width: calc((100% - 64px) * var(--p, 0)); transform-origin: left; background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+.top .rank {
+  grid-row: span 2; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 9px;
+  background: var(--card); color: var(--muted); font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums;
+}
+.top li:first-child .rank { background: var(--accent); color: var(--on-accent); }
+.top li:nth-child(2) .rank, .top li:nth-child(3) .rank { background: var(--accent-soft); color: var(--on-accent-soft); }
+.top .city { font-weight: 600; overflow-wrap: anywhere; }
+.top .muted { font-size: 14px; line-height: 20px; overflow-wrap: anywhere; }
+.top .sk-row { display: block; height: 46px; padding: 16px 12px; }
+.top .sk-row .sk-line { width: 64%; margin: 0; background-color: var(--card); }
+
+.soon { border-style: dashed; box-shadow: none; }
+.soon .count { margin-top: 8px; }
+.cta {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 9%, var(--card)), var(--card) 60%);
+}
+/* Get the app: the buttons, and on a desktop (mouse, wide screen) a QR code of the same link to scan with the phone.
+   Always dark on white with its quiet zone, whatever the theme: scanners need it. Its place is kept while it is made. */
+.get { display: flex; align-items: center; gap: 20px; }
+.get .buttons { flex: 1; min-width: 0; }
+.qrbox { display: none; }
+@media (min-width: 720px) and (pointer: fine) {
+  .qrbox, .qrbox.hidden { display: block !important; flex: none; width: 176px; margin-top: 14px; text-align: center; }
+  .qrbox.hidden { visibility: hidden; }
+}
+.qr { display: block; width: 100%; height: auto; border-radius: 10px; shape-rendering: crispEdges; box-shadow: 0 8px 24px -14px rgba(0, 0, 0, .45); }
+.qr rect { fill: #fff; }
+.qr path { fill: #000; }
+.qrbox p { margin-top: 8px; }
+/* "App Store: coming soon": not a control, so no aria-disabled (site.css gives that the busy look: a progress cursor). */
+.btn.disabled { color: var(--muted); cursor: default; box-shadow: none; }
+@media (hover: hover) { .btn.disabled:hover { border-color: var(--border); background-color: var(--card); } }
+
+@keyframes wn-grow { from { transform: scaleX(0); } }
+@media (prefers-reduced-motion: no-preference) {
+  .top li.bar::after { transform: scaleX(0); }
+  .top.in li.bar::after { transform: none; animation: wn-grow 1s var(--ease) backwards; }
+  .top.in li:nth-child(2)::after { animation-delay: .08s; }
+  .top.in li:nth-child(3)::after { animation-delay: .16s; }
+  .top.in li:nth-child(n+4)::after { animation-delay: .24s; }
+}

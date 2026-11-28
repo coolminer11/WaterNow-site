@@ -1,0 +1,29 @@
+/* « Sécurité » (securite.js): the shield's card. */
+.sec-block { margin-top: 18px; }
+.sec-block h3 { margin: 0 0 8px; font-size: 15px; }
+.sec-level { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.sec-level .chip { font-size: 15px; padding: 5px 12px; }
+.sec-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; margin-top: 10px; }
+.sec-field { display: grid; gap: 4px; min-width: 0; }
+.sec-field.sec-text { flex: 1 1 220px; max-width: 360px; }
+.sec-field.sec-number { flex: 0 1 120px; }
+.sec-field.sec-select { flex: 0 1 220px; }
+.sec-field input, .sec-field select { box-sizing: border-box; width: 100%; min-height: 40px; padding: 6px 10px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--card); color: var(--fg); font: inherit; }
+.chip.sec-ok { color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, transparent); }
+.chip.sec-watch { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.chip.sec-warn { color: var(--warn); background: color-mix(in srgb, var(--warn) 12%, transparent); }
+.chip.sec-bad { color: var(--bad); background: color-mix(in srgb, var(--bad) 12%, transparent); }
+#securite .rc-item-top b { overflow-wrap: anywhere; }
+#securite .muted.small { overflow-wrap: anywhere; }
+
+/* « Preuves » (preuves.js): the owner's evidence card shares the shield's styles. */
+.sec-field.sec-file { flex: 1 1 260px; max-width: 360px; }
+.sec-field.sec-file input { padding: 7px 10px; }
+#preuves .rc-item-top b, #preuves .muted.small, #preuves .pv-sha { overflow-wrap: anywhere; }
+#preuves .rc-acts { margin-top: 8px; }
+.pv-out { display: grid; gap: 8px; }
+.pv-out:empty { display: none; }
+.pv-out .sec-field { max-width: none; }
+.pv-sha { display: block; font: 11.5px/1.4 ui-monospace, Consolas, monospace; }
+textarea.input.pv-draft { min-height: 260px; width: 100%; box-sizing: border-box; }
